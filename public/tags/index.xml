@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Yaotian Huang</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on Yaotian Huang</description>
+    <image>
+      <title>Yaotian Huang</title>
+      <url>http://example.org/papermod-cover.png</url>
+      <link>http://example.org/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular</title>
+      <link>http://example.org/tags/angular/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
+      <guid>http://example.org/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>http://example.org/tags/css/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
+      <guid>http://example.org/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>http://example.org/tags/html/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
+      <guid>http://example.org/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://example.org/tags/javascript/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
+      <guid>http://example.org/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>http://example.org/tags/typescript/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
+      <guid>http://example.org/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java</title>
+      <link>http://example.org/tags/java/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
+      <guid>http://example.org/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSP</title>
+      <link>http://example.org/tags/jsp/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
+      <guid>http://example.org/tags/jsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Servlet</title>
+      <link>http://example.org/tags/servlet/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
+      <guid>http://example.org/tags/servlet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tomcat</title>
+      <link>http://example.org/tags/tomcat/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
+      <guid>http://example.org/tags/tomcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Retrieval</title>
+      <link>http://example.org/tags/information-retrieval/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
+      <guid>http://example.org/tags/information-retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inverted Index</title>
+      <link>http://example.org/tags/inverted-index/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
+      <guid>http://example.org/tags/inverted-index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://example.org/tags/python/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
+      <guid>http://example.org/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search Engine</title>
+      <link>http://example.org/tags/search-engine/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
+      <guid>http://example.org/tags/search-engine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>http://example.org/tags/c#/</link>
+      <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      
+      <guid>http://example.org/tags/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unity</title>
+      <link>http://example.org/tags/unity/</link>
+      <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      
+      <guid>http://example.org/tags/unity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

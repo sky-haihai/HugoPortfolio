@@ -1,0 +1,97 @@
+baseURL: "http://example.org/"
+languageCode: "en-us"
+title: "Yaotian Huang"
+theme: "hugo-PaperMod"
+
+enableInlineShortcodes: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+params:
+  author: sky_haihai
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowShareButtons: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  # comments: false
+  images: ["papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: "#"
+    imageTitle: icon
+    # imageWidth: 120
+    # imageHeight: 120
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  homeInfoParams:
+    Title: "Readme.txt"
+    Content: >
+      Welcome to my website!  
+
+      - · I'm an IT student completing my study at YorkU and an indie game developer.  
+
+      - · This is the place where I post blogs about what I have created in the past including game designs, game effects and web dev stuff to remind myself how I achieved them. 
+
+      - (and potentially to get a job interview, thank you HRs!).  
+
+      - · Check out my **Github** and **itch.io** to see my programming and design skills in action!
+  socialIcons:
+    - name: github
+      url: "https://github.com/sky-haihai"
+    - name: itchio
+      url: "https://sky-haihai.itch.io/"
+    
+  fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+taxonomies:
+  category: categories
+  tag: tags
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
