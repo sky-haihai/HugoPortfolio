@@ -2,85 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/tags/angular/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/c#/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/compute-shader/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/post-processing/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/render-feature/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/unity/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/urp/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/</loc>
+    <lastmod>2023-05-23T23:50:10-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</loc>
+    <lastmod>2023-05-07T22:54:14-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/screen-door-transparency/</loc>
+    <lastmod>2023-05-07T22:54:14-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/shader/</loc>
+    <lastmod>2023-05-07T22:54:14-04:00</lastmod>
+  </url><url>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/creating-a-diet-dashboard-based-on-angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/creating-a-diet-dashboard-using-angular/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/css/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/css/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/html/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/html/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/javascript/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/javascript/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/typescript/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/web-development/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/typescript/</loc>
-    <lastmod>2023-05-07T21:47:36-04:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/web-development/</loc>
-    <lastmod>2023-05-07T21:47:36-04:00</lastmod>
-  </url><url>
-    <loc>http://example.org/</loc>
-    <lastmod>2023-05-07T21:47:36-04:00</lastmod>
-  </url><url>
-    <loc>http://example.org/tags/java/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/java/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/jsp/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/secured-web-information-system-prototype/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/secured-web-information-system-prototype/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/servlet/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/servlet/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/tomcat/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/tomcat/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/information-retrieval/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/information-retrieval/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/posts/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/inverted-index/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/inverted-index/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/python/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/python/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/search-engine/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/search-engine/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/tags/c#/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/introducing-xiheframework/</loc>
     <lastmod>2023-05-05T14:24:13-04:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/game-development/</loc>
-    <lastmod>2023-05-05T14:24:13-04:00</lastmod>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/archives/</loc>
   </url><url>
-    <loc>http://example.org/posts/introducing-xiheframework/</loc>
-    <lastmod>2023-05-05T14:24:13-04:00</lastmod>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/search/</loc>
   </url><url>
-    <loc>http://example.org/tags/unity/</loc>
-    <lastmod>2023-05-05T14:24:13-04:00</lastmod>
-  </url><url>
-    <loc>http://example.org/archives/</loc>
-  </url><url>
-    <loc>http://example.org/search/</loc>
-  </url><url>
-    <loc>http://example.org/series/</loc>
+    <loc>https://sky-haihai.github.io/Yaotian-Huang/series/</loc>
   </url>
 </urlset>

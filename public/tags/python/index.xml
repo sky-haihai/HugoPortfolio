@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on Yaotian Huang</title>
-    <link>http://example.org/tags/python/</link>
+    <link>https://sky-haihai.github.io/Yaotian-Huang/tags/python/</link>
     <description>Recent content in Python on Yaotian Huang</description>
     <image>
       <title>Yaotian Huang</title>
-      <url>http://example.org/papermod-cover.png</url>
-      <link>http://example.org/papermod-cover.png</link>
+      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2023 16:49:27 -0400</lastBuildDate><atom:link href="http://example.org/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 16:49:27 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
-      <link>http://example.org/posts/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
       
-      <guid>http://example.org/posts/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
       <description>View the full project here: Github Repo
 Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
 Input a bunch of .GZ files, each containing multiple XML web documents.</description>

@@ -2,23 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Game Development on Yaotian Huang</title>
-    <link>http://example.org/categories/game-development/</link>
+    <link>https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/</link>
     <description>Recent content in Game Development on Yaotian Huang</description>
     <image>
       <title>Yaotian Huang</title>
-      <url>http://example.org/papermod-cover.png</url>
-      <link>http://example.org/papermod-cover.png</link>
+      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 May 2023 14:24:13 -0400</lastBuildDate><atom:link href="http://example.org/categories/game-development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 23:50:10 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <description>Environment Unity 2021.3.16f1
+Universal Render Pipeline 12.0.0
+Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
+One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+    </item>
+    
+    <item>
+      <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
+How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+    </item>
+    
     <item>
       <title>Introducing Xiheframework</title>
-      <link>http://example.org/posts/introducing-xiheframework/</link>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
       
-      <guid>http://example.org/posts/introducing-xiheframework/</guid>
-      <description>A brief introduction to XiheFramework</description>
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/introducing-xiheframework/</guid>
+      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
+Who Should Use Scale Ideally at least two members:
+Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
+Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
     </item>
     
   </channel>

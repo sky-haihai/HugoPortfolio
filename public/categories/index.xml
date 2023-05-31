@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Yaotian Huang</title>
-    <link>http://example.org/categories/</link>
+    <link>https://sky-haihai.github.io/Yaotian-Huang/categories/</link>
     <description>Recent content in Categories on Yaotian Huang</description>
     <image>
       <title>Yaotian Huang</title>
-      <url>http://example.org/papermod-cover.png</url>
-      <link>http://example.org/papermod-cover.png</link>
+      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 May 2023 23:50:10 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Web Development</title>
-      <link>http://example.org/categories/web-development/</link>
-      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <title>Game Development</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
       
-      <guid>http://example.org/categories/web-development/</guid>
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Game Development</title>
-      <link>http://example.org/categories/game-development/</link>
-      <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      <title>Web Development</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/categories/web-development/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
       
-      <guid>http://example.org/categories/game-development/</guid>
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/categories/web-development/</guid>
       <description></description>
     </item>
     

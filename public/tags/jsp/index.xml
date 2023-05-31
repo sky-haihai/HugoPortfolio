@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>JSP on Yaotian Huang</title>
-    <link>http://example.org/tags/jsp/</link>
+    <link>https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/</link>
     <description>Recent content in JSP on Yaotian Huang</description>
     <image>
       <title>Yaotian Huang</title>
-      <url>http://example.org/papermod-cover.png</url>
-      <link>http://example.org/papermod-cover.png</link>
+      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 May 2023 02:26:29 -0400</lastBuildDate><atom:link href="http://example.org/tags/jsp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 02:26:29 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Secured Web Information System Prototype</title>
-      <link>http://example.org/posts/secured-web-information-system-prototype/</link>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
       
-      <guid>http://example.org/posts/secured-web-information-system-prototype/</guid>
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/secured-web-information-system-prototype/</guid>
       <description>View the full project here: Github Repo
 Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
 The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
