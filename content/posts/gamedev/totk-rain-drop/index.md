@@ -87,6 +87,7 @@ After that, configure the settings as you like: thickness, sobel threshold, rain
 For noise map, I used a simple 2D perlin noise map that I generated from this website: http://kitfox.com/projects/perlinNoiseMaker/
 
 {{< figure src="noise_map.png" >}}
+
 ## Implementation
 
 ### Final Code
@@ -270,7 +271,7 @@ void ScreenSpaceRainDrop(uint3 id : SV_DispatchThreadID)
     float finalMask = edgeMask * angleMask * noiseMask;
     float4 result = lerp(_InputColorTex[id.xy], _DropColor, finalMask * _DropColor.a);
 
-    _OutputTex[id.xy] = dx;
+    _OutputTex[id.xy] = result;
 }
 ```
 
