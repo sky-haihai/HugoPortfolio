@@ -69,15 +69,16 @@ Mozilla Hubs only support one lighting model: PBR(Physical-Based-Rendering), usu
 
 PBR pipeline requires a set of textures to work properly.
 
-1. Albedo Texture
+1. Albedo Map(Color Map)
 2. Normal Map
 3. Roughness Map
 4. Metallic Map
 5. Ambient Occlusion Map
+6. Emission Map
+7. Transparency Map
+...
 
-GLTF is a file format for 3D scenes and models. It's a JSON-based format and is very compact. GLB is a binary version of GLTF. GLTF/GLB is the only file format that is supported by Hubs.
-
-### Has limited support for Transparency
+However, PBR is expensive and web-based PBR is not going to look great by itself, therefore the pipeline I'm going for is Lightmapping + Simplified PBR, meaning only the Albedo Map and the Normal Map are nesscessary, and the scene/objects will still look decent. 
 
 ## Official Suggestted Performance Budget
 
