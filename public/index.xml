@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2023 09:35:14 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Oct 2023 10:27:04 -0600</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Learning Mozilla Hubs: Scene</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>
+      <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
+      
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</guid>
+      <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
+    </item>
+    
     <item>
       <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
       <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
