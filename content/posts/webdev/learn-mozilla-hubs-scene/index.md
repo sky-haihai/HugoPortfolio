@@ -61,9 +61,23 @@ The second one is what I called Blender-As-Asset-Creation-Tool workflow:
 
 ## Rendering Pipeline
 
-### PBR Workflow
+### PBR Pipeline
 
--   PBR, but Mobile device only has limited PBR
+Mozilla Hubs only support one lighting model: PBR(Physical-Based-Rendering), usually involving a physically based BRDF(Bidirectional Reflectance Distribution Function) to achieve realistic lighting. The PBR workflow is very common in modern 3D rendering engines and is also the default workflow in Blender. 
+
+### Textures
+
+PBR pipeline requires a set of textures to work properly.
+
+1. Albedo Texture
+2. Normal Map
+3. Roughness Map
+4. Metallic Map
+5. Ambient Occlusion Map
+
+GLTF is a file format for 3D scenes and models. It's a JSON-based format and is very compact. GLB is a binary version of GLTF. GLTF/GLB is the only file format that is supported by Hubs.
+
+### Has limited support for Transparency
 
 ## Official Suggestted Performance Budget
 
@@ -109,6 +123,10 @@ Since the scene is limited to 50k triangles, it's important to insert some 2-tri
 ### Use Low Resolution Textures
 
 While texture resolution has a suggested value of no larger than 2K, it is still important to keep in mind that not every object in the scene need a 2K texture. Artists should decide the resolution of each texture based on the size and the significance of the object in the scene. For example, a 2K texture is not necessary for a small bat that is far away from the camera. In that case, a 256x256 texture is probably enough.
+
+### Reduce Transparent Materials
+
+Alpha blending is expensive. If transparency is required, it's suggested to use alpha test(cutoff) instead of alpha blend.
 
 ## Room Accessing
 
