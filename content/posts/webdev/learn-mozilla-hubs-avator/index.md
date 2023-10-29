@@ -15,9 +15,7 @@ In my last post I started learning Mozilla Hubs by creating a demo scene. In thi
 
 ## Demo
 
-Here's a demo avator I made during my study:
-
-https://0827133699.us1.myhubs.net/avatars/oJpqzhA
+Here's a demo avator I made during my study, you may use it as your own avator from this [Link](https://0827133699.us1.myhubs.net/avatars/oJpqzhA)
 
 #### Features
 
@@ -34,8 +32,6 @@ It doesn't have:
 2. Hand-up pose
 3. Eye tracking (for VR users)
 4. Hand tracking (for VR users)
-
-You can access my demo avator and use it as your own avator from this [Link](https://0827133699.us1.myhubs.net/avatars/oJpqzhA)
 
 ## Limitations
 

@@ -19,8 +19,7 @@
       
       <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
       <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
-Demo Here&amp;rsquo;s a demo avator I made during my study:
-https://0827133699.us1.myhubs.net/avatars/oJpqzhA
+Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
 Features It has following features:
 Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
     </item>
