@@ -11,7 +11,20 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Oct 2023 10:27:04 -0600</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes on Learning Mozilla Hubs: Avator</title>
+      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      
+      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
+      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
+Demo Here&amp;rsquo;s a demo avator I made during my study:
+https://0827133699.us1.myhubs.net/avatars/oJpqzhA
+Features It has following features:
+Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+    </item>
+    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
       <link>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>

@@ -2,8 +2,8 @@
 title: "Notes on Learning Mozilla Hubs: Scene"
 slug: "Notes on Learning Mozilla Hubs Scene"
 date: 2023-10-26T10:27:04-06:00
-tags: ["Metaverse", "Mozilla Hubs", "Blender", "GLB", "Opimazation"]
-categories: ["Web Development"]
+tags: ["Metaverse", "Mozilla Hubs", "Blender", "GLB", "Opimazation", "Scene"]
+categories: ["Web Development", "3D Art"]
 
 draft: false
 ---
@@ -14,6 +14,39 @@ Mozilla Hubs is a open-source browser-based metaverse web application that suppo
 
 1. It's open-source, meaning developers could add their own components into the engine. Though, I wish the official team could add scripting interface as a component like Unity does.
 2. The rooms(scenes) are browser-based, meaning it's cross-platform and easy to access, which attracts more users.
+
+## Demo Scene
+
+As always, a [Demo](https://0827133699.us1.myhubs.net/link/BwXmTSy) is worth a thousand words.
+
+This demo is tested on the following devices:
+
+<table>
+    <tr>
+        <td>Device</td>
+        <td>OS</td>
+        <td>Browser</td>
+        <td>Framerate</td>
+   </tr>
+    <tr>
+        <td>Desktop(3060Ti)</td>
+        <td>Windows 11</td>
+        <td>Chrome V.118 (64bits)</td>
+        <td>Stable 144FPS (Synced with monitor refresh rate)</td>
+    </tr>
+    <tr>
+        <td>Laptop (No Dedicated GPU)</td>
+        <td>Windows 11</td>
+        <td>Chrome (64bits)</td>
+        <td>50FPS - 60FPS(Disable Real-time Shadow)</td>
+    </tr>
+    <tr>
+        <td>Iphone 7 Plus</td>
+        <td>IOS</td>
+        <td>Safari</td>
+        <td>Stable 60FPS</td>
+    </tr>
+</table>
 
 ## Limitations
 
@@ -63,7 +96,7 @@ The second one is what I called Blender-As-Asset-Creation-Tool workflow:
 
 ### PBR Pipeline
 
-Mozilla Hubs only support one lighting model: PBR(Physical-Based-Rendering), usually involving a physically based BRDF(Bidirectional Reflectance Distribution Function) to achieve realistic lighting. The PBR workflow is very common in modern 3D rendering engines and is also the default workflow in Blender. 
+Mozilla Hubs only support one lighting model: PBR(Physical-Based-Rendering), usually involving a physically based BRDF(Bidirectional Reflectance Distribution Function) to achieve realistic lighting. The PBR workflow is very common in modern 3D rendering engines and is also the default workflow in Blender.
 
 ### Textures
 
@@ -76,9 +109,9 @@ PBR pipeline requires a set of textures to work properly.
 5. Ambient Occlusion Map
 6. Emission Map
 7. Transparency Map
-...
+   ...
 
-However, PBR is expensive and web-based PBR is not going to look great by itself, therefore the pipeline I'm going for is Lightmapping + Simplified PBR, meaning only the Albedo Map and the Normal Map are nesscessary, and the scene/objects will still look decent. 
+However, PBR is expensive and web-based PBR is not going to look great by itself, therefore the pipeline I'm going for is Lightmapping + Simplified PBR, meaning only the Albedo Map and the Normal Map are nesscessary, and the scene/objects will still look decent.
 
 ## Official Suggestted Performance Budget
 
@@ -139,7 +172,8 @@ Alpha blending is expensive. If transparency is required, it's suggested to use 
 -   Some user behaviours can be enabled/disabled by the room owner, (e.g. user can/cannot switch first/third person camera, user can/cannot fly, etc.)
 
 ## Copy Right
-Although Mozilla Hubs is open-sourced, the assets created by artists usually can only be used under conditions. It is nesscessary to follow the guideline of licenses of all assets used in the scene if the scene is public or used commercially. 
+
+Although Mozilla Hubs is open-sourced, the assets created by artists usually can only be used under conditions. It is nesscessary to follow the guideline of licenses of all assets used in the scene if the scene is public or used commercially.
 
 ## References
 
