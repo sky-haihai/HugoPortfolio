@@ -42,15 +42,13 @@ params:
   homeInfoParams:
     Title: "Readme.txt"
     Content: >
-      Welcome to my website!  
+      Welcome!  
 
-      - · I'm an IT student completing my study at YorkU and an indie game developer.  
+      - · I'm an IT professional and a game dev in spare time, speciallized in the role of technical artist.  
 
-      - · This is the place where I post blogs about what I have created in the past including game designs, game effects and web dev stuff to remind myself how I achieved them. 
+      - · This is where I share my IT and shader stuff experiences to hopefully help others and future myself.   
 
-      - (and potentially to get a job interview, thank you HRs!).  
-
-      - · Check out my **Github** and **itch.io** to see my programming and design skills in action!
+      - · Check out my **Github** and **itch.io** below!
   socialIcons:
     - name: github
       url: "https://github.com/sky-haihai"
