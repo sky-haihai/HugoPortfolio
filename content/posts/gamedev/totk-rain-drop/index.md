@@ -2,7 +2,7 @@
 title: "Recreating the Rain Drop Effect in The Legend of Zelda: TOTK"
 slug: "Recreating the Rain Drop Effect in The Legend of Zelda TOTK"
 date: 2023-05-23T23:50:10-04:00
-tags: ["Unity", "C#", "Compute Shader", "Render Feature", "Post Processing", "URP"]
+tags: ["Unity", "Shader", "Compute Shader", "Render Feature", "Post Processing", "URP"]
 categories: ["Game Development"]
 
 draft: false

@@ -3,7 +3,7 @@ title: "Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells"
 slug: "Harmony Script Adding Placeholder Drawings to Empty Timeline Cells"
 date: 2023-10-23T09:35:14-04:00
 tags: ["Toom-Boom Harmony", "Animation", "Script"]
-categories: ["Game Development"]
+categories: ["Animation"]
 
 draft: false
 ---

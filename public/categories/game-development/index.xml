@@ -10,17 +10,8 @@
       <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Oct 2023 09:35:14 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
-      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
-      <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
-    </item>
-    
+    <language>en</language>
+    <lastBuildDate>Tue, 23 May 2023 23:50:10 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
       <link>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
@@ -52,7 +43,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
       <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
 Who Should Use Scale Ideally at least two members:
 Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
-Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+Skills Unity Editor Node-based Editor C# (Custom Modules) Warning &amp;#x26a0;&amp;#xfe0f; Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
     </item>
     
   </channel>

@@ -21,6 +21,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 <link rel="mask-icon" href="https://sky-haihai.github.io/Yaotian-Huang/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/">
 <noscript>
     <style>
         #theme-toggle,
@@ -164,6 +165,8 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -193,7 +196,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
     <h1 class="post-title">
       Layer-based Screen-Door Transparency Effect using Unity URP 12
     </h1>
-    <div class="post-meta"><span title='2023-05-07 22:54:14 -0400 -0400'>May 7, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;sky_haihai
+    <div class="post-meta">&lt;span title=&#39;2023-05-07 22:54:14 -0400 -0400&#39;&gt;May 7, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;8 min&amp;nbsp;·&amp;nbsp;sky_haihai
 
 </div>
   </header> <div class="toc">
@@ -276,7 +279,7 @@ Another detailed explanation of the effect, showcasing how this effect reacts to
   <iframe src="https://www.youtube.com/embed/ebjjGDwZ6kw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 </p>
-<p>From here, if you are fimiliar with the concept of render feature and render pass, and just want to see the ordered dithering part, you can skip to the <a href="#execute-method">#execute-method</a> section. To see the final code, skip to here: <a href="#source-code">#source-code</a></p>
+<p>From here, if you are fimiliar with the concept of render feature and render pass, and just want to see the ordered dithering part, you can skip to the <a href="/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/#execute-method">#execute-method</a> section. To see the final code, skip to here: <a href="/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/#source-code">#source-code</a></p>
 <h2 id="environment">Environment<a hidden class="anchor" aria-hidden="true" href="#environment">#</a></h2>
 <ul>
 <li>Unity <code>2021.3.16f1</code></li>
@@ -519,7 +522,7 @@ Find your URP renderer asset and add the render feature we just created.</p>
 </figure>
 
 Drag the compute shader we create eariler in, and set the target layer to the ones you want to reveal from obstacles and as the name suggested , set all the environment layers as obstacle layer.</p>
-<p>For example, in the video <a href="#demo">demo</a>, the layer for the green boxes are set to be osbatcle layer, and the layer for the orange balls are set to be target layer.</p>
+<p>For example, in the video <a href="/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/#demo">demo</a>, the layer for the green boxes are set to be osbatcle layer, and the layer for the orange balls are set to be target layer.</p>
 <h2 id="future-improvements">Future Improvements<a hidden class="anchor" aria-hidden="true" href="#future-improvements">#</a></h2>
 <ol>
 <li>Add a dropdown menu to the render feature to allow the user to select different <strong>sizes</strong> of Bayer Matrixes.</li>

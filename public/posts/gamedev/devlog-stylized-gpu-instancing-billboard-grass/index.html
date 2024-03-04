@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/Yaotian-Huang/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Yaotian-Huang/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP | Yaotian Huang</title>
+<meta name="keywords" content="Unity, Shader, Render Feature, Post Processing, URP">
+<meta name="description" content="Environment Unity 2021.3.16f1
+URP 12.0
+Prerequisite Basic knowledge of C# and Shader programming (HLSL).
+Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call. In Unity, we can use Graphics.DrawMeshInstancedIndirect to create a GPU instancing draw call.
+// Graphics.cs public void DrawMeshInstancedIndirect( Mesh mesh, int submeshIndex, Material material, Bounds bounds, ComputeBuffer bufferWithArgs, int argsOffset = 0, MaterialPropertyBlock properties = null, ShadowCastingMode castShadows = ShadowCastingMode.">
+<meta name="author" content="sky_haihai">
+<link rel="canonical" href="http://localhost:1313/Yaotian-Huang/posts/gamedev/devlog-stylized-gpu-instancing-billboard-grass/">
+<link crossorigin="anonymous" href="/Yaotian-Huang/assets/css/stylesheet.62aa25427797f8efd87301a5b69795dc50df2dbe79a5fba0648cc7bb8dbcd7c9.css" integrity="sha256-YqolQneX&#43;O/YcwGltpeV3FDfLb55pfugZIzHu42818k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/Yaotian-Huang/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js" integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/Yaotian-Huang/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/Yaotian-Huang/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/Yaotian-Huang/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/Yaotian-Huang/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/Yaotian-Huang/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/Yaotian-Huang/posts/gamedev/devlog-stylized-gpu-instancing-billboard-grass/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/Yaotian-Huang/" accesskey="h" title="Yaotian Huang (Alt + H)">Yaotian Huang</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/Yaotian-Huang/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/Yaotian-Huang/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/Yaotian-Huang/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/Yaotian-Huang/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/Yaotian-Huang/posts/">Posts</a></div>
+    <h1 class="post-title">
+      Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP
+    </h1>
+    <div class="post-meta">&lt;span title=&#39;2024-03-04 11:59:37 -0700 MST&#39;&gt;March 4, 2024&lt;/span&gt;&amp;nbsp;·&amp;nbsp;5 min&amp;nbsp;·&amp;nbsp;sky_haihai
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#environment" aria-label="Environment">Environment</a></li>
+                <li>
+                    <a href="#prerequisite" aria-label="Prerequisite">Prerequisite</a></li>
+                <li>
+                    <a href="#graphicsdrawmeshinstancedindirect" aria-label="Graphics.DrawMeshInstancedIndirect">Graphics.DrawMeshInstancedIndirect</a></li>
+                <li>
+                    <a href="#material" aria-label="Material">Material</a></li>
+                <li>
+                    <a href="#gpu-instancing" aria-label="GPU Instancing">GPU Instancing</a></li>
+                <li>
+                    <a href="#demo" aria-label="Demo">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="environment">Environment<a hidden class="anchor" aria-hidden="true" href="#environment">#</a></h2>
+<p>Unity 2021.3.16f1<br>
+URP 12.0</p>
+<h2 id="prerequisite">Prerequisite<a hidden class="anchor" aria-hidden="true" href="#prerequisite">#</a></h2>
+<p>Basic knowledge of C# and Shader programming (HLSL).</p>
+<h2 id="graphicsdrawmeshinstancedindirect">Graphics.DrawMeshInstancedIndirect<a hidden class="anchor" aria-hidden="true" href="#graphicsdrawmeshinstancedindirect">#</a></h2>
+<p>The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call. In Unity, we can use <code>Graphics.DrawMeshInstancedIndirect</code> to create a GPU instancing draw call.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// Graphics.cs</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> DrawMeshInstancedIndirect(
+</span></span><span style="display:flex;"><span>Mesh mesh, <span style="color:#66d9ef">int</span> submeshIndex, Material material, 
+</span></span><span style="display:flex;"><span>Bounds bounds, ComputeBuffer bufferWithArgs, 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> argsOffset = <span style="color:#ae81ff">0</span>, MaterialPropertyBlock properties = <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>ShadowCastingMode castShadows = ShadowCastingMode.On, 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> receiveShadows = <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">int</span> layer = <span style="color:#ae81ff">0</span>, 
+</span></span><span style="display:flex;"><span>Camera camera = <span style="color:#66d9ef">null</span>, LightProbeUsage lightProbeUsage = LightProbeUsage.BlendProbes, 
+</span></span><span style="display:flex;"><span>LightProbeProxyVolume lightProbeProxyVolume = <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>Most of the parameters are self-explanatory. The <code>ComputeBuffer bufferWithArgs</code> is the most important one. It is a buffer that contains the arguments for the draw call. This has to be exacly a 5 elements long int array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span>[] args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[<span style="color:#ae81ff">5</span>] { <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span> };
+</span></span></code></pre></div><p>The five arguments that we are going to fill inside this int array are:</p>
+<ol>
+<li>the number of instances</li>
+<li>the number of instances to draw</li>
+<li>the start instance location</li>
+<li>the base vertex location</li>
+<li>the start index location</li>
+</ol>
+<p>With the knowledge above, we can create a simple script to draw a single mesh with GPU instancing.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BillboardGrassRenderer</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Mesh mesh;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> subMeshIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> instanceCount = <span style="color:#ae81ff">1000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Material m_Material;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> ComputeBuffer m_ArgsBuffer;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">uint</span>[] m_Args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">uint</span>[<span style="color:#ae81ff">5</span>] { <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Start()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        m_ArgsBuffer = <span style="color:#66d9ef">new</span> ComputeBuffer(<span style="color:#ae81ff">1</span>, m_Args.Length * <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">uint</span>), ComputeBufferType.IndirectArguments);
+</span></span><span style="display:flex;"><span>        m_Args[<span style="color:#ae81ff">0</span>] = (<span style="color:#66d9ef">uint</span>)mesh.GetIndexCount(subMeshIndex);
+</span></span><span style="display:flex;"><span>        m_Args[<span style="color:#ae81ff">1</span>] = (<span style="color:#66d9ef">uint</span>)instanceCount;
+</span></span><span style="display:flex;"><span>        m_Args[<span style="color:#ae81ff">2</span>] = (<span style="color:#66d9ef">uint</span>)mesh.GetIndexStart(subMeshIndex);
+</span></span><span style="display:flex;"><span>        m_Args[<span style="color:#ae81ff">3</span>] = (<span style="color:#66d9ef">uint</span>)mesh.GetBaseVertex(subMeshIndex);
+</span></span><span style="display:flex;"><span>        m_Args[<span style="color:#ae81ff">4</span>] = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        m_ArgsBuffer.SetData(m_Args);
+</span></span><span style="display:flex;"><span>        m_Material = <span style="color:#66d9ef">new</span> Material(Shader.Find(<span style="color:#e6db74">&#34;Universal Render Pipeline/Lit&#34;</span>));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Update()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Graphics.DrawMeshInstancedIndirect(mesh, <span style="color:#ae81ff">0</span>, m_Material, <span style="color:#66d9ef">new</span> Bounds(transform.position, Vector3.one), m_ArgsBuffer);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDisable()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (m_ArgsBuffer != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            m_ArgsBuffer.Release();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        _argsBuffer = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="material">Material<a hidden class="anchor" aria-hidden="true" href="#material">#</a></h2>
+<p>As you probably noticed in the script, the grass material is currently using URP/Lit as its shader. As we didn&rsquo;t compute the grass positions anywhere, the grass will be drawn at the origin. We can fix this in two ways:</p>
+<ol>
+<li>Compute position info in the shader</li>
+<li>Use a compute shader to calculate the positions, and a compute buffer to store the positions info and pass it to the shader.</li>
+</ol>
+<p>The difference between the two methods is that the first method is more efficient as there&rsquo;s no need to pass the information around between CPU and GPU , but the second method is more flexible. We will use the first method in this tutorial.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hlsl" data-lang="hlsl"><span style="display:flex;"><span>Shader <span style="color:#e6db74">&#34;Hidden/XiheRendering/BillboardGrassUnlit&#34;</span> {
+</span></span><span style="display:flex;"><span>    Properties {
+</span></span><span style="display:flex;"><span>        _MainTex (<span style="color:#e6db74">&#34;Albedo (RGB)&#34;</span>, <span style="color:#ae81ff">2</span>D) <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;white&#34;</span> {}
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    SubShader {
+</span></span><span style="display:flex;"><span>        Cull Off
+</span></span><span style="display:flex;"><span>        Zwrite On
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Pass {
+</span></span><span style="display:flex;"><span>            Name <span style="color:#e6db74">&#34;BillboardGrassForward&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            Tags {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;LightMode&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UniversalForward&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            HLSLPROGRAM
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>pragma vertex Vertex
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>pragma fragment Fragment
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>pragma target <span style="color:#ae81ff">4.5</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>pragma multi_compile_instancing
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#e6db74">&#34;Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl&#34;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">#</span>include <span style="color:#e6db74">&#34;Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            UNITY_INSTANCING_BUFFER_START(Props)
+</span></span><span style="display:flex;"><span>                UNITY_DEFINE_INSTANCED_PROP(<span style="color:#66d9ef">float4</span>, _Dimension) <span style="color:#75715e">//x: dimensionX, y: dimensionZ, z: densityX, w: densityZ</span>
+</span></span><span style="display:flex;"><span>            UNITY_INSTANCING_BUFFER_END(Props)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            TEXTURE2D(_MainTex);
+</span></span><span style="display:flex;"><span>            SAMPLER(sampler_MainTex);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">struct</span> Attributes
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float4</span> vertex <span style="color:#f92672">:</span> POSITION;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float4</span> uv <span style="color:#f92672">:</span> TEXCOORD0;
+</span></span><span style="display:flex;"><span>            };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">struct</span> Varyings
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float4</span> positionHCS <span style="color:#f92672">:</span> SV_POSITION;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float2</span> uv <span style="color:#f92672">:</span> TEXCOORD0;
+</span></span><span style="display:flex;"><span>            };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            Varyings Vertex(Attributes IN, <span style="color:#66d9ef">uint</span> instanceID <span style="color:#f92672">:</span> <span style="color:#a6e22e">SV_InstanceID</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float</span> dimensionZ <span style="color:#f92672">=</span> floor(_Dimension.y <span style="color:#f92672">*</span> _Dimension.w); <span style="color:#75715e">//actual number of instances allowed on z-axis</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float</span> offsetX <span style="color:#f92672">=</span> floor(instanceID <span style="color:#f92672">/</span> dimensionZ) <span style="color:#f92672">/</span> _Dimension.z;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float</span> offsetZ <span style="color:#f92672">=</span> instanceID <span style="color:#f92672">%</span> dimensionZ <span style="color:#f92672">/</span> _Dimension.w;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float3</span> localPosition <span style="color:#f92672">=</span> IN.vertex.xyz;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float2</span> instanceID2D01 <span style="color:#f92672">=</span> <span style="color:#66d9ef">float2</span>(offsetX <span style="color:#f92672">/</span> _Dimension.x, offsetZ <span style="color:#f92672">/</span> _Dimension.y);<span style="color:#75715e">//no use for now, use this to sample noise later </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float3</span> localPositionOffset <span style="color:#f92672">=</span> localPosition <span style="color:#f92672">-</span> <span style="color:#66d9ef">float3</span>(_Dimension.x, <span style="color:#ae81ff">0</span>, _Dimension.y) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.0</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">float3</span>(offsetX, <span style="color:#ae81ff">0</span>, offsetZ);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                Varyings o;
+</span></span><span style="display:flex;"><span>                o.positionHCS <span style="color:#f92672">=</span> TransformObjectToHClip(localPositionOffset);
+</span></span><span style="display:flex;"><span>                o.uv <span style="color:#f92672">=</span> IN.uv.xy;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> o;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">float4</span> Fragment(Varyings IN) <span style="color:#f92672">:</span> <span style="color:#a6e22e">SV_Target</span>
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">float4</span> albedo <span style="color:#f92672">=</span> SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, IN.uv);
+</span></span><span style="display:flex;"><span>                clip(albedo.a <span style="color:#f92672">-</span> <span style="color:#ae81ff">0.5</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> albedo;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            ENDHLSL
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>First thing is first, in order to let the shader support GPU instancing, we need to add <code>#pragma multi_compile_instancing</code> to the shader. This will tell the shader to generate multiple shader variants for each instance.</p>
+<p>All keywords and macros can be found here: <a href="https://docs.unity3d.com/Manual/gpu-instancing-shader.html">Creating shaders that support GPU instancing</a>.</p>
+<p>In this basic shader, we first declare the <code>_Dimension</code> property inside the <code>UNITY_INSTANCING_BUFFER_START</code> and <code>UNITY_INSTANCING_BUFFER_END</code> macros.</p>
+<p><code>UNITY_INSTANCING_BUFFER</code> is a per-instance type of CBUFFER which will receive values from MaterialPropertyBlock from C# side.</p>
+<p>We will use this property to calculate a 2D(XZ) position offset(similar to DispatchThreadID) of the grass instance. Let&rsquo;s first draw a grass instance every 1 meter on the x-axis and 1 meter on the z-axis. We can then calculate the offset distance for each instance on the x and z axis using the instance ID and the <code>_Dimension</code> property.</p>
+<ul>
+<li>_Dimension.x: dimension of the grass bounding volume on the x-axis</li>
+<li>_Dimension.y: dimension of the grass bounding volume on the z-axis</li>
+<li>_Dimension.z: density of the grass per meter on the x-axis</li>
+<li>_Dimension.w: density of the grass per meter on the z-axis</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hlsl" data-lang="hlsl"><span style="display:flex;"><span><span style="color:#75715e">//actual number of instances allowed on z-axis</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> dimensionZ <span style="color:#f92672">=</span> floor(_Dimension.y <span style="color:#f92672">*</span> _Dimension.w);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> offsetX <span style="color:#f92672">=</span> floor(instanceID <span style="color:#f92672">/</span> dimensionZ) <span style="color:#f92672">/</span> _Dimension.z;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> offsetZ <span style="color:#f92672">=</span> instanceID <span style="color:#f92672">%</span> dimensionZ <span style="color:#f92672">/</span> _Dimension.w;
+</span></span></code></pre></div><p>Now we got offset distance for each instance on the x and z axis, add the offset to the origin position and subtract half of the bounding volume to get a local position from the left, backward corner of the bounding volume:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hlsl" data-lang="hlsl"><span style="display:flex;"><span><span style="color:#66d9ef">float3</span> localPositionOffset <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>localPosition <span style="color:#f92672">-</span> <span style="color:#66d9ef">float3</span>(_Dimension.x, <span style="color:#ae81ff">0</span>, _Dimension.y) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.0</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">float3</span>(offsetX, <span style="color:#ae81ff">0</span>, offsetZ);
+</span></span></code></pre></div><p>We can also calculate the normalized Offset as a grass bounding box space UV for sampling scrolling noise textures later:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hlsl" data-lang="hlsl"><span style="display:flex;"><span><span style="color:#75715e">//normalized instance ID in 2D space</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float2</span> instanceID2D01 <span style="color:#f92672">=</span> <span style="color:#66d9ef">float2</span>(offsetX <span style="color:#f92672">/</span> _Dimension.x, offsetZ <span style="color:#f92672">/</span> _Dimension.y);
+</span></span></code></pre></div><h2 id="gpu-instancing">GPU Instancing<a hidden class="anchor" aria-hidden="true" href="#gpu-instancing">#</a></h2>
+<p>GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.</p>
+<p>In this tutorial, we will create a simple shader that</p>
+<h2 id="demo">Demo<a hidden class="anchor" aria-hidden="true" href="#demo">#</a></h2>
+<p>TBD</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/Yaotian-Huang/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/Yaotian-Huang/tags/shader/">Shader</a></li>
+      <li><a href="http://localhost:1313/Yaotian-Huang/tags/render-feature/">Render Feature</a></li>
+      <li><a href="http://localhost:1313/Yaotian-Huang/tags/post-processing/">Post Processing</a></li>
+      <li><a href="http://localhost:1313/Yaotian-Huang/tags/urp/">URP</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Notes on Learning Mozilla Hubs: Avator</span>
+  </a>
+</nav>
+
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on twitter"
+        href="https://twitter.com/intent/tweet/?text=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP&amp;url=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f&amp;hashtags=Unity%2cShader%2cRenderFeature%2cPostProcessing%2cURP">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f&amp;title=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP&amp;summary=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP&amp;source=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on reddit"
+        href="https://reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f&title=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on whatsapp"
+        href="https://api.whatsapp.com/send?text=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP%20-%20http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Create GPU Instancing Billboard Grass Without Creating Position Buffer in URP on telegram"
+        href="https://telegram.me/share/url?text=Create%20GPU%20Instancing%20Billboard%20Grass%20Without%20Creating%20Position%20Buffer%20in%20URP&amp;url=http%3a%2f%2flocalhost%3a1313%2fYaotian-Huang%2fposts%2fgamedev%2fdevlog-stylized-gpu-instancing-billboard-grass%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="http://localhost:1313/Yaotian-Huang/">Yaotian Huang</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
