@@ -54,6 +54,8 @@ params:
       url: "https://github.com/sky-haihai"
     - name: itchio
       url: "https://sky-haihai.itch.io/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/yaotian-huang/"
     
   fuseOpts:
         isCaseSensitive: false
