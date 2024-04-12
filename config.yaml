@@ -1,7 +1,7 @@
-baseURL: "https://sky-haihai.github.io/Yaotian-Huang/"
+baseURL: "https://www.yaotian-huang.com"
 languageCode: "en-us"
 title: "Yaotian Huang"
-theme: "hugo-PaperMod"
+theme: "charlolamode"
 
 enableInlineShortcodes: true
 buildDrafts: false
@@ -9,81 +9,84 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 
+menu:
+  main:
+    - name: About
+      url: about/
+    - name: Blog
+      url: blog/
+    # - name: Categories
+    #   url: categories/
+    #   weight: 10
+    - name: Render
+      url: render/
+    #  weight: 10
+    - name: Code
+      url: code/
+
 params:
-  author: sky_haihai
-  # author: ["Me", "You"] # multiple authors
+    author: sky-haihai
 
-  defaultTheme: auto
-  disableThemeToggle: false
-  ShowShareButtons: true
-  displayFullLangName: true
-  ShowPostNavLinks: true
-  ShowReadingTime: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowToc: true
-  # comments: false
-  images: ["papermod-cover.png"]
 
-  profileMode:
-    enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: icon
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
 
-  homeInfoParams:
-    Title: "Readme.txt"
-    Content: >
-      Welcome!  
+    profileMode:
+        # Disable to populate home page with 'mainSections' content
+        enabled: true
+        title: Yaotian Huang
+        description: |
+          Technical(70%) Artist(29%) ~~Life(1%)~~
+        imageUrl: "/images/profile.png"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: Don't click me
+              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    mainSections:
+      - posts
 
-      - · I'm an IT professional and a game developer in spare time, speciallized in the role of TA(Technical Artist).  
+    socialIcons:
+        - name: github
+          url: "https://github.com/sky-haihai"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/yaotian-huang/"
+        - name: twitter
+          url: "https://www.twitter.com/yaotianh"
+        - name: instagram
+          url: "https://www.instagram.com/sky_haihai/"
 
-      - · This is where I share my IT and TA experiences to hopefully help others and future myself.   
+      # add more social icons. find more in svg.html file
+      # - name: youtube
+      #   url: yoururl
+      # - name: twitter
+      #   url: yoururl
+      # - name: facebook
+      #   url: yoururl
 
-  socialIcons:
-    - name: github
-      url: "https://github.com/sky-haihai"
-    - name: itchio
-      url: "https://sky-haihai.itch.io/"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/yaotian-huang/"
-    
-  fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
 
-languages:
-  en:
-    languageName: "English"
-    weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - name: Archive
-          url: archives
-          weight: 5
-        - name: Search
-          url: search/
-          weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
+    # change favicon in images folder (icon for web tab)
+    assets:
+          favicon: "/images/favicon.ico"
+          favicon16x16: "/images/favicon-16x16.png"
+          favicon32x32: "/images/favicon-32x32.png"
+          apple_touch_icon: "/images/apple-touch-icon.png"
+          safari_pinned_tab: "/images/apple-touch-icon.png"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+    disableXML: true
 
 taxonomies:
   category: categories

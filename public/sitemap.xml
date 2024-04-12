@@ -2,169 +2,183 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/</loc>
+    <loc>https://www.yaotian-huang.com/categories/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</loc>
+    <loc>https://www.yaotian-huang.com/posts/gamedev/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/eotr-devlog/</loc>
+    <loc>https://www.yaotian-huang.com/categories/eotr-devlog/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/gpu-instancing/</loc>
+    <loc>https://www.yaotian-huang.com/tags/gpu-instancing/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/grass/</loc>
+    <loc>https://www.yaotian-huang.com/tags/grass/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/</loc>
+    <loc>https://www.yaotian-huang.com/posts/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/shader/</loc>
+    <loc>https://www.yaotian-huang.com/tags/shader/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/</loc>
+    <loc>https://www.yaotian-huang.com/tags/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/unity/</loc>
+    <loc>https://www.yaotian-huang.com/tags/unity/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/urp/</loc>
+    <loc>https://www.yaotian-huang.com/tags/urp/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/</loc>
+    <loc>https://www.yaotian-huang.com/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/3d-art/</loc>
+    <loc>https://www.yaotian-huang.com/categories/3d-art/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/blender/</loc>
+    <loc>https://www.yaotian-huang.com/tags/blender/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/character/</loc>
+    <loc>https://www.yaotian-huang.com/tags/character/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/glb/</loc>
+    <loc>https://www.yaotian-huang.com/tags/glb/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/metaverse/</loc>
+    <loc>https://www.yaotian-huang.com/tags/metaverse/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/mozilla-hubs/</loc>
+    <loc>https://www.yaotian-huang.com/tags/mozilla-hubs/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</loc>
+    <loc>https://www.yaotian-huang.com/about/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/opimazation/</loc>
+    <loc>https://www.yaotian-huang.com/blog/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/web-development/</loc>
+    <loc>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-avator/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</loc>
+    <loc>https://www.yaotian-huang.com/tags/opimazation/</loc>
+    <lastmod>2023-10-28T13:40:42-06:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/categories/web-development/</loc>
+    <lastmod>2023-10-28T13:40:42-06:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-scene/</loc>
     <lastmod>2023-10-26T10:27:04-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/scene/</loc>
+    <loc>https://www.yaotian-huang.com/tags/scene/</loc>
     <lastmod>2023-10-26T10:27:04-06:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/animation/</loc>
+    <loc>https://www.yaotian-huang.com/tags/animation/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/animation/</loc>
+    <loc>https://www.yaotian-huang.com/categories/animation/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</loc>
+    <loc>https://www.yaotian-huang.com/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/script/</loc>
+    <loc>https://www.yaotian-huang.com/tags/script/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/toom-boom-harmony/</loc>
+    <loc>https://www.yaotian-huang.com/tags/toom-boom-harmony/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/compute-shader/</loc>
+    <loc>https://www.yaotian-huang.com/tags/compute-shader/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/categories/game-development/</loc>
+    <loc>https://www.yaotian-huang.com/categories/game-development/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/post-processing/</loc>
+    <loc>https://www.yaotian-huang.com/tags/post-processing/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</loc>
+    <loc>https://www.yaotian-huang.com/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/render-feature/</loc>
+    <loc>https://www.yaotian-huang.com/tags/render-feature/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</loc>
+    <loc>https://www.yaotian-huang.com/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</loc>
     <lastmod>2023-05-07T22:54:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/screen-door-transparency/</loc>
+    <loc>https://www.yaotian-huang.com/tags/screen-door-transparency/</loc>
     <lastmod>2023-05-07T22:54:14-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/angular/</loc>
+    <loc>https://www.yaotian-huang.com/tags/angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/creating-a-diet-dashboard-based-on-angular/</loc>
+    <loc>https://www.yaotian-huang.com/posts/uni/creating-a-diet-dashboard-based-on-angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/css/</loc>
+    <loc>https://www.yaotian-huang.com/tags/css/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/html/</loc>
+    <loc>https://www.yaotian-huang.com/tags/html/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/javascript/</loc>
+    <loc>https://www.yaotian-huang.com/tags/javascript/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/typescript/</loc>
+    <loc>https://www.yaotian-huang.com/tags/typescript/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/</loc>
+    <loc>https://www.yaotian-huang.com/tags/unfinished/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/java/</loc>
+    <loc>https://www.yaotian-huang.com/tags/java/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/</loc>
+    <loc>https://www.yaotian-huang.com/tags/jsp/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/secured-web-information-system-prototype/</loc>
+    <loc>https://www.yaotian-huang.com/posts/uni/secured-web-information-system-prototype/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/servlet/</loc>
+    <loc>https://www.yaotian-huang.com/tags/servlet/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/tomcat/</loc>
+    <loc>https://www.yaotian-huang.com/tags/tomcat/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/information-retrieval/</loc>
+    <loc>https://www.yaotian-huang.com/tags/information-retrieval/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
+    <loc>https://www.yaotian-huang.com/posts/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/inverted-index/</loc>
+    <loc>https://www.yaotian-huang.com/tags/inverted-index/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/python/</loc>
+    <loc>https://www.yaotian-huang.com/tags/python/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/search-engine/</loc>
+    <loc>https://www.yaotian-huang.com/tags/search-engine/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/tags/c</loc>
+    <loc>https://www.yaotian-huang.com/tags/c</loc>
     <lastmod>2023-05-05T14:24:13-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/posts/gamedev/introducing-xiheframework/</loc>
+    <loc>https://www.yaotian-huang.com/posts/gamedev/introducing-xiheframework/</loc>
     <lastmod>2023-05-05T14:24:13-04:00</lastmod>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/archives/</loc>
+    <loc>https://www.yaotian-huang.com/archives/</loc>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/search/</loc>
+    <loc>https://www.yaotian-huang.com/articles/</loc>
   </url><url>
-    <loc>https://sky-haihai.github.io/Yaotian-Huang/series/</loc>
+    <loc>https://www.yaotian-huang.com/contact/</loc>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/projects/math-brain-trainer/</loc>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/projects/</loc>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/search/</loc>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/articles/article/</loc>
   </url>
 </urlset>

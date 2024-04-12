@@ -1,322 +1,250 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Yaotian Huang</title>
-    <link>https://sky-haihai.github.io/Yaotian-Huang/tags/</link>
+    <link>https://www.yaotian-huang.com/tags/</link>
     <description>Recent content in Tags on Yaotian Huang</description>
-    <image>
-      <title>Yaotian Huang</title>
-      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GPU Instancing</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/gpu-instancing/</link>
+      <link>https://www.yaotian-huang.com/tags/gpu-instancing/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/gpu-instancing/</guid>
+      <guid>https://www.yaotian-huang.com/tags/gpu-instancing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Grass</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/grass/</link>
+      <link>https://www.yaotian-huang.com/tags/grass/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/grass/</guid>
+      <guid>https://www.yaotian-huang.com/tags/grass/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Shader</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/shader/</link>
+      <link>https://www.yaotian-huang.com/tags/shader/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/shader/</guid>
+      <guid>https://www.yaotian-huang.com/tags/shader/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Unity</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/unity/</link>
+      <link>https://www.yaotian-huang.com/tags/unity/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/unity/</guid>
+      <guid>https://www.yaotian-huang.com/tags/unity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>URP</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/urp/</link>
+      <link>https://www.yaotian-huang.com/tags/urp/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/urp/</guid>
+      <guid>https://www.yaotian-huang.com/tags/urp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Blender</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/blender/</link>
+      <link>https://www.yaotian-huang.com/tags/blender/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/blender/</guid>
+      <guid>https://www.yaotian-huang.com/tags/blender/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Character</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/character/</link>
+      <link>https://www.yaotian-huang.com/tags/character/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/character/</guid>
+      <guid>https://www.yaotian-huang.com/tags/character/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GLB</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/glb/</link>
+      <link>https://www.yaotian-huang.com/tags/glb/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/glb/</guid>
+      <guid>https://www.yaotian-huang.com/tags/glb/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Metaverse</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/metaverse/</link>
+      <link>https://www.yaotian-huang.com/tags/metaverse/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/metaverse/</guid>
+      <guid>https://www.yaotian-huang.com/tags/metaverse/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mozilla Hubs</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/mozilla-hubs/</link>
+      <link>https://www.yaotian-huang.com/tags/mozilla-hubs/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/mozilla-hubs/</guid>
+      <guid>https://www.yaotian-huang.com/tags/mozilla-hubs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Opimazation</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/opimazation/</link>
+      <link>https://www.yaotian-huang.com/tags/opimazation/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/opimazation/</guid>
+      <guid>https://www.yaotian-huang.com/tags/opimazation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Scene</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/scene/</link>
+      <link>https://www.yaotian-huang.com/tags/scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/scene/</guid>
+      <guid>https://www.yaotian-huang.com/tags/scene/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Animation</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/animation/</link>
+      <link>https://www.yaotian-huang.com/tags/animation/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/animation/</guid>
+      <guid>https://www.yaotian-huang.com/tags/animation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Script</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/script/</link>
+      <link>https://www.yaotian-huang.com/tags/script/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/script/</guid>
+      <guid>https://www.yaotian-huang.com/tags/script/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Toom-Boom Harmony</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/toom-boom-harmony/</link>
+      <link>https://www.yaotian-huang.com/tags/toom-boom-harmony/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/toom-boom-harmony/</guid>
+      <guid>https://www.yaotian-huang.com/tags/toom-boom-harmony/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Compute Shader</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/compute-shader/</link>
+      <link>https://www.yaotian-huang.com/tags/compute-shader/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/compute-shader/</guid>
+      <guid>https://www.yaotian-huang.com/tags/compute-shader/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Post Processing</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/post-processing/</link>
+      <link>https://www.yaotian-huang.com/tags/post-processing/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/post-processing/</guid>
+      <guid>https://www.yaotian-huang.com/tags/post-processing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Render Feature</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/render-feature/</link>
+      <link>https://www.yaotian-huang.com/tags/render-feature/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/render-feature/</guid>
+      <guid>https://www.yaotian-huang.com/tags/render-feature/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Screen-Door Transparency</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/screen-door-transparency/</link>
+      <link>https://www.yaotian-huang.com/tags/screen-door-transparency/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/screen-door-transparency/</guid>
+      <guid>https://www.yaotian-huang.com/tags/screen-door-transparency/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Angular</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/angular/</link>
+      <link>https://www.yaotian-huang.com/tags/angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/angular/</guid>
+      <guid>https://www.yaotian-huang.com/tags/angular/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CSS</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/css/</link>
+      <link>https://www.yaotian-huang.com/tags/css/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/css/</guid>
+      <guid>https://www.yaotian-huang.com/tags/css/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>HTML</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/html/</link>
+      <link>https://www.yaotian-huang.com/tags/html/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/html/</guid>
+      <guid>https://www.yaotian-huang.com/tags/html/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JavaScript</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/javascript/</link>
+      <link>https://www.yaotian-huang.com/tags/javascript/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/javascript/</guid>
+      <guid>https://www.yaotian-huang.com/tags/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TypeScript</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/typescript/</link>
+      <link>https://www.yaotian-huang.com/tags/typescript/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/typescript/</guid>
+      <guid>https://www.yaotian-huang.com/tags/typescript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Unfinished</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/</link>
+      <link>https://www.yaotian-huang.com/tags/unfinished/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/</guid>
+      <guid>https://www.yaotian-huang.com/tags/unfinished/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Java</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/java/</link>
+      <link>https://www.yaotian-huang.com/tags/java/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/java/</guid>
+      <guid>https://www.yaotian-huang.com/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JSP</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/</link>
+      <link>https://www.yaotian-huang.com/tags/jsp/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/jsp/</guid>
+      <guid>https://www.yaotian-huang.com/tags/jsp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Servlet</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/servlet/</link>
+      <link>https://www.yaotian-huang.com/tags/servlet/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/servlet/</guid>
+      <guid>https://www.yaotian-huang.com/tags/servlet/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tomcat</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/tomcat/</link>
+      <link>https://www.yaotian-huang.com/tags/tomcat/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/tomcat/</guid>
+      <guid>https://www.yaotian-huang.com/tags/tomcat/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Information Retrieval</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/information-retrieval/</link>
+      <link>https://www.yaotian-huang.com/tags/information-retrieval/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/information-retrieval/</guid>
+      <guid>https://www.yaotian-huang.com/tags/information-retrieval/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Inverted Index</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/inverted-index/</link>
+      <link>https://www.yaotian-huang.com/tags/inverted-index/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/inverted-index/</guid>
+      <guid>https://www.yaotian-huang.com/tags/inverted-index/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Python</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/python/</link>
+      <link>https://www.yaotian-huang.com/tags/python/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/python/</guid>
+      <guid>https://www.yaotian-huang.com/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Search Engine</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/search-engine/</link>
+      <link>https://www.yaotian-huang.com/tags/search-engine/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/search-engine/</guid>
+      <guid>https://www.yaotian-huang.com/tags/search-engine/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>C#</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/tags/c</link>
+      <link>https://www.yaotian-huang.com/tags/c</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/tags/c</guid>
+      <guid>https://www.yaotian-huang.com/tags/c</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

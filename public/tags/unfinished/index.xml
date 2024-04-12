@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unfinished on Yaotian Huang</title>
-    <link>https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/</link>
+    <link>https://www.yaotian-huang.com/tags/unfinished/</link>
     <description>Recent content in Unfinished on Yaotian Huang</description>
-    <image>
-      <title>Yaotian Huang</title>
-      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/tags/unfinished/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/tags/unfinished/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>https://www.yaotian-huang.com/posts/uni/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/uni/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>https://www.yaotian-huang.com/posts/uni/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>Source code: Github Repo&#xA;View Live Demo: Diet Dashboard</description>
     </item>
-    
   </channel>
 </rss>

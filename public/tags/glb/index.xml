@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GLB on Yaotian Huang</title>
-    <link>https://sky-haihai.github.io/Yaotian-Huang/tags/glb/</link>
+    <link>https://www.yaotian-huang.com/tags/glb/</link>
     <description>Recent content in GLB on Yaotian Huang</description>
-    <image>
-      <title>Yaotian Huang</title>
-      <url>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</url>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/papermod-cover.png</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate><atom:link href="https://sky-haihai.github.io/Yaotian-Huang/tags/glb/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/tags/glb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</link>
+      <link>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
-      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
-Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
-Features It has following features:
-Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+      <guid>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
+      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&#xA;Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link&#xA;Features It has following features:&#xA;Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
     </item>
-    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
-      <link>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>
+      <link>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      
-      <guid>https://sky-haihai.github.io/Yaotian-Huang/posts/webdev/notes-on-learning-mozilla-hubs-scene/</guid>
+      <guid>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-scene/</guid>
       <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
     </item>
-    
   </channel>
 </rss>
