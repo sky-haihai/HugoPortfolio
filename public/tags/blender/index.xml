@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blender on Yaotian Huang</title>
-    <link>https://www.yaotian-huang.com/tags/blender/</link>
+    <link>http://localhost:1313/tags/blender/</link>
     <description>Recent content in Blender on Yaotian Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate>
-    <atom:link href="https://www.yaotian-huang.com/tags/blender/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/blender/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
-      <link>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-avator/</link>
+      <link>http://localhost:1313/posts/webdev/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      <guid>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
+      <guid>http://localhost:1313/posts/webdev/notes-on-learning-mozilla-hubs-avator/</guid>
       <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&#xA;Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link&#xA;Features It has following features:&#xA;Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
     </item>
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
-      <link>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>
+      <link>http://localhost:1313/posts/webdev/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      <guid>https://www.yaotian-huang.com/posts/webdev/notes-on-learning-mozilla-hubs-scene/</guid>
+      <guid>http://localhost:1313/posts/webdev/notes-on-learning-mozilla-hubs-scene/</guid>
       <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
     </item>
   </channel>

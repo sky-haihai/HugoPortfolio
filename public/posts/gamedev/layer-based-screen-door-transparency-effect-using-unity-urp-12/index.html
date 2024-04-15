@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Layer-based Screen-Door Transparency Effect using Unity URP 12 | Yaotian Huang</title>
 <meta name="keywords" content="Screen-Door Transparency, Unity, URP, Shader, Render Feature" />
 <meta name="description" content="Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
 How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.">
 <meta name="author" content="sky-haihai">
-<link rel="canonical" href="https://www.yaotian-huang.com/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="canonical" href="http://localhost:1313/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -76,7 +76,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/" accesskey="h" title="Yaotian Huang (Alt + H)">Yaotian Huang</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Yaotian Huang (Alt + H)">Yaotian Huang</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -107,22 +107,22 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/about/" title="About">
+                <a href="http://localhost:1313/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/blog/" title="Blog">
+                <a href="http://localhost:1313/blog/" title="Blog">
                     <span>Blog</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/code/" title="Code">
+                <a href="http://localhost:1313/code/" title="Code">
                     <span>Code</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/render/" title="Render">
+                <a href="http://localhost:1313/render/" title="Render">
                     <span>Render</span>
                 </a>
             </li>
@@ -133,7 +133,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title">
       Layer-based Screen-Door Transparency Effect using Unity URP 12
     </h1>
@@ -478,11 +478,11 @@ Drag the compute shader we create eariler in, and set the target layer to the on
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/tags/screen-door-transparency/">Screen-Door Transparency</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/unity/">Unity</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/urp/">URP</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/shader/">Shader</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/render-feature/">Render Feature</a></li>
+      <li><a href="http://localhost:1313/tags/screen-door-transparency/">Screen-Door Transparency</a></li>
+      <li><a href="http://localhost:1313/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/tags/urp/">URP</a></li>
+      <li><a href="http://localhost:1313/tags/shader/">Shader</a></li>
+      <li><a href="http://localhost:1313/tags/render-feature/">Render Feature</a></li>
     </ul>
 
 <div class="share-buttons">

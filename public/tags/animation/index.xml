@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animation on Yaotian Huang</title>
-    <link>https://www.yaotian-huang.com/tags/animation/</link>
+    <link>http://localhost:1313/tags/animation/</link>
     <description>Recent content in Animation on Yaotian Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Oct 2023 09:35:14 -0400</lastBuildDate>
-    <atom:link href="https://www.yaotian-huang.com/tags/animation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/animation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
-      <link>https://www.yaotian-huang.com/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
+      <link>http://localhost:1313/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
+      <guid>http://localhost:1313/posts/gamedev/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
       <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
     </item>
   </channel>
