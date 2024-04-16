@@ -11,18 +11,19 @@ enableEmoji: true
 
 menu:
   main:
-    - name: About
-      url: about/
-    - name: Blog
-      url: blog/
-    # - name: Categories
-    #   url: categories/
-    #   weight: 10
-    - name: Render
-      url: render/
+    - name: Published Games
+      url: published/
+      weight: 1
+    - name: DevLog
+      url: devlog/
+      weight: 2
+    - name: Tutorial
+      url: tutorial/
+      weight: 3
+    - name: University Projects
+      url: uni/
+      weight: 4
     #  weight: 10
-    - name: Code
-      url: code/
 
 params:
     author: sky-haihai
@@ -48,8 +49,10 @@ params:
         # imageWidth: 120
         # imageHeight: 120
         buttons:
-            - name: Don't click me
-              url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+            - name: Play My Games
+              url: https://sky-haihai.itch.io/
+            - name: See How I Made Them
+              url: /devlog/
     mainSections:
       - posts
 

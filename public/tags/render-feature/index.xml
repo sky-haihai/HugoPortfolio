@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Render Feature on Yaotian Huang</title>
-    <link>http://localhost:1313/tags/render-feature/</link>
+    <link>https://www.yaotian-huang.com/tags/render-feature/</link>
     <description>Recent content in Render Feature on Yaotian Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 23 May 2023 23:50:10 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/render-feature/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.yaotian-huang.com/tags/render-feature/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
-      <link>http://localhost:1313/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <link>https://www.yaotian-huang.com/devlog/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      <guid>http://localhost:1313/posts/gamedev/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <guid>https://www.yaotian-huang.com/devlog/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
       <description>Environment Unity 2021.3.16f1&#xA;Universal Render Pipeline 12.0.0&#xA;Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&#xA;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
     </item>
     <item>
       <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
-      <link>http://localhost:1313/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <link>https://www.yaotian-huang.com/devlog/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
-      <guid>http://localhost:1313/posts/gamedev/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <guid>https://www.yaotian-huang.com/devlog/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
       <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&#xA;How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
     </item>
   </channel>

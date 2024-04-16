@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angular on Yaotian Huang</title>
-    <link>http://localhost:1313/tags/angular/</link>
+    <link>https://www.yaotian-huang.com/tags/angular/</link>
     <description>Recent content in Angular on Yaotian Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.yaotian-huang.com/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>http://localhost:1313/posts/uni/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>https://www.yaotian-huang.com/uni/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      <guid>http://localhost:1313/posts/uni/creating-a-diet-dashboard-based-on-angular/</guid>
+      <guid>https://www.yaotian-huang.com/uni/creating-a-diet-dashboard-based-on-angular/</guid>
       <description>Source code: Github Repo&#xA;View Live Demo: Diet Dashboard</description>
     </item>
   </channel>
