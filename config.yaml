@@ -50,7 +50,7 @@ params:
         # imageHeight: 120
         buttons:
             - name: Play My Games
-              url: https://sky-haihai.itch.io/
+              url: /published/
             - name: See How I Made Them
               url: /devlog/
     mainSections:
