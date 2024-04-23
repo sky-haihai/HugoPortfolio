@@ -8,7 +8,7 @@ title: Published Games
 
 <iframe frameborder="0" src="https://itch.io/embed/2489961" width="552" height="167"><a href="https://secondrealmstudio.itch.io/eotr">Echoes of the Roots by Second Realm Studio, Charlotte Crosland</a></iframe>
 
-### Windo
+### Slimo
 #### Designer, Programmer
 Slime, Puzzle, Adventure. "Slink, Slink, Find Slimo"
 
