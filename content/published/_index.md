@@ -25,3 +25,9 @@ Strategy, Action, SLG. "Vaccum shaped dust blower"
 Spherical, Planet Building, Strategy, SLG. "Hexagon is the bestagon"
 
 <iframe frameborder="0" src="https://itch.io/embed/1193783" width="552" height="167"><a href="https://yifengs.itch.io/animalplanet">AnimalPlanet by yifengs, sky-haihai</a></iframe>
+
+### BumpItUp
+#### Designer, Programmer
+Casual,Rhythm. "Literally bump it up"
+
+<iframe frameborder="0" src="https://itch.io/embed/1031976" width="552" height="167"><a href="https://sky-haihai.itch.io/bumpitup">BumpItUp by sky-haihai, yifengs</a></iframe>
