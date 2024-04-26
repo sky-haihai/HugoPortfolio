@@ -1,6 +1,6 @@
 baseURL: "https://www.yaotian-huang.com"
 languageCode: "en-us"
-title: "Yaotian Huang"
+title: "Tim (Yaotian) Huang"
 theme: "charlolamode"
 
 enableInlineShortcodes: true
@@ -11,8 +11,8 @@ enableEmoji: true
 
 menu:
   main:
-    - name: Published Games
-      url: published/
+    - name: Projects
+      url: games/
       weight: 1
     - name: DevLog
       url: devlog/
@@ -20,9 +20,9 @@ menu:
     - name: Tutorial
       url: tutorial/
       weight: 3
-    - name: University Projects
-      url: uni/
-      weight: 4
+    # - name: University
+    #   url: uni/
+    #   weight: 4
     #  weight: 10
 
 params:
@@ -41,17 +41,17 @@ params:
     profileMode:
         # Disable to populate home page with 'mainSections' content
         enabled: true
-        title: Yaotian Huang
+        title: Tim (Yaotian) Huang
         description: |
-          Technical(70%) Artist(29%) ~~Life(1%)~~
+          Technical(70%) Artist(29%)
         imageUrl: "/images/profile.png"
         imageTitle: my image
         # imageWidth: 120
         # imageHeight: 120
         buttons:
-            - name: Play My Games
-              url: /published/
-            - name: See How I Made Them
+            - name: My Projects
+              url: /games/
+            - name: DevLog
               url: /devlog/
     mainSections:
       - posts
