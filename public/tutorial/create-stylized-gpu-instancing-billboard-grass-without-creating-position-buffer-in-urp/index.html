@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP | Tim (Yaotian) Huang</title>
 <meta name="keywords" content="Unity, Shader, GPU Instancing, Grass, URP" />
 <meta name="description" content="Environment Unity 2021.3.16f1
@@ -13,18 +13,18 @@ Prerequisite Basic knowledge of C# and Shader programming (HLSL).
 GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.
 Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.">
 <meta name="author" content="sky-haihai">
-<link rel="canonical" href="https://www.yaotian-huang.com/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/" />
+<link rel="canonical" href="http://localhost:1313/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -79,7 +79,7 @@ Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -110,17 +110,17 @@ Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/games/" title="Projects">
+                <a href="http://localhost:1313/games/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/devlog/" title="DevLog">
+                <a href="http://localhost:1313/devlog/" title="DevLog">
                     <span>DevLog</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/tutorial/" title="Tutorial">
+                <a href="http://localhost:1313/tutorial/" title="Tutorial">
                     <span>Tutorial</span>
                 </a>
             </li>
@@ -131,7 +131,7 @@ Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/tutorial/">Tutorials</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/tutorial/">Tutorials</a></div>
     <h1 class="post-title">
       Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP
     </h1>
@@ -705,11 +705,11 @@ URP 12.0</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/tags/unity/">Unity</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/shader/">Shader</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/gpu-instancing/">GPU Instancing</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/grass/">Grass</a></li>
-      <li><a href="https://www.yaotian-huang.com/tags/urp/">URP</a></li>
+      <li><a href="http://localhost:1313/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/tags/shader/">Shader</a></li>
+      <li><a href="http://localhost:1313/tags/gpu-instancing/">GPU Instancing</a></li>
+      <li><a href="http://localhost:1313/tags/grass/">Grass</a></li>
+      <li><a href="http://localhost:1313/tags/urp/">URP</a></li>
     </ul>
 
 <div class="share-buttons">
@@ -728,7 +728,7 @@ URP 12.0</p>
     </main>
     
 <footer class="footer">
-    <span> <s>Life 1%</s>
+    <span> built with ♥ from charlola
       
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

@@ -10,9 +10,9 @@
     <atom:link href="https://www.yaotian-huang.com/tags/toom-boom-harmony/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
-      <link>https://www.yaotian-huang.com/tutorial/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
+      <link>https://www.yaotian-huang.com/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/tutorial/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
+      <guid>https://www.yaotian-huang.com/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
       <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
     </item>
   </channel>

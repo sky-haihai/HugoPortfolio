@@ -12,14 +12,17 @@ enableEmoji: true
 menu:
   main:
     - name: Projects
-      url: games/
+      url: project/
       weight: 1
-    - name: DevLog
-      url: devlog/
+    - name: TA
+      url: ta/
       weight: 2
-    - name: Tutorial
-      url: tutorial/
+    - name: Code
+      url: code/
       weight: 3
+    - name: Art
+      url: art/
+      weight: 4
     # - name: University
     #   url: uni/
     #   weight: 4
@@ -49,10 +52,14 @@ params:
         # imageWidth: 120
         # imageHeight: 120
         buttons:
-            - name: My Projects
-              url: /games/
-            - name: DevLog
-              url: /devlog/
+            - name: Projects
+              url: /project/
+            - name: TA
+              url: /ta/
+            - name: Code
+              url: /code/
+            - name: Art
+              url: /art/
     mainSections:
       - posts
 

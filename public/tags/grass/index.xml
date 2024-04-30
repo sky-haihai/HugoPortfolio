@@ -10,9 +10,9 @@
     <atom:link href="https://www.yaotian-huang.com/tags/grass/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
-      <link>https://www.yaotian-huang.com/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
+      <link>https://www.yaotian-huang.com/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      <guid>https://www.yaotian-huang.com/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
+      <guid>https://www.yaotian-huang.com/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
       <description>Environment Unity 2021.3.16f1&#xA;URP 12.0&#xA;Prerequisite Basic knowledge of C# and Shader programming (HLSL).&#xA;GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&#xA;Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
     </item>
   </channel>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells | Tim (Yaotian) Huang</title>
+<meta name="keywords" content="Toom-Boom Harmony, Animation, Script" />
+<meta name="description" content="Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &ldquo;00&rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.">
+<meta name="author" content="sky-haihai">
+<link rel="canonical" href="http://localhost:1313/art/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/art/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ta/" title="TA">
+                    <span>TA</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/code/" title="Code">
+                    <span>Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/art/" title="Art">
+                    <span>Art</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/art/">Arts</a></div>
+    <h1 class="post-title">
+      Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells
+    </h1>
+    <div class="post-meta">&lt;span title=&#39;2023-10-23 09:35:14 -0400 -0400&#39;&gt;October 23, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;5 min&amp;nbsp;·&amp;nbsp;sky-haihai</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#installation" aria-label="Installation">Installation</a></li>
+                <li>
+                    <a href="#why-the-rest-of-this-post-exists" aria-label="Why The Rest of This Post Exists">Why The Rest of This Post Exists</a></li>
+                <li>
+                    <a href="#the-pain" aria-label="The Pain">The Pain</a></li>
+                <li>
+                    <a href="#start-from-scene" aria-label="Start from Scene">Start from Scene</a></li>
+                <li>
+                    <a href="#node-column-layer" aria-label="Node, Column, Layer">Node, Column, Layer</a></li>
+                <li>
+                    <a href="#cell-frame-exposure" aria-label="Cell, Frame, Exposure">Cell, Frame, Exposure</a></li>
+                <li>
+                    <a href="#element" aria-label="Element">Element</a></li>
+                <li>
+                    <a href="#drawing-a-tricky-one" aria-label="Drawing (A Tricky One)">Drawing (A Tricky One)</a></li>
+                <li>
+                    <a href="#the-happiness" aria-label="The Happiness">The Happiness</a></li>
+                <li>
+                    <a href="#final-code" aria-label="Final Code">Final Code</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content">
+  <h2 id="introduction">Introduction</h2>
+<p>In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &ldquo;00&rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</p>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Download .zip file from the Github <a href="https://github.com/sky-haihai/SKY_Fill_Empty_Frames/releases">Release</a> page</li>
+<li>Unzip everything directly into script folder(don&rsquo;t worry about script-icons folder, it will merge with other icons just fine)</li>
+<li>In case you don&rsquo;t know the address, here you go: <a href="https://docs.toonboom.com/help/harmony-20/premium/scripting/import-script.html">https://docs.toonboom.com/help/harmony-20/premium/scripting/import-script.html</a></li>
+<li>Open Harmony, right-click on any toolbar, Click &ldquo;Customize&rdquo; at the bottom and search for SKY_Fill_Empty_Frames</li>
+<li>Select the search result and move it from left to right</li>
+<li>And you are good to go, simply select the nodes you want to fill and click the button you just added to the toolbar</li>
+</ol>
+<p>Final setup should look like this:<br>
+<figure><img src="usage.png"/>
+</figure>
+</p>
+<pre tabindex="0"><code>if worked:
+    Congratulations! You have successfully installed the script.
+else:
+    Feel free to dm me on discord: sky_haihai
+</code></pre><h2 id="why-the-rest-of-this-post-exists">Why The Rest of This Post Exists</h2>
+<p>Harmony is a great tool for animation and rigging. However, the structure might be intuitive for animators but not for me (as a unemployed programmer). I had to gather information for different concepts from every corner of the internet. To be fair, this is what I do for 80% of the time while programming. But since I found Harmony being particularly hard to understand, Let me share what I learnt from the past few days.</p>
+<p>First comes with simple things:</p>
+<ol>
+<li>Do yourself a favor, use DOM-based Library <a href="https://github.com/cfourney/OpenHarmony"><em>OpenHarmony</em></a>, it&rsquo;s basically a wrapper around the official API, but much more intuitive.</li>
+<li><a href="https://docs.toonboom.com/help/harmony-20/scripting/script/index.html">API Document</a> have different versions, make sure to check the version number</li>
+<li>External code editors are supported.</li>
+</ol>
+<p>And then, here comes the pain.</p>
+<h2 id="the-pain">The Pain</h2>
+<p>Scene, Node, Layer, Column, Element, Drawing, Cell, Frame, Exposure, Timeline&hellip;</p>
+<p><del>I&rsquo;m not going to explain what they are, because I don&rsquo;t know. But I can tell you what I know about them.</del></p>
+<h2 id="start-from-scene">Start from Scene</h2>
+<p>Scene is basically a root container of literally everything. Think it as the root folder of your project.</p>
+<p>Access it through <em>OpenHarmony</em> like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scene</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">scn</span><span class="p">;</span>
+</span></span></code></pre></div><p>The next layer inside scene is Nodes.
+<figure><img src="scene-nodes.png"/>
+</figure>
+</p>
+<h2 id="node-column-layer">Node, Column, Layer</h2>
+<p>There are many terms that are essentially the same in Harmony, or at least synced with each other. For example, <strong>Layer</strong> is just another name of <strong>Column</strong>. In the timeline view, each &ldquo;track&rdquo; is called a <strong>Layer</strong>, while in the Xsheet view, each &ldquo;column&rdquo; is literrally called a <strong>Column</strong>.</p>
+<p>Nodes are more complex and contain more information inside them. Each node may have multiple linked Columns.</p>
+<p>In this script, the focus is on drawing nodes, a.k.a DrawingNode in <em>OpenHarmony</em>. Each drawing node possesses a single timing column, a.k.a a DrawingColumn in <em>OpenHarmony</em>. However, it&rsquo;s possible for drawing nodes to have additional columns linked to them, even though they are not required for this script.</p>
+<p>In other words, nodes possess columns like scenes possessing nodes.</p>
+<p>Here&rsquo;s an example to get the first selected drawing node and its column:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scene</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">scn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">selectedNodes</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">selectedNodes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">selectedNodes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">$</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Please select at least one drawing node&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">firstDrawingNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">selectedNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">selectedNode</span> <span class="o">=</span> <span class="nx">selectedNodes</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//READ is the type name for Drawing nodes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">selectedNode</span><span class="p">.</span><span class="nx">type</span> <span class="o">!=</span> <span class="s2">&#34;READ&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">firstDrawingNode</span> <span class="o">=</span> <span class="nx">selectedNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">linkedDrawingColumn</span> <span class="o">=</span> <span class="nx">firstDrawingNode</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">drawing</span><span class="p">.</span><span class="nx">element</span><span class="p">.</span><span class="nx">column</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="cell-frame-exposure">Cell, Frame, Exposure</h2>
+<ul>
+<li>A <strong>Cell</strong> is a single frame of a layer regardless of the type of the layer or whether it&rsquo;s empty or not.</li>
+<li>A <strong>Frame</strong> is a single frame of a layer that contains a drawing. An exposure is a single frame of a layer that contains a drawing and is not empty.</li>
+<li><strong>Exposure</strong> just refers to how long is the previous keyframe lasts.</li>
+</ul>
+<h2 id="element">Element</h2>
+<p>Element is the parent of Drawings. Theoratically speaking, elements can be reused in multiple drawing nodes.</p>
+<h2 id="drawing-a-tricky-one">Drawing (A Tricky One)</h2>
+<p>While it&rsquo;s almost the end of this article, drawing has always been the trickiest term in Harmony in my opinion. It &ldquo;could&rdquo; refer to a single image file on your disk, a single frame of a layer, or a collection of multiple image files. In fact, I&rsquo;m still not exactly sure what a &ldquo;Drawing&rdquo; is if I&rsquo;m given a random documentation with limited context now. This term literally can be used anywhere in any animation working scenario.</p>
+<p>But tangling about a term is just waste of time. The need is simple and clear!</p>
+<p>Replace the path of drawings of any empty cells on the timeline with &ldquo;00&rdquo;!</p>
+<p>Just Do It!</p>
+<h2 id="the-happiness">The Happiness</h2>
+<p>Like many other projects I did in the past, the happiness always comes after the struggle. Although I&rsquo;m still not sure what a &ldquo;Drawing&rdquo; is and how some of the other terms relate to each other, I&rsquo;m happy that I can finally write a script that can save my animators some time.</p>
+<p>During the process, I learnt a lot from other fantastic animators and programmers who open-sourced their script for free. They are the true <a href="#references">heroes</a>.</p>
+<h2 id="final-code">Final Code</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">include</span><span class="p">(</span><span class="s2">&#34;openHarmony.js&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">SKY_Fill_Empty_Frames</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">$</span><span class="p">.</span><span class="nx">beginUndo</span><span class="p">(</span><span class="s2">&#34;fillFrame&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">scene</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">scn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">selectedNodes</span> <span class="o">=</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">selectedNodes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">selectedNodes</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">$</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Please select at least one drawing node&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">selectedNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">sNode</span> <span class="o">=</span> <span class="nx">selectedNodes</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">sNode</span><span class="p">.</span><span class="nx">type</span> <span class="o">!=</span> <span class="s2">&#34;READ&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">$</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&#34;Skipping node: &#34;</span> <span class="o">+</span> <span class="nx">sNode</span><span class="p">.</span><span class="nx">type</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">continue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kd">var</span> <span class="nx">drawingAttr</span> <span class="o">=</span> <span class="nx">sNode</span><span class="p">.</span><span class="nx">attributes</span><span class="p">.</span><span class="nx">drawing</span><span class="p">.</span><span class="nx">element</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">scene</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">var</span> <span class="nx">drawing</span> <span class="o">=</span> <span class="nx">sNode</span><span class="p">.</span><span class="nx">getDrawingAtFrame</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">drawing</span><span class="p">.</span><span class="nx">path</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">drawingAttr</span><span class="p">.</span><span class="nx">setValue</span><span class="p">(</span><span class="s2">&#34;00&#34;</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">$</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&#34;Adding 00 at Frame: &#34;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">$</span><span class="p">.</span><span class="nx">debug</span><span class="p">(</span><span class="s2">&#34;Skipping Frame: &#34;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">$</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Fill Finished&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">$</span><span class="p">.</span><span class="nx">endUndo</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="references">References</h2>
+<p>BAKE PARENT TO DRAWINGS Source Code - Yu Ueda
+<a href="http://raindropmoment.com/2019/06/25/bake-parent-to-drawings/">http://raindropmoment.com/2019/06/25/bake-parent-to-drawings/</a></p>
+<p>OpenHarmony API Documentation - OpenHarmony
+<a href="https://cfourney.github.io/OpenHarmony/">https://cfourney.github.io/OpenHarmony/</a></p>
+<p>About Layers and Columns - Harmony 20 User Guide<br>
+<a href="https://docs.toonboom.com/help/harmony-20/premium/layers/about-layer-column.html">https://docs.toonboom.com/help/harmony-20/premium/layers/about-layer-column.html</a></p>
+<p>Official API Documentation - Harmony 20 Scripting Interface<br>
+<a href="https://docs.toonboom.com/help/harmony-20/scripting/script/index.html">https://docs.toonboom.com/help/harmony-20/scripting/script/index.html</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/toom-boom-harmony/">Toom-Boom Harmony</a></li>
+      <li><a href="http://localhost:1313/tags/animation/">Animation</a></li>
+      <li><a href="http://localhost:1313/tags/script/">Script</a></li>
+    </ul>
+
+<div class="share-buttons">
+
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells on linkedin"
+        href="https://www.linkedin.com/in/heycharlola/">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span> <del>Life 1%</del>
+      
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

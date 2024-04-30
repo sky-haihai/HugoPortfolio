@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Information Retrieval: Web Document Indexer and Search Engine Prototype | Tim (Yaotian) Huang</title>
+<meta name="keywords" content="Python, Information Retrieval, Search Engine, Inverted Index" />
+<meta name="description" content="View the full project here: Github Repo
+Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
+Input a bunch of .GZ files, each containing multiple XML web documents.">
+<meta name="author" content="sky-haihai">
+<link rel="canonical" href="http://localhost:1313/code/itec4020-a3/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://localhost:1313/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/images/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/code/itec4020-a3/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/ta/" title="TA">
+                    <span>TA</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/code/" title="Code">
+                    <span>Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/art/" title="Art">
+                    <span>Art</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/code/">Code</a></div>
+    <h1 class="post-title">
+      Information Retrieval: Web Document Indexer and Search Engine Prototype
+    </h1>
+    <div class="post-meta">&lt;span title=&#39;2023-05-05 16:49:27 -0400 -0400&#39;&gt;May 5, 2023&lt;/span&gt;&amp;nbsp;·&amp;nbsp;4 min&amp;nbsp;·&amp;nbsp;sky-haihai</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a><ul>
+                        
+                <li>
+                    <a href="#input" aria-label="Input">Input</a></li>
+                <li>
+                    <a href="#output" aria-label="Output">Output</a></li></ul>
+                </li>
+                <li>
+                    <a href="#challenges" aria-label="Challenges">Challenges</a></li>
+                <li>
+                    <a href="#approach-overview" aria-label="Approach Overview">Approach Overview</a><ul>
+                        
+                <li>
+                    <a href="#1-pre-processing" aria-label="1. Pre-Processing">1. Pre-Processing</a></li>
+                <li>
+                    <a href="#2-building-the-inverted-index" aria-label="2. Building the Inverted Index">2. Building the Inverted Index</a></li>
+                <li>
+                    <a href="#3-searching" aria-label="3. Searching">3. Searching</a></li></ul>
+                </li>
+                <li>
+                    <a href="#pre-processing" aria-label="Pre-Processing">Pre-Processing</a><ul>
+                        
+                <li>
+                    <a href="#unzipping-gz" aria-label="Unzipping GZ">Unzipping GZ</a></li>
+                <li>
+                    <a href="#natural-language-processing" aria-label="Natural Language Processing">Natural Language Processing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#building-the-inverted-index" aria-label="Building the Inverted Index">Building the Inverted Index</a></li>
+                <li>
+                    <a href="#searchingquerying" aria-label="Searching/Querying">Searching/Querying</a><ul>
+                        
+                <li>
+                    <a href="#pre-processing-1" aria-label="Pre-Processing">Pre-Processing</a></li>
+                <li>
+                    <a href="#vector-space-model" aria-label="Vector Space Model">Vector Space Model</a></li></ul>
+                </li>
+                <li>
+                    <a href="#optimization" aria-label="Optimization">Optimization</a></li>
+                <li>
+                    <a href="#analysis-of-results" aria-label="Analysis of Results">Analysis of Results</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content">
+  <p>View the full project here: <a href="https://github.com/sky-haihai/4020A3-Information-Retrieval.git">Github Repo</a></p>
+<h2 id="introduction">Introduction</h2>
+<p>In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.</p>
+<h3 id="input">Input</h3>
+<p>a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">.GZ file
+</span></span><span class="line"><span class="cl">    XML file
+</span></span><span class="line"><span class="cl">        Article 1
+</span></span><span class="line"><span class="cl">        Article 2
+</span></span><span class="line"><span class="cl">        Article 3
+</span></span><span class="line"><span class="cl">        ...
+</span></span><span class="line"><span class="cl">        Article n
+</span></span></code></pre></div><p>Each document looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">DOC</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">DOCNO</span><span class="p">&gt;</span>WT01-B01-1<span class="p">&lt;/</span><span class="nt">DOCNO</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">DOCOLDNO</span><span class="p">&gt;</span>IA073-000475-B029-48<span class="p">&lt;/</span><span class="nt">DOCOLDNO</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">DOCHDR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Document Description --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">DOCHDR</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Web Content --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">DOC</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Each topic looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;top&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;num&gt;</span> Number: 401
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;title&gt;</span> foreign minorities, Germany
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;desc&gt;</span> Description:
+</span></span><span class="line"><span class="cl">What language and cultural differences impede the integration
+</span></span><span class="line"><span class="cl">of foreign minorities in Germany?
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;narr&gt;</span> Narrative:
+</span></span><span class="line"><span class="cl">A relevant document will focus on the causes of the lack of
+</span></span><span class="line"><span class="cl">integration in a significant way; that is, the mere mention of
+</span></span><span class="line"><span class="cl">immigration difficulties is not relevant.  Documents that discuss
+</span></span><span class="line"><span class="cl">immigration problems unrelated to Germany are also not relevant.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/top&gt;</span>
+</span></span></code></pre></div><h3 id="output">Output</h3>
+<p>Query results for 20 topics</p>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li>The size of the raw token(word) collection is too large to be loaded into RAM.</li>
+<li>The documents are in XML format and some documents partially miss nessessary tags like <code>&lt;html&gt;</code>, which is not easy to parse.</li>
+<li>The documents are in different encodings, which adds difficulty to the pre-processing module.</li>
+</ol>
+<h2 id="approach-overview">Approach Overview</h2>
+<h3 id="1-pre-processing">1. Pre-Processing</h3>
+<ul>
+<li>· Unzip GZ files and read them as XML.</li>
+<li>· Pre-process XML into document number dictionary { docno: docoldno } and word dictionary {docno: [word1, word2, …..]}.</li>
+</ul>
+<h3 id="2-building-the-inverted-index">2. Building the Inverted Index</h3>
+<ul>
+<li>· Build the inverted indexer using the word dictionary.</li>
+<li>· Group by initial and save each file into an individual JSON file to save RAM usage when applying searching.</li>
+</ul>
+<h3 id="3-searching">3. Searching</h3>
+<ul>
+<li>· Apply the vector space model to calculate the similarity between the query and each document.</li>
+<li>· Sort the similarity and output the top 1000 results for each query.</li>
+</ul>
+<h2 id="pre-processing">Pre-Processing</h2>
+<h3 id="unzipping-gz">Unzipping GZ</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.GZ&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.gz&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">gz_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">with</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">gz_file</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-errors=&#39;</span><span class="n">ignore</span><span class="s1">&#39;) as file:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">xml_content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">xml_content</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span></code></pre></div><h3 id="natural-language-processing">Natural Language Processing</h3>
+<p>Import <code>nltk</code> and download essential data from <code>nltk</code> server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">nltk</span>
+</span></span><span class="line"><span class="cl"><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;words&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Tokenize all html contents and apply stemming to keep original english word only:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">tokens</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">content_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()]</span>
+</span></span><span class="line"><span class="cl"><span class="n">filtered_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">stemmed_tokens</span> <span class="o">=</span> <span class="p">[</span><span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">filtered_tokens</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">only_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">stemmed_tokens</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">english_words</span><span class="p">]</span>
+</span></span></code></pre></div><p><strong>Note</strong><br>
+Stick with one encoding format, in this case, UTF-8 to avoid decoding errors when web documents contain special characters like Hanzi(Chinese letter) and Hirakana(Japanese word).</p>
+<h2 id="building-the-inverted-index">Building the Inverted Index</h2>
+<p>At this point, all the web documents have been extracted, tokenized, stemmed into a dictionary: <code>{docno: [word1, word2,...]}</code>.</p>
+<p>Now to build the index, simply count the frequency of each word</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">docno</span><span class="p">,</span> <span class="n">words</span> <span class="ow">in</span> <span class="n">word_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">word_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">word_counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="n">inverted_index</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">docno</span><span class="p">]</span> <span class="o">+=</span> <span class="n">count</span>
+</span></span></code></pre></div><h2 id="searchingquerying">Searching/Querying</h2>
+<h3 id="pre-processing-1">Pre-Processing</h3>
+<p>Tokenize the query and apply stemming:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">topic_tokens</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">topics_to_tokens</span><span class="p">(</span><span class="n">topic_file</span><span class="p">)</span>
+</span></span></code></pre></div><p>See <a href="https://github.com/sky-haihai/4020A3-Information-Retrieval/blob/master/src/preprocess.py">preprocess.py</a></p>
+<h3 id="vector-space-model">Vector Space Model</h3>
+<ol>
+<li>Treat the query and each documents as a vector.</li>
+<li>Calculate the similarity between the query vector and each document vector</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">query_vector</span><span class="p">,</span> <span class="n">doc_vector</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">query_vector</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">doc_vector</span><span class="p">))</span>
+</span></span></code></pre></div><p>See <a href="https://github.com/sky-haihai/4020A3-Information-Retrieval/blob/master/src/calculate_similarity.py">calculate_similarity.py</a></p>
+<h2 id="optimization">Optimization</h2>
+<ol>
+<li>Calculating the TF-IDF value instead of dot product to mark the importance of each token (word) during the preprocess stage.</li>
+<li>Multithreading during the preprocessing stage to speed up the process of reading HTML content and during the index building stage.</li>
+<li>Using the vector space function for weighting.</li>
+<li>Utilizing the dot product for calculating similarity in the vector space model.</li>
+</ol>
+<h2 id="analysis-of-results">Analysis of Results</h2>
+<ol>
+<li>A full run which involves over <strong>48,000</strong> XML documents(<strong>6,000,000</strong> lines) takes approximately 2 hours, which was a significant improvement over the initial 3-hour runtime before implementing multithreading in the preprocessing stage and indexing stage.</li>
+<li>Each query takes only <strong>250ms</strong> to complete in average.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>This project taught me valuable lessons about optimizing search engine algorithms and the importance of efficient indexing for web document retrieval. By using the appropriate data structures, algorithms, and parallel processing techniques, I was able to build an efficient and effective search engine.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/information-retrieval/">Information Retrieval</a></li>
+      <li><a href="http://localhost:1313/tags/search-engine/">Search Engine</a></li>
+      <li><a href="http://localhost:1313/tags/inverted-index/">Inverted Index</a></li>
+    </ul>
+
+<div class="share-buttons">
+
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Information Retrieval: Web Document Indexer and Search Engine Prototype on linkedin"
+        href="https://www.linkedin.com/in/heycharlola/">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span> <del>Life 1%</del>
+      
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

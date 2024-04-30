@@ -5,7 +5,7 @@
     <loc>https://www.yaotian-huang.com/categories/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/tutorial/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</loc>
+    <loc>https://www.yaotian-huang.com/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/categories/eotr-devlog/</loc>
@@ -23,10 +23,10 @@
     <loc>https://www.yaotian-huang.com/tags/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/</loc>
+    <loc>https://www.yaotian-huang.com/ta/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/tutorial/</loc>
+    <loc>https://www.yaotian-huang.com/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/unity/</loc>
@@ -44,9 +44,6 @@
     <loc>https://www.yaotian-huang.com/tags/character/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/devlog/</loc>
-    <lastmod>2023-10-28T13:40:42-06:00</lastmod>
-  </url><url>
     <loc>https://www.yaotian-huang.com/tags/glb/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
@@ -56,7 +53,7 @@
     <loc>https://www.yaotian-huang.com/tags/mozilla-hubs/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/devlog/notes-on-learning-mozilla-hubs-avator/</loc>
+    <loc>https://www.yaotian-huang.com/ta/notes-on-learning-mozilla-hubs-avator/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/opimazation/</loc>
@@ -65,7 +62,7 @@
     <loc>https://www.yaotian-huang.com/categories/web-development/</loc>
     <lastmod>2023-10-28T13:40:42-06:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/devlog/notes-on-learning-mozilla-hubs-scene/</loc>
+    <loc>https://www.yaotian-huang.com/ta/notes-on-learning-mozilla-hubs-scene/</loc>
     <lastmod>2023-10-26T10:27:04-06:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/scene/</loc>
@@ -77,7 +74,7 @@
     <loc>https://www.yaotian-huang.com/categories/animation/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/tutorial/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</loc>
+    <loc>https://www.yaotian-huang.com/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</loc>
     <lastmod>2023-10-23T09:35:14-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/script/</loc>
@@ -95,13 +92,22 @@
     <loc>https://www.yaotian-huang.com/tags/post-processing/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/tutorial/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</loc>
+    <loc>https://www.yaotian-huang.com/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/render-feature/</loc>
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/tutorial/layer-based-screen-door-transparency-effect-using-unity-urp-12/</loc>
+    <loc>https://www.yaotian-huang.com/tags/c-sharp/</loc>
+    <lastmod>2023-05-18T08:35:48-04:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/code/</loc>
+    <lastmod>2023-05-18T08:35:48-04:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/code/getting-started-xiheframework/</loc>
+    <lastmod>2023-05-18T08:35:48-04:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</loc>
     <lastmod>2023-05-07T22:54:14-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/screen-door-transparency/</loc>
@@ -110,7 +116,7 @@
     <loc>https://www.yaotian-huang.com/tags/angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/uni/creating-a-diet-dashboard-based-on-angular/</loc>
+    <loc>https://www.yaotian-huang.com/code/creating-a-diet-dashboard-based-on-angular/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/css/</loc>
@@ -128,16 +134,13 @@
     <loc>https://www.yaotian-huang.com/tags/unfinished/</loc>
     <lastmod>2023-05-07T21:47:36-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/uni/</loc>
-    <lastmod>2023-05-07T21:47:36-04:00</lastmod>
-  </url><url>
     <loc>https://www.yaotian-huang.com/tags/java/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/jsp/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/uni/secured-web-information-system-prototype/</loc>
+    <loc>https://www.yaotian-huang.com/code/secured-web-information-system-prototype/</loc>
     <lastmod>2023-05-07T02:26:29-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/servlet/</loc>
@@ -149,7 +152,7 @@
     <loc>https://www.yaotian-huang.com/tags/information-retrieval/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/uni/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
+    <loc>https://www.yaotian-huang.com/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</loc>
     <lastmod>2023-05-05T16:49:27-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/inverted-index/</loc>
@@ -164,16 +167,20 @@
     <loc>https://www.yaotian-huang.com/tags/c</loc>
     <lastmod>2023-05-05T14:24:13-04:00</lastmod>
   </url><url>
-    <loc>https://www.yaotian-huang.com/devlog/introducing-xiheframework/</loc>
+    <loc>https://www.yaotian-huang.com/code/introducing-xiheframework/</loc>
     <lastmod>2023-05-05T14:24:13-04:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/hidden/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/archives/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/articles/</loc>
   </url><url>
+    <loc>https://www.yaotian-huang.com/art/</loc>
+  </url><url>
     <loc>https://www.yaotian-huang.com/contact/</loc>
   </url><url>
-    <loc>https://www.yaotian-huang.com/games/</loc>
+    <loc>https://www.yaotian-huang.com/hidden/project-eotr/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/projects/math-brain-trainer/</loc>
   </url><url>
@@ -182,5 +189,7 @@
     <loc>https://www.yaotian-huang.com/search/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/articles/article/</loc>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/project/</loc>
   </url>
 </urlset>

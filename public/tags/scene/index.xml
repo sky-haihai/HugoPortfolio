@@ -10,9 +10,9 @@
     <atom:link href="https://www.yaotian-huang.com/tags/scene/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
-      <link>https://www.yaotian-huang.com/devlog/notes-on-learning-mozilla-hubs-scene/</link>
+      <link>https://www.yaotian-huang.com/ta/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      <guid>https://www.yaotian-huang.com/devlog/notes-on-learning-mozilla-hubs-scene/</guid>
+      <guid>https://www.yaotian-huang.com/ta/notes-on-learning-mozilla-hubs-scene/</guid>
       <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
     </item>
   </channel>

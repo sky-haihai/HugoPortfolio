@@ -10,9 +10,9 @@
     <atom:link href="https://www.yaotian-huang.com/tags/c" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing Xiheframework</title>
-      <link>https://www.yaotian-huang.com/devlog/introducing-xiheframework/</link>
+      <link>https://www.yaotian-huang.com/code/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/devlog/introducing-xiheframework/</guid>
+      <guid>https://www.yaotian-huang.com/code/introducing-xiheframework/</guid>
       <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.&#xA;Who Should Use Scale Ideally at least two members:&#xA;Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)&#xA;Skills Unity Editor Node-based Editor C# (Custom Modules) Warning &amp;#x26a0;&amp;#xfe0f; Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
     </item>
   </channel>

@@ -10,9 +10,9 @@
     <atom:link href="https://www.yaotian-huang.com/tags/post-processing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
-      <link>https://www.yaotian-huang.com/tutorial/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <link>https://www.yaotian-huang.com/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/tutorial/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <guid>https://www.yaotian-huang.com/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
       <description>Environment Unity 2021.3.16f1&#xA;Universal Render Pipeline 12.0.0&#xA;Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&#xA;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
     </item>
   </channel>
