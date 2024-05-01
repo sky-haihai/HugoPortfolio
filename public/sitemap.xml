@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.yaotian-huang.com/code/auto-fishing-wow/</loc>
+    <lastmod>2024-05-01T10:45:53-06:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/code/</loc>
+    <lastmod>2024-05-01T10:45:53-06:00</lastmod>
+  </url><url>
+    <loc>https://www.yaotian-huang.com/</loc>
+    <lastmod>2024-05-01T10:45:53-06:00</lastmod>
+  </url><url>
     <loc>https://www.yaotian-huang.com/categories/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
@@ -24,9 +33,6 @@
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/ta/</loc>
-    <lastmod>2024-03-04T11:59:37-07:00</lastmod>
-  </url><url>
-    <loc>https://www.yaotian-huang.com/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/unity/</loc>
@@ -99,9 +105,6 @@
     <lastmod>2023-05-23T23:50:10-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/tags/c-sharp/</loc>
-    <lastmod>2023-05-18T08:35:48-04:00</lastmod>
-  </url><url>
-    <loc>https://www.yaotian-huang.com/code/</loc>
     <lastmod>2023-05-18T08:35:48-04:00</lastmod>
   </url><url>
     <loc>https://www.yaotian-huang.com/code/getting-started-xiheframework/</loc>
@@ -182,6 +185,8 @@
   </url><url>
     <loc>https://www.yaotian-huang.com/hidden/project-eotr/</loc>
   </url><url>
+    <loc>https://www.yaotian-huang.com/project/</loc>
+  </url><url>
     <loc>https://www.yaotian-huang.com/projects/math-brain-trainer/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/projects/</loc>
@@ -189,7 +194,5 @@
     <loc>https://www.yaotian-huang.com/search/</loc>
   </url><url>
     <loc>https://www.yaotian-huang.com/articles/article/</loc>
-  </url><url>
-    <loc>https://www.yaotian-huang.com/project/</loc>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 ---
-title: Tim's Game Projects
+title: Game Projects
 ---
 
 ---
