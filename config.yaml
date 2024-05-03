@@ -1,18 +1,14 @@
 baseURL: "https://www.yaotian-huang.com"
-languageCode: "en-us"
 title: "Tim (Yaotian) Huang"
+paginate: 50
 theme: "charlolamode"
 
-enableInlineShortcodes: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true
+
 
 menu:
   main:
     - name: Projects
-      url: project/
+      url: projects/
       weight: 1
     - name: TA
       url: ta/
@@ -28,8 +24,10 @@ menu:
     #   weight: 4
     #  weight: 10
 
+
+
 params:
-    author: sky-haihai
+    author: Tim Huang
 
 
     defaultTheme: auto
@@ -53,15 +51,15 @@ params:
         # imageHeight: 120
         buttons:
             - name: Projects
-              url: /project/
+              url: projects/
             - name: TA
-              url: /ta/
+              url: ta/
             - name: Code
-              url: /code/
+              url: code/
             - name: Art
-              url: /art/
+              url: art/
     mainSections:
-      - posts
+      - project
 
     socialIcons:
         - name: github
@@ -90,6 +88,7 @@ params:
           apple_touch_icon: "/images/apple-touch-icon.png"
           safari_pinned_tab: "/images/apple-touch-icon.png"
 
+
 enableInlineShortcodes: true
 enableRobotsTXT: true
 enableEmoji: true
@@ -98,17 +97,21 @@ pygmentsUseClasses: true
 minify:
     disableXML: true
 
-taxonomies:
-  category: categories
-  tag: tags
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # is necessary
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  jp:
+    contentDir: content/jp
+    languageCode: ja
+    languageName: Japanese
+    params:
+      reading_speed: 175
+    weight: 2
+  en:
+    contentDir: content/en
+    languageCode: en-US
+    languageName: English
+    params:
+      reading_speed: 175
+    weight: 1

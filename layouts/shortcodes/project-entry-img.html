@@ -1,15 +1,18 @@
+{{$img := .Get "img"}}
+{{$devlog := .Get "devlog"}}
+
 <div>
-  <h2>{{ index .Params 0 }}</h2>
+  <h2>{{ .Get "name" }}</h2>
   <div style="display: flex; flex-flow: row wrap; column-gap: 20px">
     <div style="flex: 2 1 420px">
-      <h3>{{ index .Params 1 }}</h3>
+      <h3>{{ .Get "role" }}</h3>
       <p style="text-align: left">
-        {{ index .Params 2 }}
+        {{ .Get "desc" }}
       </p>
-      <a href="hidden/{{ index .Params 0 }}"> Read More </a>
+      {{ with .Get "devlog" }} <a href="{{ $devlog }}"> <b>Read Devlogs</b> </a> {{ end }}
     </div>
     <div style="flex: 2 1 auto; align-self: center">
-      <img style="width: 250px; height: auto; margin: 0px" src="{{ index .Params 3 }}" alt="Huh? CloudFlare? Hello?" />
+      <img style="width: 250px; height: auto; margin: 0px" src="{{ $img }}" alt="Huh? CloudFlare? Hello?" />
     </div>
   </div>
 </div>

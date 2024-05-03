@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical Art on Tim (Yaotian) Huang</title>
+    <link>https://www.yaotian-huang.com/en/ta/</link>
+    <description>Recent content in Technical Art on Tim (Yaotian) Huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/en/ta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
+      <link>https://www.yaotian-huang.com/en/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
+      <description>Environment Unity 2021.3.16f1&#xA;URP 12.0&#xA;Prerequisite Basic knowledge of C# and Shader programming (HLSL).&#xA;GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&#xA;Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
+    </item>
+    <item>
+      <title>Notes on Learning Mozilla Hubs: Avator</title>
+      <link>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/</guid>
+      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&#xA;Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link&#xA;Features It has following features:&#xA;Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+    </item>
+    <item>
+      <title>Notes on Learning Mozilla Hubs: Scene</title>
+      <link>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/</link>
+      <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/</guid>
+      <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
+    </item>
+    <item>
+      <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
+      <link>https://www.yaotian-huang.com/en/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
+      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
+      <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
+    </item>
+    <item>
+      <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
+      <link>https://www.yaotian-huang.com/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <description>Environment Unity 2021.3.16f1&#xA;Universal Render Pipeline 12.0.0&#xA;Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&#xA;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+    </item>
+    <item>
+      <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
+      <link>https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&#xA;How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+    </item>
+  </channel>
+</rss>

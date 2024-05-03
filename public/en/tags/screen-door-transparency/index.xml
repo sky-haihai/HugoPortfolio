@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Screen-Door Transparency on Tim (Yaotian) Huang</title>
+    <link>https://www.yaotian-huang.com/en/tags/screen-door-transparency/</link>
+    <description>Recent content in Screen-Door Transparency on Tim (Yaotian) Huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 07 May 2023 22:54:14 -0400</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/en/tags/screen-door-transparency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
+      <link>https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&#xA;How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+    </item>
+  </channel>
+</rss>
