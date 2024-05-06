@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unity on Tim (Yaotian) Huang</title>
+    <link>https://www.yaotian-huang.com/cn/tags/unity/</link>
+    <description>Recent content in Unity on Tim (Yaotian) Huang</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="https://www.yaotian-huang.com/cn/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
+      <link>https://www.yaotian-huang.com/cn/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>https://www.yaotian-huang.com/cn/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
+      <description>Environment Unity 2021.3.16f1&#xA;URP 12.0&#xA;Prerequisite Basic knowledge of C# and Shader programming (HLSL).&#xA;GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&#xA;Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
+    </item>
+    <item>
+      <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
+      <link>https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <description>Environment Unity 2021.3.16f1&#xA;Universal Render Pipeline 12.0.0&#xA;Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&#xA;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+    </item>
+    <item>
+      <title>Getting Started in Xiheframework</title>
+      <link>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</link>
+      <pubDate>Thu, 18 May 2023 08:35:48 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</guid>
+      <description>Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.&#xA;Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.&#xA;To do that:&#xA;Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.</description>
+    </item>
+    <item>
+      <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
+      <link>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&#xA;How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+    </item>
+    <item>
+      <title>Introducing Xiheframework</title>
+      <link>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</link>
+      <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</guid>
+      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.&#xA;Who Should Use Scale Ideally at least two members:&#xA;Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)&#xA;Skills Unity Editor Node-based Editor C# (Custom Modules) Warning &amp;#x26a0;&amp;#xfe0f; Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+    </item>
+  </channel>
+</rss>

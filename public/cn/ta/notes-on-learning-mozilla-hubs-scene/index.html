@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="cn" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Notes on Learning Mozilla Hubs: Scene | Tim (Yaotian) Huang</title>
+<meta name="keywords" content="Metaverse, Mozilla Hubs, Blender, GLB, Opimazation, Scene" />
+<meta name="description" content="Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&rsquo;s bright future for two reasons:">
+<meta name="author" content="Tim Huang">
+<link rel="canonical" href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.yaotian-huang.com/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.yaotian-huang.com/images/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/" />
+<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/" />
+<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/" title="EN"
+                            aria-label="EN">EN</a>
+                    </li>
+                    <li>
+                        <a href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/" title="JP"
+                            aria-label="JP">JP</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href="https://www.yaotian-huang.com/cn/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.yaotian-huang.com/cn/ta/" title="TA">
+                    <span>TA</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.yaotian-huang.com/cn/code/" title="Code">
+                    <span>Code</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.yaotian-huang.com/cn/art/" title="Art">
+                    <span>Art</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/ta/">Technical Art</a></div>
+    <h1 class="post-title">
+      Notes on Learning Mozilla Hubs: Scene
+    </h1>
+    <div class="post-meta"><span title='2023-10-26 10:27:04 -0600 MDT'>Oct 26, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Tim Huang</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#demo-scene" aria-label="Demo Scene">Demo Scene</a></li>
+                <li>
+                    <a href="#limitations" aria-label="Limitations">Limitations</a></li>
+                <li>
+                    <a href="#scene-editing-workflow" aria-label="Scene Editing Workflow">Scene Editing Workflow</a><ul>
+                        
+                <li>
+                    <a href="#blender-as-main-editor" aria-label="Blender-As-Main-Editor">Blender-As-Main-Editor</a></li>
+                <li>
+                    <a href="#blender-as-asset-creation-tool" aria-label="Blender-As-Asset-Creation-Tool">Blender-As-Asset-Creation-Tool</a></li>
+                <li>
+                    <a href="#comparison" aria-label="Comparison">Comparison</a><ul>
+                        
+                <li>
+                    <a href="#similarity" aria-label="Similarity">Similarity</a></li>
+                <li>
+                    <a href="#difference" aria-label="Difference">Difference</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#rendering-pipeline" aria-label="Rendering Pipeline">Rendering Pipeline</a><ul>
+                        
+                <li>
+                    <a href="#pbr-pipeline" aria-label="PBR Pipeline">PBR Pipeline</a></li>
+                <li>
+                    <a href="#textures" aria-label="Textures">Textures</a></li></ul>
+                </li>
+                <li>
+                    <a href="#official-suggestted-performance-budget" aria-label="Official Suggestted Performance Budget">Official Suggestted Performance Budget</a><ul>
+                        
+                <li>
+                    <a href="#poly-count" aria-label="Poly Count">Poly Count</a></li>
+                <li>
+                    <a href="#materials" aria-label="Materials">Materials</a></li>
+                <li>
+                    <a href="#textures-1" aria-label="Textures">Textures</a></li>
+                <li>
+                    <a href="#lights" aria-label="Lights">Lights</a></li>
+                <li>
+                    <a href="#file-size" aria-label="File Size">File Size</a></li></ul>
+                </li>
+                <li>
+                    <a href="#opimization" aria-label="Opimization">Opimization</a><ul>
+                        
+                <li>
+                    <a href="#lightmapping" aria-label="Lightmapping">Lightmapping</a><ul>
+                        
+                <li>
+                    <a href="#" aria-label="With Lightmapping">With Lightmapping</a></li>
+                <li>
+                    <a href="#" aria-label="Without Lightmapping">Without Lightmapping</a></li></ul>
+                </li>
+                <li>
+                    <a href="#mix-actual-3d-and-billboard-models" aria-label="Mix Actual 3D and Billboard Models">Mix Actual 3D and Billboard Models</a></li>
+                <li>
+                    <a href="#use-low-resolution-textures" aria-label="Use Low Resolution Textures">Use Low Resolution Textures</a></li>
+                <li>
+                    <a href="#reduce-transparent-materials" aria-label="Reduce Transparent Materials">Reduce Transparent Materials</a></li></ul>
+                </li>
+                <li>
+                    <a href="#room-accessing" aria-label="Room Accessing">Room Accessing</a></li>
+                <li>
+                    <a href="#copy-right" aria-label="Copy Right">Copy Right</a></li>
+                <li>
+                    <a href="#references" aria-label="References">References</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content">
+  <h2 id="introduction">Introduction</h2>
+<p>Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&rsquo;s bright future for two reasons:</p>
+<ol>
+<li>It&rsquo;s open-source, meaning developers could add their own components into the engine. Though, I wish the official team could add scripting interface as a component like Unity does.</li>
+<li>The rooms(scenes) are browser-based, meaning it&rsquo;s cross-platform and easy to access, which attracts more users.</li>
+</ol>
+<h2 id="demo-scene">Demo Scene</h2>
+<p>As always, a <a href="https://0827133699.us1.myhubs.net/link/BwXmTSy">Demo</a> is worth a thousand words.</p>
+<p>This demo is tested on the following devices:</p>
+<!-- raw HTML omitted -->
+<h2 id="limitations">Limitations</h2>
+<ol>
+<li>No support for custom shaders</li>
+<li>No support for mipmaps</li>
+<li>No support for LOD</li>
+<li>No support for texture filters</li>
+<li>Alpha blending is supported in published scenes but limited to 1 time(1-bit) in spoke editor</li>
+<li>The only external scene editor work an replacement of Spoke is Blender. Other mainstream DCC(Digital Content Creation) software like Maya, 3ds Max, Cinema 4D, etc. are not supported.</li>
+</ol>
+<h2 id="scene-editing-workflow">Scene Editing Workflow</h2>
+<p>There are two types of workflow for artists to create Hubs scenes(.spoke) using Blender.</p>
+<h3 id="blender-as-main-editor">Blender-As-Main-Editor</h3>
+<p>The first one is what I called Blender-As-Main-Editor workflow:</p>
+<ol>
+<li>Install Hubs Blender export addon</li>
+<li>Create models, draw/import textures, and eventually finish the scene in Blender</li>
+<li>Add required Hubs components to objects using the Hubs addon</li>
+<li>Export the scene as a .glb file</li>
+</ol>
+<p>In short: Asset creation in Blender -&gt; Add Hubs components in Blender -&gt; Export as .glb -&gt; Import .glb into Spoke as a</p>
+<h3 id="blender-as-asset-creation-tool">Blender-As-Asset-Creation-Tool</h3>
+<p>The second one is what I called Blender-As-Asset-Creation-Tool workflow:</p>
+<ol>
+<li>No need to install Hubs Blender export addon</li>
+<li>Create modular models/collection of models in Blender</li>
+<li>Export the model/models as .glb files</li>
+<li>Login to Spoke editor and upload the .glb files as &ldquo;My Assets&rdquo;</li>
+<li>Place the assets in the scene and add components to them individually.</li>
+</ol>
+<h3 id="comparison">Comparison</h3>
+<h4 id="similarity">Similarity</h4>
+<ol>
+<li>Both workflows require Blender to create assets</li>
+</ol>
+<h4 id="difference">Difference</h4>
+<ol>
+<li>The Blender-As-Main-Editor workflow requires setting up every detail in Blender before exporting the scene into Spoke and after that there is no way to give any adjustment to the scene in Spoke editor, while the other workflow can give artists more flexibility to adjust the scene in Spoke editor, especiall when dealing with a complex scene and collaborating with other artists.</li>
+</ol>
+<h2 id="rendering-pipeline">Rendering Pipeline</h2>
+<h3 id="pbr-pipeline">PBR Pipeline</h3>
+<p>Mozilla Hubs only support one lighting model: PBR(Physical-Based-Rendering), usually involving a physically based BRDF(Bidirectional Reflectance Distribution Function) to achieve realistic lighting. The PBR workflow is very common in modern 3D rendering engines and is also the default workflow in Blender.</p>
+<h3 id="textures">Textures</h3>
+<p>PBR pipeline requires a set of textures to work properly.</p>
+<ol>
+<li>Albedo Map(Color Map)</li>
+<li>Normal Map</li>
+<li>Roughness Map</li>
+<li>Metallic Map</li>
+<li>Ambient Occlusion Map</li>
+<li>Emission Map</li>
+<li>Transparency Map
+&hellip;</li>
+</ol>
+<p>However, PBR is expensive and web-based PBR is not going to look great by itself, therefore the pipeline I&rsquo;m going for is Lightmapping + Simplified PBR, meaning only the Albedo Map and the Normal Map are nesscessary, and the scene/objects will still look decent.</p>
+<h2 id="official-suggestted-performance-budget">Official Suggestted Performance Budget</h2>
+<h3 id="poly-count">Poly Count</h3>
+<p>Up to 50,000 Triangles</p>
+<h3 id="materials">Materials</h3>
+<ul>
+<li>Up to 25 Unique Materials</li>
+<li>Haven&rsquo;t tested if similar materials with different input values are batched together, but I guess they are not.</li>
+</ul>
+<h3 id="textures-1">Textures</h3>
+<ul>
+<li>256MB of VRAM</li>
+<li>Each texture should be not larger than 2048x2048</li>
+</ul>
+<h3 id="lights">Lights</h3>
+<ul>
+<li>Mobile does not support dynamic lights at all</li>
+<li>In high end devices such as Desktop browsers, 3 dynamic lights is suggested</li>
+</ul>
+<h3 id="file-size">File Size</h3>
+<ul>
+<li>16MB for the whole scene in general</li>
+<li>This really just depends on network condition, in other words, location of the server</li>
+</ul>
+<h2 id="opimization">Opimization</h2>
+<h3 id="lightmapping">Lightmapping</h3>
+<p>The biggest compact of the visual quality of scene with limited graphical computing power for low-end devices is for sure Lightmapping. Because Hubs Rooms run on a browser which only support basic PBR lightmodle, without lightmaps, the scene will look like a flat cartoon. If you are not familiar with lightmapping, here&rsquo;s a quick comparison:</p>
+<p><figure><img src="with-lightmapping.png"/><figcaption>
+            <h4>With Lightmapping</h4>
+        </figcaption>
+</figure>
+
+<figure><img src="without-lightmapping.png"/><figcaption>
+            <h4>Without Lightmapping</h4>
+        </figcaption>
+</figure>
+</p>
+<h3 id="mix-actual-3d-and-billboard-models">Mix Actual 3D and Billboard Models</h3>
+<p>Since the scene is limited to 50k triangles, it&rsquo;s important to insert some 2-triangle Billboard models to replace some 3D models that are far away from the camera or not important component of the scene. For example, in a demo scene I made while learning Hubs, I modelled the main objects: pumpkin lamps as 3D models and used a bunch of Billboards to replace the trees which are less important visual components of the scene, and the scene still looks decent.</p>
+<figure><img src="billboard-tree.png"/>
+</figure>
+
+<h3 id="use-low-resolution-textures">Use Low Resolution Textures</h3>
+<p>While texture resolution has a suggested value of no larger than 2K, it is still important to keep in mind that not every object in the scene need a 2K texture. Artists should decide the resolution of each texture based on the size and the significance of the object in the scene. For example, a 2K texture is not necessary for a small bat that is far away from the camera. In that case, a 256x256 texture is probably enough.</p>
+<h3 id="reduce-transparent-materials">Reduce Transparent Materials</h3>
+<p>Alpha blending is expensive. If transparency is required, it&rsquo;s suggested to use alpha test(cutoff) instead of alpha blend.</p>
+<h2 id="room-accessing">Room Accessing</h2>
+<ul>
+<li>No account required</li>
+<li>Assets(e.g. Images, Videos) is URL-based, which means assets are downloaded from the company&rsquo;s file server when user enters the room, e.g. images</li>
+<li>User can upload their own assets upon permission, but they will be deleted when the room is closed</li>
+<li>Some properties of objects in the room are shared across all users. (e.g. pause state of the video player, etc.)</li>
+<li>Some properties are not shared, (e.g. volume of the video player, position of the player model, etc.)</li>
+<li>Some user behaviours can be enabled/disabled by the room owner, (e.g. user can/cannot switch first/third person camera, user can/cannot fly, etc.)</li>
+</ul>
+<h2 id="copy-right">Copy Right</h2>
+<p>Although Mozilla Hubs is open-sourced, the assets created by artists usually can only be used under conditions. It is nesscessary to follow the guideline of licenses of all assets used in the scene if the scene is public or used commercially.</p>
+<h2 id="references">References</h2>
+<p>Mozilla. Blender Addon Components Manual. Hubs Documentation. <a href="https://hubs.mozilla.com/docs/creators-blender-components.html">https://hubs.mozilla.com/docs/creators-blender-components.html</a></p>
+<p>Mozilla. Optimizing Scenes. Hubs Documentation.<br>
+<a href="https://hubs.mozilla.com/docs/spoke-optimization.html">https://hubs.mozilla.com/docs/spoke-optimization.html</a></p>
+<p>Valencia, P. (2022, December 21). Creating 2d sprite-based Retro Worlds. Creator Labs.<br>
+<a href="https://hubs.mozilla.com/labs/creating-retro-worlds/">https://hubs.mozilla.com/labs/creating-retro-worlds/</a></p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.yaotian-huang.com/cn/tags/metaverse/">Metaverse</a></li>
+      <li><a href="https://www.yaotian-huang.com/cn/tags/mozilla-hubs/">Mozilla Hubs</a></li>
+      <li><a href="https://www.yaotian-huang.com/cn/tags/blender/">Blender</a></li>
+      <li><a href="https://www.yaotian-huang.com/cn/tags/glb/">GLB</a></li>
+      <li><a href="https://www.yaotian-huang.com/cn/tags/opimazation/">Opimazation</a></li>
+      <li><a href="https://www.yaotian-huang.com/cn/tags/scene/">Scene</a></li>
+    </ul>
+
+<div class="share-buttons">
+
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Notes on Learning Mozilla Hubs: Scene on linkedin"
+        href="https://www.linkedin.com/in/heycharlola/">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span> <del>Life 1%</del></span>
+      
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 ---
 title: "Devlog: Dynamic Shadow for 2D Animation"
-dateMonthYear: April 2024
+date: "2020-12-23T15:21:54+05:30"
 type: page
 image: "/images/2ndmethod.png"
 

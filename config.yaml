@@ -31,6 +31,7 @@ params:
 
 
     defaultTheme: auto
+    dateFormat: "Jan 2, 2006"
     # disableThemeToggle: true
     ShowShareButtons: true
     ShowReadingTime: true
@@ -104,14 +105,21 @@ languages:
   jp:
     contentDir: content/jp
     languageCode: ja
-    languageName: Japanese
+    languageName: JP
     params:
       reading_speed: 175
     weight: 2
   en:
     contentDir: content/en
     languageCode: en-US
-    languageName: English
+    languageName: EN
     params:
       reading_speed: 175
     weight: 1
+  cn:
+    contentDir: content/cn
+    languageCode: zh-cn
+    languageName: CN
+    params:
+      reading_speed: 175
+    weight: 3

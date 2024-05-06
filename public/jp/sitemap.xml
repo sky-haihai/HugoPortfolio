@@ -11,6 +11,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/categories/"
                 />
@@ -21,6 +26,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -37,6 +47,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/eotr-devlog/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/categories/eotr-devlog/"
                 />
@@ -47,6 +62,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/gpu-instancing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/gpu-instancing/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -63,6 +83,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/grass/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/grass/"
                 />
@@ -73,6 +98,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/shader/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/shader/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -89,6 +119,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/"
                 />
@@ -99,6 +134,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/ta/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -115,6 +155,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/"
                 />
@@ -125,6 +170,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/unity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/unity/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -141,6 +191,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/urp/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/urp/"
                 />
@@ -151,6 +206,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/categories/3d-art/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/3d-art/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -167,6 +227,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/blender/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/blender/"
                 />
@@ -177,6 +242,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/character/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/character/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -193,6 +263,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/glb/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/glb/"
                 />
@@ -203,6 +278,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/metaverse/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/metaverse/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -219,6 +299,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/mozilla-hubs/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/mozilla-hubs/"
                 />
@@ -229,6 +314,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -245,6 +335,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/opimazation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/opimazation/"
                 />
@@ -255,6 +350,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/categories/web-development/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/web-development/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -271,6 +371,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/"
                 />
@@ -281,6 +386,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/scene/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/scene/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -297,6 +407,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/animation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/animation/"
                 />
@@ -307,6 +422,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/categories/animation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/animation/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -323,6 +443,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/"
                 />
@@ -333,6 +458,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/script/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/script/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -349,6 +479,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/toom-boom-harmony/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/toom-boom-harmony/"
                 />
@@ -359,6 +494,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/compute-shader/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/compute-shader/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -375,6 +515,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/categories/game-development/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/categories/game-development/"
                 />
@@ -385,6 +530,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/post-processing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/post-processing/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -401,6 +551,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/"
                 />
@@ -411,6 +566,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/render-feature/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/render-feature/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -427,6 +587,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/c-sharp/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/c-sharp/"
                 />
@@ -437,6 +602,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -453,6 +623,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/code/getting-started-xiheframework/"
                 />
@@ -463,6 +638,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -479,6 +659,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/screen-door-transparency/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/screen-door-transparency/"
                 />
@@ -489,6 +674,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/angular/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/angular/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -505,6 +695,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/code/creating-a-diet-dashboard-based-on-angular/"
                 />
@@ -515,6 +710,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/css/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -531,6 +731,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/html/"
                 />
@@ -541,6 +746,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/javascript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/javascript/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -557,6 +767,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/typescript/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/typescript/"
                 />
@@ -567,6 +782,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/unfinished/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/unfinished/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -583,6 +803,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/java/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/java/"
                 />
@@ -593,6 +818,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/jsp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/jsp/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -609,6 +839,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/code/secured-web-information-system-prototype/"
                 />
@@ -619,6 +854,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/servlet/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/servlet/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -635,6 +875,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/tomcat/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/tomcat/"
                 />
@@ -645,6 +890,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/information-retrieval/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/information-retrieval/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -661,6 +911,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/"
                 />
@@ -671,6 +926,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/inverted-index/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/inverted-index/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -687,6 +947,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/python/"
                 />
@@ -697,6 +962,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/tags/search-engine/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/search-engine/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -713,6 +983,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/tags/c"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/tags/c"
                 />
@@ -723,6 +998,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/code/introducing-xiheframework/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/introducing-xiheframework/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -738,6 +1018,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/art/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/art/"
                 />
@@ -747,6 +1032,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/code/auto-fishing-wow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/auto-fishing-wow/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -762,6 +1052,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ja"
                 href="https://www.yaotian-huang.com/jp/projects/eotr/dynamic-shadow-for-2d-animation/"
                 />
@@ -771,6 +1066,11 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/projects/"
                 />
     <xhtml:link
                 rel="alternate"

@@ -6,8 +6,15 @@
     <description>Recent content in Code on Tim (Yaotian) Huang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 18 May 2023 08:35:48 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 08:35:48 -0400</lastBuildDate>
     <atom:link href="https://www.yaotian-huang.com/en/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
+      <link>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</link>
+      <pubDate>Wed, 01 May 2024 08:35:48 -0400</pubDate>
+      <guid>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</guid>
+      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.&#xA;The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
+    </item>
     <item>
       <title>Getting Started in Xiheframework</title>
       <link>https://www.yaotian-huang.com/en/code/getting-started-xiheframework/</link>
@@ -42,13 +49,6 @@
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
       <guid>https://www.yaotian-huang.com/en/code/introducing-xiheframework/</guid>
       <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.&#xA;Who Should Use Scale Ideally at least two members:&#xA;Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)&#xA;Skills Unity Editor Node-based Editor C# (Custom Modules) Warning &amp;#x26a0;&amp;#xfe0f; Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
-    </item>
-    <item>
-      <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
-      <link>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</guid>
-      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.&#xA;The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
     </item>
   </channel>
 </rss>
