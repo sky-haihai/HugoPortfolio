@@ -1,6 +1,6 @@
 ---
 title: "Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness"
-date: 2023-11-18T08:35:48-04:00
+date: 2024-05-01T08:35:48-04:00
 type: page
 
 draft: false

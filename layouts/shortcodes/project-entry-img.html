@@ -2,8 +2,11 @@
 {{$devlog := .Get "devlog"}}
 
 <div>
-  <h2>{{ .Get "name" }}</h2>
-  <div style="display: flex; flex-flow: row wrap; column-gap: 20px">
+  <!-- <div style="display: flex; flex-flow: row nowrap;column-gap: 20px;"> -->
+    <h2 style="align-self: center; margin-left: 0px; width:auto;margin-right: 0px;">{{ .Get "name" }}</h2>
+    <h4 style="align-self: center; margin: 0px;">{{ .Get "date" }}</h4>
+  <!-- </div> -->
+  <div style="display: flex; flex-flow: row wrap; column-gap: 20px;">
     <div style="flex: 2 1 420px">
       <h3>{{ .Get "role" }}</h3>
       <p style="text-align: left">

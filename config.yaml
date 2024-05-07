@@ -1,5 +1,5 @@
 baseURL: "https://www.yaotian-huang.com"
-title: "Tim (Yaotian) Huang"
+title: "Portfolio"
 paginate: 50
 theme: "charlolamode"
 
@@ -83,11 +83,11 @@ params:
 
     # change favicon in images folder (icon for web tab)
     assets:
-          favicon: "/images/favicon.ico"
-          favicon16x16: "/images/favicon-16x16.png"
-          favicon32x32: "/images/favicon-32x32.png"
-          apple_touch_icon: "/images/apple-touch-icon.png"
-          safari_pinned_tab: "/images/apple-touch-icon.png"
+      favicon: "/images/favicon.ico"
+      favicon16x16: "/images/favicon-16x16.png"
+      favicon32x32: "/images/favicon-32x32.png"
+      apple_touch_icon: "/images/apple-touch-icon.png"
+      safari_pinned_tab: "/images/apple-touch-icon.png"
 
 
 enableInlineShortcodes: true
@@ -97,6 +97,11 @@ pygmentsUseClasses: true
 
 minify:
     disableXML: true
+
+markup:
+  goldmark:
+    renderer: 
+      unsafe: true
 
 
 defaultContentLanguage: en
@@ -109,6 +114,52 @@ languages:
     params:
       reading_speed: 175
     weight: 2
+    title: "ポートフォリオ"
+    menu:
+      main:
+        - name: プロジェクト
+          url: projects/
+          weight: 1
+        - name: テクニカルアート
+          url: ta/
+          weight: 2
+        - name: プログラミング
+          url: code/
+          weight: 3
+        - name: アート
+          url: art/
+          weight: 4
+    params:
+      author: 黃 堯天
+      profileMode:
+        title: 黃 堯天
+        description: |
+          Technical(70%) Artist(29%)
+        imageUrl: "/images/profile.png"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: プロジェクト
+              url: projects/
+            - name: テクニカルアート
+              url: ta/
+            - name: プログラミング
+              url: code/
+            - name: アート
+              url: art/
+      mainSections:
+        - プロジェクト
+
+      socialIcons:
+          - name: github
+            url: "https://github.com/sky-haihai"
+          - name: linkedin
+            url: "https://www.linkedin.com/in/yaotian-huang/"
+          - name: twitter
+            url: "https://www.twitter.com/yaotianh"
+          - name: instagram
+            url: "https://www.instagram.com/sky_haihai/"
   en:
     contentDir: content/en
     languageCode: en-US
@@ -116,6 +167,7 @@ languages:
     params:
       reading_speed: 175
     weight: 1
+
   cn:
     contentDir: content/cn
     languageCode: zh-cn
@@ -123,3 +175,39 @@ languages:
     params:
       reading_speed: 175
     weight: 3
+    title: "作品集"
+    menu:
+      main:
+        - name: 项目作品
+          url: projects/
+          weight: 1
+        - name: 技术美术
+          url: ta/
+          weight: 2
+        - name: 程序
+          url: code/
+          weight: 3
+        - name: 美术
+          url: art/
+          weight: 4
+    params:
+      author: 黄尧天
+      profileMode:
+        title: 黄尧天
+        description: |
+          Technical(70%) Artist(29%)
+        imageUrl: "/images/profile.png"
+        imageTitle: my image
+        # imageWidth: 120
+        # imageHeight: 120
+        buttons:
+            - name: 项目作品
+              url: projects/
+            - name: 技术美术
+              url: ta/
+            - name: 程序
+              url: code/
+            - name: 美术
+              url: art/
+      mainSections:
+        - 项目作品

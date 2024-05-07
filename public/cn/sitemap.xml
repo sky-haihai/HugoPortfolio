@@ -2,6 +2,96 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</loc>
+    <lastmod>2024-05-01T08:35:48-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/code/auto-fishing-wow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/code/auto-fishing-wow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/auto-fishing-wow/"
+                />
+  </url><url>
+    <loc>https://www.yaotian-huang.com/cn/code/</loc>
+    <lastmod>2024-05-01T08:35:48-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/code/"
+                />
+  </url><url>
+    <loc>https://www.yaotian-huang.com/cn/</loc>
+    <lastmod>2024-05-01T08:35:48-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/"
+                />
+  </url><url>
+    <loc>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</loc>
+    <lastmod>2024-04-29T15:07:01+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/projects/eotr/dynamic-shadow-for-2d-animation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/projects/eotr/dynamic-shadow-for-2d-animation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/"
+                />
+  </url><url>
+    <loc>https://www.yaotian-huang.com/cn/projects/</loc>
+    <lastmod>2024-04-29T15:07:01+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/projects/"
+                />
+  </url><url>
     <loc>https://www.yaotian-huang.com/cn/categories/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
     <xhtml:link
@@ -146,24 +236,6 @@
                 href="https://www.yaotian-huang.com/cn/ta/"
                 />
   </url><url>
-    <loc>https://www.yaotian-huang.com/cn/</loc>
-    <lastmod>2024-03-04T11:59:37-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/"
-                />
-  </url><url>
     <loc>https://www.yaotian-huang.com/cn/tags/unity/</loc>
     <lastmod>2024-03-04T11:59:37-07:00</lastmod>
     <xhtml:link
@@ -198,42 +270,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.yaotian-huang.com/cn/tags/urp/"
-                />
-  </url><url>
-    <loc>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</loc>
-    <lastmod>2023-11-18T08:35:48-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/code/auto-fishing-wow/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/code/auto-fishing-wow/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/code/auto-fishing-wow/"
-                />
-  </url><url>
-    <loc>https://www.yaotian-huang.com/cn/code/</loc>
-    <lastmod>2023-11-18T08:35:48-04:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/code/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/code/"
                 />
   </url><url>
     <loc>https://www.yaotian-huang.com/cn/categories/3d-art/</loc>
@@ -1043,40 +1079,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.yaotian-huang.com/cn/art/"
-                />
-  </url><url>
-    <loc>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/projects/eotr/dynamic-shadow-for-2d-animation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/projects/eotr/dynamic-shadow-for-2d-animation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/"
-                />
-  </url><url>
-    <loc>https://www.yaotian-huang.com/cn/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/projects/"
                 />
   </url>
 </urlset>

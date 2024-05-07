@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Game Projects on Tim (Yaotian) Huang</title>
+    <title>项目作品 on 作品集</title>
     <link>https://www.yaotian-huang.com/cn/projects/</link>
-    <description>Recent content in Game Projects on Tim (Yaotian) Huang</description>
+    <description>Recent content in 项目作品 on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://www.yaotian-huang.com/cn/projects/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

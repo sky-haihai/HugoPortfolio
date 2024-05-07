@@ -1,31 +1,33 @@
 ---
-title: Game Projects
+title: ゲームプロジェクト
 ---
 
 ---
 
-{{<project-entry-img name="Echoes of the Roots" role="Technical Artist, Lead Programmer" desc="Winner of Best Artistic Achievement at Level-up Showcase 2024. A 2.5 action adventure made with Unity. I'm credited for coding the combat framework, various technical art including shaders, post-processings and asset automation tools." img="eotr/AWARDS-min.png" devlog="eotr">}}
+{{<project-entry-img name="エコーズ・オブ・ザ・ルーツ" date="2023-2024" role="テクニカルアーティスト、リードプログラマー" desc="2024年レベルアップショーケースで最優秀芸術成就賞を受賞。Unity製の2.5Dアクションアドベンチャーゲーム。戦闘フレームワークのコーディング、シェーダー・ポストプロセス・アセットオートメーションツールなどの技術アートを担当。" img="eotr/AWARDS-min.png" devlog="eotr">}}
 
 ---
 
-{{<project-entry-img name="Animal Planet: Flat Earth [Ongoing]" role="Programmer, Designer" desc="An upgrade to my previous jam project: Animal Planet. This is a (flat) planet building, strategy, simulation game made with Unity. Comparing to Animal Planet, a new disasters system will be introduced! The project is under active development." img="ongoing/placeholder.png">}}
+{{<project-entry-img name="アニマルプラネット：フラットアース [進行中]" date="2023-現在" role="プログラマー、デザイナー" desc="以前のジャムプロジェクト「アニマルプラネット」のアップグレード版。Unityで製作された（平らな）惑星ビルディング、戦略、シミュレーションゲーム。新しい災害システムが導入される予定！プロジェクトは積極的に開発中です。" img="ongoing/placeholder.png">}}
 
 ---
 
-{{<project-entry-img name="Slimo" role="Programmer, Designer" desc="A 3D puzzle game where you control Slinks to find their princess, Slimo. Made with unity using keyboard controls. Designed for A game created within 3 days for the Toronto Game Jam 2023." img="slimo/0ujX43.png">}}
+{{<project-entry-img name="Slimo" role="プログラマー、デザイナー、3Dアーティスト" date="2023" desc="プレイヤーがスリンクスを操作し、彼らのプリンセス、スリモを見つける3Dパズルゲーム。Unityを使用してキーボード操作で作成。トロントゲームジャム2023の3日間で制作されたゲームです。" img="slimo/0ujX43.png">}}
 
 ---
 
-{{<project-entry-img name="Windo" role="Programmer, Designer" desc="A 3D house cleaning strategy simulation game with multiple stage where the player controls a vacuum bot to blow, instead of inhale dusts into the designated trash bin within the level. Sounds simple? Cato the house cat is on his way ready to create obstacles and give you a hard time. A game created within 3 days for the Toronto Game Jam 2023." img="windo/4TlwTo1.png">}}
+{{<project-entry-img name="Windo" role="プログラマー、デザイナー、3Dアーティスト" date="2022" desc="プレイヤーが掃除ロボットを操作して、複数のステージで家の掃除をする戦略シミュレーションゲーム。ほこりを吸い込むのではなく、吹き飛ばしてレベル内の指定されたゴミ箱に入れることが目的。簡単に聞こえますか？カトーという名前の家の猫が障害物を作り出し、困難を提供します。トロントゲームジャム2023の3日間で制作されたゲームです。" img="windo/4TlwTo1.png">}}
 
 ---
 
-{{<project-entry-img name="The Day of Sagittarius: IV" role="Plagiarist" desc="Fan project for the anime Haruhi Suzumiya, episode of \"I forgot but in the later half for sure\". In that episode, Yuki Nagato programmed a game called The Day of Sagittarius III, so I tried to replicate it, and shamelessly made it called IV." img="tdos/tdos1.png">}}
+{{<project-entry-img name="射手座の日IV" role="盗作家" date="2022" desc="アニメ「涼宮ハルヒの憂鬱」のあるエピソードのファンプロジェクト。そのエピソードでは、長門有希が「射手座の日III」というゲームをプログラムしていたため、それを模倣し、図々しくも「IV」と名付けました。" img="tdos/tdos1.png">}}
 
 ---
 
-{{<project-entry-img name="Animal Planet" role="Programmer, Designer, 3D Artist" desc="Winner of Participation Award(Top 13%) at BIGC 2021 (Beijing International Game Innovation Conference) . A spherical planet building, stretegy, simulation game, where the player needs to discover different combinations between various terrain blocks and try to balance the ecosystem by keeping the amount of all kinds of animals up." img="animalplanet/zxRCxq.png">}}
+{{<project-entry-img name="動物の星" date="2021" role="プログラマー、デザイナー、3Dアーティスト" desc="2021年北京国際ゲームイノベーションカンファレンス(BIGC)で参加賞（トップ13％）を受賞。球形の惑星ビルディング、戦略、シミュレーションゲームで、プレイヤーはさまざまな地形ブロックの組み合わせを発見し、全種類の動物の数量を保つことで生態系のバランスをとる必要があります。" img="animalplanet/zxRCxq.png">}}
 
 ---
 
-{{<project-entry-img name="BumpItUp" role="Programmer, Designer" desc="This game analyzes the audio file the player imports in and generate a beat map for player to play. The goal is literally to bump it up, strong beats provide more momentum! This game is made for Toronto Game Jam 2023." img="bumpitup/zC_4R4.png" >}}
+{{<project-entry-img name="バンプイットアップ" date="2021" role="プログラマー、デザイナー" desc="このゲームはプレイヤーがインポートするオーディオファイルを分析し、プレイヤーが遊ぶためのビートマップを生成します。文字通りに盛り上がることが目標で、強いビートがより多くの勢いを提供します！トロントゲームジャム2023で制作されたゲームです。" img="bumpitup/zC_4R4.png" >}}
+
+---

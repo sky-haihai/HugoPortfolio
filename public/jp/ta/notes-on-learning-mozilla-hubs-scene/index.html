@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Notes on Learning Mozilla Hubs: Scene | Tim (Yaotian) Huang</title>
+<title>Notes on Learning Mozilla Hubs: Scene | ポートフォリオ</title>
 <meta name="keywords" content="Metaverse, Mozilla Hubs, Blender, GLB, Opimazation, Scene" />
 <meta name="description" content="Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&rsquo;s bright future for two reasons:">
-<meta name="author" content="Tim Huang">
+<meta name="author" content="黃 堯天">
 <link rel="canonical" href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
@@ -77,7 +77,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/jp/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <a href="https://www.yaotian-huang.com/jp/" accesskey="h" title="ポートフォリオ (Alt + H)">ポートフォリオ</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -116,23 +116,23 @@
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="https://www.yaotian-huang.com/jp/projects/" title="プロジェクト">
+                    <span>プロジェクト</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/ta/" title="TA">
-                    <span>TA</span>
+                <a href="https://www.yaotian-huang.com/jp/ta/" title="テクニカルアート">
+                    <span>テクニカルアート</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/code/" title="Code">
-                    <span>Code</span>
+                <a href="https://www.yaotian-huang.com/jp/code/" title="プログラミング">
+                    <span>プログラミング</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/art/" title="Art">
-                    <span>Art</span>
+                <a href="https://www.yaotian-huang.com/jp/art/" title="アート">
+                    <span>アート</span>
                 </a>
             </li>
         </ul>
@@ -146,7 +146,7 @@
     <h1 class="post-title">
       Notes on Learning Mozilla Hubs: Scene
     </h1>
-    <div class="post-meta"><span title='2023-10-26 10:27:04 -0600 MDT'>Oct 26, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;Tim Huang</div>
+    <div class="post-meta"><span title='2023-10-26 10:27:04 -0600 MDT'>Oct 26, 2023</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;黃 堯天</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -238,7 +238,32 @@
 <h2 id="demo-scene">Demo Scene</h2>
 <p>As always, a <a href="https://0827133699.us1.myhubs.net/link/BwXmTSy">Demo</a> is worth a thousand words.</p>
 <p>This demo is tested on the following devices:</p>
-<!-- raw HTML omitted -->
+<table>
+    <tr>
+        <td>Device</td>
+        <td>OS</td>
+        <td>Browser</td>
+        <td>Framerate</td>
+   </tr>
+    <tr>
+        <td>Desktop(3060Ti)</td>
+        <td>Windows 11</td>
+        <td>Chrome V.118 (64bits)</td>
+        <td>Stable 144FPS (Synced with monitor refresh rate)</td>
+    </tr>
+    <tr>
+        <td>Laptop (No Dedicated GPU)</td>
+        <td>Windows 11</td>
+        <td>Chrome (64bits)</td>
+        <td>50FPS - 60FPS(Disable Real-time Shadow)</td>
+    </tr>
+    <tr>
+        <td>Iphone 7 Plus</td>
+        <td>IOS</td>
+        <td>Safari</td>
+        <td>Stable 60FPS</td>
+    </tr>
+</table>
 <h2 id="limitations">Limitations</h2>
 <ol>
 <li>No support for custom shaders</li>

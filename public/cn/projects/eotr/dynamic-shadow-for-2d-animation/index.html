@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Devlog: Dynamic Shadow for 2D Animation | Tim (Yaotian) Huang</title>
+<title>Devlog: Dynamic Shadow for 2D Animation | 作品集</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Why Dynamic Shadow for 2D Animation? In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.
 Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.">
-<meta name="author" content="Tim Huang">
+<meta name="author" content="黄尧天">
 <link rel="canonical" href="https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
@@ -78,7 +78,7 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="Tim (Yaotian) Huang (Alt + H)">Tim (Yaotian) Huang</a>
+            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -117,23 +117,23 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="https://www.yaotian-huang.com/cn/projects/" title="项目作品">
+                    <span>项目作品</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/ta/" title="TA">
-                    <span>TA</span>
+                <a href="https://www.yaotian-huang.com/cn/ta/" title="技术美术">
+                    <span>技术美术</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/code/" title="Code">
-                    <span>Code</span>
+                <a href="https://www.yaotian-huang.com/cn/code/" title="程序">
+                    <span>程序</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/art/" title="Art">
-                    <span>Art</span>
+                <a href="https://www.yaotian-huang.com/cn/art/" title="美术">
+                    <span>美术</span>
                 </a>
             </li>
         </ul>
@@ -143,11 +143,11 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/">Game Projects</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/eotr/">Echoes of the Roots Devlogs</a></div>
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/">项目作品</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/eotr/">Echoes of the Roots Devlogs</a></div>
     <h1 class="post-title">
       Devlog: Dynamic Shadow for 2D Animation
     </h1>
-    <div class="post-meta">3 min&nbsp;·&nbsp;Tim Huang</div>
+    <div class="post-meta"><span title='2024-04-29 15:07:01 +0000 +0000'>Apr 29, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;黄尧天</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -165,15 +165,17 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
                 <li>
                     <a href="#result" aria-label="Result">Result</a></li>
                 <li>
-                    <a href="#problem-1" aria-label="Problem 1">Problem 1</a></li>
+                    <a href="#problem-1" aria-label="Problem #1">Problem #1</a></li>
                 <li>
-                    <a href="#problem-2" aria-label="Problem 2">Problem 2</a></li></ul>
+                    <a href="#problem-2" aria-label="Problem #2">Problem #2</a></li></ul>
                 </li>
                 <li>
                     <a href="#trial-2-mask-based-shadow" aria-label="Trial #2: Mask Based Shadow">Trial #2: Mask Based Shadow</a><ul>
                         
                 <li>
-                    <a href="#method-1" aria-label="Method">Method</a>
+                    <a href="#method-1" aria-label="Method">Method</a></li>
+                <li>
+                    <a href="#result-1" aria-label="Result">Result</a>
                 </li>
             </ul>
             </li>
@@ -205,7 +207,7 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
 </figure>
 
 <p>The result is somewhat decent, considering we haven&rsquo;t simplified the lighting model yet. However, there are some issues:</p>
-<h3 id="problem-1">Problem 1</h3>
+<h3 id="problem-1">Problem #1</h3>
 <p>The distance in the SDF map is linear, there are obvious peaks at the pixels which have the largest distances.
 <figure><img src="sdfmap.png"/>
 </figure>
@@ -215,7 +217,7 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
 </figure>
 
 <p>We could apply a spherical falloff to the distance to make the normal map looks smoother, but that leads us to the second problem:</p>
-<h3 id="problem-2">Problem 2</h3>
+<h3 id="problem-2">Problem #2</h3>
 <p>Controllability.</p>
 <p>Baking the normal map basically means that we are committed to a full PBR workflow. Which means the 2D artist will have no control over the final result of the shadow. Of course, we can always manually tweak the normal map, but that&rsquo;s not very intuitive for the 2D artist.</p>
 <h2 id="trial-2-mask-based-shadow">Trial #2: Mask Based Shadow</h2>
@@ -224,9 +226,28 @@ Among the various efforts, a key point was to achieve the consistancy of the sha
 
 <h3 id="method-1">Method</h3>
 <p>The mask method works quite straightforwardly. We first create a mask for each frame of the animation, then offset the mask a little bit based on the lighting information. The mask is marked as the lit area while the rest is marked as shadow.</p>
-<figure><img src="2ndmethod.png"/>
+<figure><img src="2ndmethod.png" width="600"/>
 </figure>
 
+<p>Comparing to the method used in <a href="/cn/projects/eotr/dynamic-shadow-for-2d-animation/#trial-1-normal-map-baking">Trial #1</a>, this one is much simpler, technically. We just need a more rounded image for each spritesheet.</p>
+<p>This can be done in various ways, here&rsquo;s my approach:</p>
+<ol>
+<li>Extend the image by drawing solid circles for each pixel.</li>
+<li>Blur it.</li>
+<li>Discard pixels below a certain threshold.</li>
+</ol>
+<p>There are a few parameters that we can still tweak, so I wrote another baking tool as shown below. The sreenshot is took during the development, so some parts have wrong labels&hellip;</p>
+<figure><img src="finalbaker.png"/>
+</figure>
+
+<h3 id="result-1">Result</h3>
+<figure><img src="spherelight.png"/>
+</figure>
+
+<p>For the scope of the project, the mask is offsetting linearly based on the light direction. The result is quite satisfying, this method achived two main goals:</p>
+<ol>
+<li>The project now has a basic implementation of 2D</li>
+</ol>
 
   </div>
 

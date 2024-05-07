@@ -1,6 +1,6 @@
 ---
 title: "Devlog: Dynamic Shadow for 2D Animation"
-date: "2020-12-23T15:21:54+05:30"
+date: "2024-04-29T15:07:01+00:00"
 type: page
 image: "/images/2ndmethod.png"
 
@@ -35,7 +35,7 @@ Now we have the normal map, we can simply create a material and assign the sourc
 
 The result is somewhat decent, considering we haven't simplified the lighting model yet. However, there are some issues:
 
-### Problem 1
+### Problem #1
 
 The distance in the SDF map is linear, there are obvious peaks at the pixels which have the largest distances. 
 {{< figure src="sdfmap.png" >}}
@@ -46,7 +46,7 @@ Which as a result, make the normal map looks sharp and not smooth.
 
 We could apply a spherical falloff to the distance to make the normal map looks smoother, but that leads us to the second problem:
 
-### Problem 2
+### Problem #2
 
 Controllability. 
 
@@ -62,6 +62,31 @@ Baking the normal map basically means that we are committed to a full PBR workfl
 
 The mask method works quite straightforwardly. We first create a mask for each frame of the animation, then offset the mask a little bit based on the lighting information. The mask is marked as the lit area while the rest is marked as shadow.
 
-{{< figure src="2ndmethod.png" >}}
+{{< figure src="2ndmethod.png" width="600" >}}
+
+Comparing to the method used in [Trial #1](#trial-1-normal-map-baking), this one is much simpler, technically. We just need a more rounded image for each spritesheet.
+
+This can be done in various ways, here's my approach:
+
+1. Extend the image by drawing solid circles for each pixel.
+2. Blur it.
+3. Discard pixels below a certain threshold.
+
+There are a few parameters that we can still tweak, so I wrote another baking tool as shown below. The sreenshot is took during the development, so some parts have wrong labels...
+
+{{< figure src="finalbaker.png" >}}
 
 
+### Result
+
+{{< figure src="spherelight.png" >}}
+
+For the scope of the project, the mask is offsetting linearly based on the light direction. The result is quite satisfying, this method achived two main goals:
+
+1. We now have a basic implementation of dynamic shadow for 2D animation.
+2. 2D Artists can have pixel-accurate control over the shadow by simply editing the baked masks.
+
+## Play The Game
+See the work in the game! Especially in the first stage.
+
+<iframe frameborder="0" src="https://itch.io/embed/2489961?border_width=3" width="556" height="171"><a href="https://secondrealmstudio.itch.io/eotr">Echoes of the Roots by Second Realm Studio, Charlotte Crosland</a></iframe>

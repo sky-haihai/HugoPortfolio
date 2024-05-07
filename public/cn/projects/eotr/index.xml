@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Echoes of the Roots Devlogs on Tim (Yaotian) Huang</title>
+    <title>Echoes of the Roots Devlogs on 作品集</title>
     <link>https://www.yaotian-huang.com/cn/projects/eotr/</link>
-    <description>Recent content in Echoes of the Roots Devlogs on Tim (Yaotian) Huang</description>
+    <description>Recent content in Echoes of the Roots Devlogs on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Mon, 29 Apr 2024 15:07:01 +0000</lastBuildDate>
     <atom:link href="https://www.yaotian-huang.com/cn/projects/eotr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Devlog: Dynamic Shadow for 2D Animation</title>
       <link>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 Apr 2024 15:07:01 +0000</pubDate>
       <guid>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</guid>
       <description>Why Dynamic Shadow for 2D Animation? In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.&#xA;Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&amp;rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.</description>
     </item>
