@@ -8,7 +8,7 @@ title: 项目作品
 
 ---
 
-{{<project-entry-img name="Animal Planet: Flat Earth [进行中]" date="2023-至今" role="程序、策划" desc="我之前的jam项目“Animal Planet”的升级版本：这是一个使用Unity制作的（平面）星球建造、战略、模拟游戏。与“Animal Planet”相比，将引入一个新的灾难系统！该项目正在积极开发中。" img="ongoing/placeholder.png">}}
+{{<project-entry-img name="动物星球：地平说 [进行中]" date="2023-至今" role="程序、策划" desc="我之前的jam项目“Animal Planet”的升级版本：这是一个使用Unity制作的（平面）星球建造、战略、模拟游戏。与“Animal Planet”相比，将引入一个新的灾难系统！该项目正在积极开发中。" img="ongoing/placeholder.png">}}
 
 ---
 

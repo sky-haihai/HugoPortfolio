@@ -60,4 +60,4 @@ Although I'm not caught by the anti-cheat department, I felt greedy when I cook 
 
 What I really wanted to enjoy is the moment when I wake up and there is that one rare item sitting in the middle of all the craps that I got over the last night.
 
-So I quit WOW in 2 weeks after making this script, due to the increased amount of work for one of my game projects: [Echoes of the Roots](/project/).
+So I quit WOW in 2 weeks after making this script, due to the increased amount of work for one of my game projects: [Echoes of the Roots](/projects/).
