@@ -43,7 +43,7 @@ params:
     profileMode:
         # Disable to populate home page with 'mainSections' content
         enabled: true
-        title: Tim (Yaotian) Huang
+        title: Yaotian (Tim) Huang
         description: |
           Technical(70%) Artist(29%)
         imageUrl: "/images/profile.png"
