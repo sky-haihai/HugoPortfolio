@@ -6,8 +6,15 @@
     <description>Recent content on Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 01 May 2024 08:35:48 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate>
     <atom:link href="https://www.yaotian-huang.com/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Devlog: Smoothed Sector Ray Casting</title>
+      <link>https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/</link>
+      <pubDate>Thu, 16 May 2024 17:45:58 +0000</pubDate>
+      <guid>https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/</guid>
+      <description>Goal The game project Fluffy Floaty Rubber Tennis is a physic-based fixed-Camera space tennis game. The only player control is to Swing the racket.&#xA;The logic I chose for the interaction between the racket and other objects when swinging is to apply a force to the object the racket hit and a reaction force to the player.&#xA;Why NOT Physics.SphereCast? So.. why not just use the built-in Unity physics function Physics.</description>
+    </item>
     <item>
       <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
       <link>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</link>

@@ -2,7 +2,7 @@
 title: "Devlog: Dynamic Shadow for 2D Animation"
 date: "2024-04-29T15:07:01+00:00"
 type: page
-image: "/images/2ndmethod.png"
+image: "/images/eotr/2ndmethod.png"
 
 ---
 

@@ -23,7 +23,7 @@ I choose the second option.
 
 ## Code Snippet
 
-Most game has a sound queue when the fish is hooked, so I can just write a simple program to listen to the sound and press the button when a certain loudness threshold is reached.
+Most game has a sound cue when the fish is hooked, so I can just write a simple program to listen to the sound and press the button when a certain loudness threshold is reached.
 
 ### Detect the volume of the sound.
 
