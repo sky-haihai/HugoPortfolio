@@ -6,6 +6,8 @@ title: Game Projects
 
 {{<project-entry-img name="Fluffy Floaty Rubber Tennis" date="2024" role="Programmer, Technical Artist" desc="It's supposed to be a space tennis game, hit the ball 6 times in a row to win! But without the net, what is the racket supposed to do now? There is an answer in your heart (it's violence). This game is made for ToJam 2024: Talk About Fourshadowing. The theme is \"It's supposed to do that!\" " img="ffrt/ffrtbeat.png" devlog="ffrt">}}
 
+---
+
 {{<project-entry-img name="Echoes of the Roots" date="2023-2024" role="Technical Artist, Lead Programmer" desc="Winner of Best Artistic Achievement at Level-up Showcase 2024. A 2.5D action adventure made with Unity. I'm credited for coding the combat framework, various technical art including shaders, post-processings and asset automation tools." img="eotr/AWARDS-min.png" devlog="eotr">}}
 
 ---
