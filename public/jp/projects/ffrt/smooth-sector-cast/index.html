@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="jp" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Devlog: Smoothed Sector Ray Casting | Portfolio</title>
+<title>開発ログ：平滑なセクター放射線キャスティング | ポートフォリオ</title>
 <meta name="keywords" content="" />
-<meta name="description" content="A realtime sector ray casting method with smoothed central angle">
-<meta name="author" content="Tim Huang">
-<link rel="canonical" href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/" />
+<meta name="description" content="平滑な中心角を持つリアルタイムセクター放射線キャスティング法">
+<meta name="author" content="黃 堯天">
+<link rel="canonical" href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -77,7 +77,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <a href="https://www.yaotian-huang.com/jp/" accesskey="h" title="ポートフォリオ (Alt + H)">ポートフォリオ</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -101,8 +101,8 @@
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/" title="JP"
-                            aria-label="JP">JP</a>
+                        <a href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/" title="EN"
+                            aria-label="EN">EN</a>
                     </li>
                     <li>
                         <a href="https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/" title="CN"
@@ -116,23 +116,23 @@
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="https://www.yaotian-huang.com/jp/projects/" title="プロジェクト">
+                    <span>プロジェクト</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/ta/" title="TA">
-                    <span>TA</span>
+                <a href="https://www.yaotian-huang.com/jp/ta/" title="テクニカルアート">
+                    <span>テクニカルアート</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/code/" title="Code">
-                    <span>Code</span>
+                <a href="https://www.yaotian-huang.com/jp/code/" title="プログラミング">
+                    <span>プログラミング</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/art/" title="Art">
-                    <span>Art</span>
+                <a href="https://www.yaotian-huang.com/jp/art/" title="アート">
+                    <span>アート</span>
                 </a>
             </li>
         </ul>
@@ -142,14 +142,14 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/en/projects/">Game Projects</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/en/projects/ffrt/">Fluffy Floaty Rubber Tennis Devlogs</a></div>
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/jp/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/jp/projects/">ゲームプロジェクト</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/jp/projects/ffrt/">ふわふわぷかぷかゴムテニス 開発日誌</a></div>
     <h1 class="post-title">
-      Devlog: Smoothed Sector Ray Casting
+      開発ログ：平滑なセクター放射線キャスティング
     </h1>
     <div class="post-description">
-      A realtime sector ray casting method with smoothed central angle
+      平滑な中心角を持つリアルタイムセクター放射線キャスティング法
     </div>
-    <div class="post-meta"><span title='2024-05-16 17:45:58 +0000 +0000'>May 16, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Tim Huang</div>
+    <div class="post-meta"><span title='2024-05-16 17:45:58 +0000 +0000'>May 16, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;黃 堯天</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -158,25 +158,25 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#goal" aria-label="Goal">Goal</a></li>
+                    <a href="#%e7%9b%ae%e6%a8%99" aria-label="目標">目標</a></li>
                 <li>
-                    <a href="#why-not-physicsspherecast" aria-label="Why NOT Physics.SphereCast?">Why NOT Physics.SphereCast?</a></li>
+                    <a href="#%e3%81%aa%e3%81%9c-physicsspherecast-%e3%82%92%e4%bd%bf%e3%82%8f%e3%81%aa%e3%81%84%e3%81%ae%e3%81%8b" aria-label="なぜ Physics.SphereCast を使わないのか？">なぜ Physics.SphereCast を使わないのか？</a></li>
                 <li>
-                    <a href="#building-a-new-solution" aria-label="Building a New Solution">Building a New Solution</a><ul>
+                    <a href="#%e6%96%b0%e3%81%97%e3%81%84%e3%82%bd%e3%83%aa%e3%83%a5%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e6%a7%8b%e7%af%89" aria-label="新しいソリューションの構築">新しいソリューションの構築</a><ul>
                         
                 <li>
-                    <a href="#intuitivity" aria-label="Intuitivity">Intuitivity</a></li>
+                    <a href="#%e7%9b%b4%e6%84%9f%e6%80%a7" aria-label="直感性">直感性</a></li>
                 <li>
-                    <a href="#mechanism" aria-label="Mechanism">Mechanism</a></li>
+                    <a href="#%e3%83%a1%e3%82%ab%e3%83%8b%e3%82%ba%e3%83%a0" aria-label="メカニズム">メカニズム</a></li>
                 <li>
-                    <a href="#ray-casting" aria-label="Ray Casting">Ray Casting</a></li>
+                    <a href="#%e3%83%ac%e3%82%a4%e3%82%ad%e3%83%a3%e3%82%b9%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0" aria-label="レイキャスティング">レイキャスティング</a></li>
                 <li>
-                    <a href="#ray-sorting" aria-label="Ray Sorting">Ray Sorting</a></li></ul>
+                    <a href="#%e3%83%ac%e3%82%a4%e3%81%ae%e3%82%bd%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0" aria-label="レイのソーティング">レイのソーティング</a></li></ul>
                 </li>
                 <li>
-                    <a href="#implementation" aria-label="Implementation">Implementation</a></li>
+                    <a href="#%e5%ae%9f%e8%a3%85" aria-label="実装">実装</a></li>
                 <li>
-                    <a href="#want-to-see-the-work-in-the-game" aria-label="Want to see the work in the game?">Want to see the work in the game?</a>
+                    <a href="#%e3%82%b2%e3%83%bc%e3%83%a0%e5%86%85%e3%81%a7%e3%81%93%e3%81%ae%e6%88%90%e6%9e%9c%e3%82%92%e8%a6%8b%e3%81%9f%e3%81%84%e3%81%a7%e3%81%99%e3%81%8b" aria-label="ゲーム内でこの成果を見たいですか？">ゲーム内でこの成果を見たいですか？</a>
                 </li>
             </ul>
         </div>
@@ -184,97 +184,97 @@
 </div>
 
   <div class="post-content">
-  <h2 id="goal">Goal</h2>
-<p>The game project Fluffy Floaty Rubber Tennis is a physic-based fixed-Camera space tennis game. The only player control is to <strong>Swing</strong> the racket.</p>
-<p>The logic I chose for the interaction between the racket and other objects when swinging is to apply a force to the object the racket hit and a reaction force to the player.</p>
-<h2 id="why-not-physicsspherecast">Why NOT Physics.SphereCast?</h2>
-<p>So.. why not just use the built-in Unity physics function <code>Physics.SphereCast</code>?</p>
-<p>Maybe I just don&rsquo;t understand the real logic behind it, but I think it&rsquo;s bugged when the hit distance euqals to 0.</p>
-<p>As shown in the screenshot below, when the player swings toward left, the sphere cast starts at the character origin, and ends a little bit further than the racket. The expected collision point happens between &ldquo;first spehre&rdquo; of the Sphere Cast and the long obstacle on its right side. Since the sphere cast travels 0 distance to reach the obstacle, the hit distance is also expected to be 0.</p>
+  <h2 id="目標">目標</h2>
+<p>ゲームプロジェクト Fluffy Floaty Rubber Tennis は、物理ベースの固定カメラ宇宙テニスゲームです。プレイヤーの唯一の操作は<strong>ラケットを振る</strong>ことです。</p>
+<p>ラケットを振る際にラケットと他の物体がどのように相互作用するかのロジックは、ラケットがヒットした物体に力を加え、プレイヤーに反作用力を加えることです。</p>
+<h2 id="なぜ-physicsspherecast-を使わないのか">なぜ Physics.SphereCast を使わないのか？</h2>
+<p>では、なぜ内蔵の Unity 物理関数 <code>Physics.SphereCast</code> を使わないのでしょうか？</p>
+<p>もしかしたらその背後にある本当のロジックを理解していないだけかもしれませんが、ヒット距離が 0 の時にバグがあると思います。</p>
+<p>下のスクリーンショットに示されているように、プレイヤーが左に向かってスイングすると、スフィアキャストはキャラクターの原点で始まり、ラケットより少し先で終わります。予想される衝突点はスフィアキャストの「最初の球体」とその右側の長い障害物の間に発生します。スフィアキャストが障害物に到達するまでの移動距離が 0 であるため、ヒット距離も 0 であると予想されます。</p>
 <figure><img src="sphere-cast.png"/>
 </figure>
 
-<p>To this point, Everything makes sense to me. The reality is that the Sphere Cast returns a hit with hit distance as 0, as expected, however the hit point is at <code>Vector3.Zero</code>!</p>
-<p>I did multiple tests and the result is consistent. As long as the hit distance is 0, the hit point is always <code>Vector3.Zero</code>&hellip;</p>
-<h2 id="building-a-new-solution">Building a New Solution</h2>
-<p>Since the built-in function is not working as expected, I decided to build my own solution, using <code>Physics.Raycast</code>.</p>
-<p>The mechanism is really based on the need of this project: swing a racket.</p>
-<h3 id="intuitivity">Intuitivity</h3>
-<p>Breaking down the problem, these are the key points to make a swing intuitive:</p>
+<p>この時点までは、すべてが私にとって理にかなっています。実際には、スフィアキャストは予想通りヒット距離が 0 でヒットを返しますが、ヒットポイントは <code>Vector3.Zero</code> にあります！</p>
+<p>私は複数のテストを行い、結果は一貫しています。ヒット距離が 0 である限り、ヒットポイントは常に <code>Vector3.Zero</code> にあります&hellip;</p>
+<h2 id="新しいソリューションの構築">新しいソリューションの構築</h2>
+<p>組み込みの関数が期待通りに動作しないため、<code>Physics.Raycast</code> を使用して独自のソリューションを構築することにしました。</p>
+<p>このメカニズムは、このプロジェクトのニーズに基づいています：ラケットを振ること。</p>
+<h3 id="直感性">直感性</h3>
+<p>問題を分解すると、これらはスイングを直感的にするための重要なポイントです：</p>
 <ul>
-<li>A comfortable swing should include a small circle space around the character, so when the ball is overlapping with the player, the player should be able to hit it.</li>
-<li>The swing should be the shape of a sector, because swinging is essentially rotating the arm to make the racket cover a sector area.</li>
-<li>The swing should hit the object which is closest to the aim direction or the mouse position first.</li>
+<li>快適なスイングには、キャラクターの周りに小さな円の空間を含める必要があります。したがって、ボールがプレイヤーと重なっている場合、プレイヤーはそれを打つことができるはずです。</li>
+<li>スイングは扇形である必要があります。なぜなら、スイングは基本的に腕を回転させてラケットが扇形の領域をカバーするからです。</li>
+<li>スイングは、プレイヤーが狙っている方向またはマウスの位置に最も近い物体を最初にヒットする必要があります。</li>
 </ul>
-<p>Therefore, the hitting area should be covered like this:</p>
+<p>したがって、打撃領域は次のようにカバーする必要があります：</p>
 <figure><img src="new-1.png" height="200"/>
 </figure>
 
-<h3 id="mechanism">Mechanism</h3>
-<p>As shown above, the idea is to draw two concentric circles, then draw two lines through the center of the circle to determine the sector angle, Then connect the hitting points to form a sector area with a smoothed central angle.</p>
-<p>The parameters are:</p>
+<h3 id="メカニズム">メカニズム</h3>
+<p>上記のように、アイデアは同心円を2つ描き、円の中心を通る2本の線を引いて扇形の角度を決定し、ヒットポイントを接続して平滑な中心角を持つ扇形領域を形成することです。</p>
+<p>パラメータは以下の通りです：</p>
 <ol>
-<li>The radius of the overlapping circle.</li>
-<li>The radius of the circle in which the sector lies. (Distance of how far the racket can reach when swinging)</li>
-<li>The angle of the sector.</li>
+<li>重なり合う円の半径。</li>
+<li>扇形がある円の半径。（スイング時にラケットが届く距離）</li>
+<li>扇形の角度。</li>
 </ol>
-<h3 id="ray-casting">Ray Casting</h3>
-<p>Then we can cast rays from the small circle to the big circle with a defined ray desity. In this project, I</p>
+<h3 id="レイキャスティング">レイキャスティング</h3>
+<p>その後、小さな円から大きな円まで定義されたレイ密度でレイをキャストできます。このプロジェクトでは、</p>
 <figure><img src="new-2.png" height="200"/>
 </figure>
 
-<h3 id="ray-sorting">Ray Sorting</h3>
-<p>As mentioned in the Intuitivity section, the ray should be sorted/culled to let the player hits what they want to hit.</p>
-<p>Say the player is aiming toward right and the green circle overlapping the hitting area is a ball. The default behaviour without any sorting is quite random. For example, in the shown image, the rays can be casting from bottom to top, top to bottom or even from middle to the edge.</p>
+<h3 id="レイのソーティング">レイのソーティング</h3>
+<p>直感性セクションで述べたように、レイはプレイヤーがヒットしたい物体をヒットするようにソート/削除する必要があります。</p>
+<p>たとえば、プレイヤーが右側を狙っていて、ヒットエリアと重なる緑の円がボールである場合、ソートなしのデフォルトの動作は非常にランダムです。たとえば、表示された画像では、レイは下から上、上から下、さらには中央からエッジに向かってキャストされることがあります。</p>
 <figure><img src="new-4.png" height="200"/>
 </figure>
 
 <figure><img src="new-3.png" height="200"/>
 </figure>
 
-<p>In this case, I decided to add three sorting methods:</p>
+<p>この場合、次の3つのソーティング方法を追加することにしました：</p>
 <ol>
 <li>
-<p><strong>Distance Sorting</strong>: Sort the rays based on the distance to the center of the sector.</p>
+<p><strong>距離ソート</strong>：セクターの中心からの距離に基づいてレイをソートします。</p>
 </li>
 <li>
-<p><strong>Angle Sorting</strong>: Sort the rays based on the angle between the ray and the aiming direction.</p>
+<p><strong>角度ソート</strong>：レイと照準方向との角度に基づいてレイをソートします。</p>
 </li>
 <li>
-<p><strong>First/Last Hit Sorting</strong>: Sort the rays based on the order that rays are casted.</p>
+<p><strong>最初/最後のヒットソート</strong>：レイがキャストされる順序に基づいてレイをソートします。</p>
 </li>
 </ol>
-<h2 id="implementation">Implementation</h2>
-<p>After some debugging, the result is quite good, at least gameplay wise.</p>
-<p>Here is a full comparison of different sorting methods:</p>
+<h2 id="実装">実装</h2>
+<p>いくつかのデバッグを経て、結果はかなり良好です。少なくともゲームプレイの観点からはそうです。</p>
+<p>これは、さまざまなソート方法の完全な比較です：</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;">
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="first-hit.png" alt="first hit" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Fist Hit</div>
+        <div style="margin-top: 0px; text-align: center;">最初のヒット</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="last-hit.png" alt="last hit" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Last Hit</div>
+        <div style="margin-top: 0px; text-align: center;">最後のヒット</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="dist-min.png" alt="distance min" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Min Distance</div>
+        <div style="margin-top: 0px; text-align: center;">最小距離</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="dist-max.png" alt="distance max" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Max Distance</div>
+        <div style="margin-top: 0px; text-align: center;">最大距離</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="angle-min.png" alt="angle min" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Min Angle</div>
+        <div style="margin-top: 0px; text-align: center;">最小角度</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="angle-max.png" alt="angle max" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Max Angle</div>
+        <div style="margin-top: 0px; text-align: center;">最大角度</div>
     </div>
 </div>
-<h2 id="want-to-see-the-work-in-the-game">Want to see the work in the game?</h2>
-<p>Try the game yourself for free!</p>
+<h2 id="ゲーム内でこの成果を見たいですか">ゲーム内でこの成果を見たいですか？</h2>
+<p>自分でゲームを試してみてください！</p>
 <iframe frameborder="0" src="https://itch.io/embed/2707388?bg_color=ffffff&amp;fg_color=2d2d2d&amp;link_color=ea5858&amp;border_color=cccccc" width="552" height="167"><a href="https://secondrealmstudio.itch.io/ffrt">Fluffy Floaty Rubber Tennis by Second Realm Studio, Charlotte Crosland, Yyuk1, Wonderboiz, Rina, sky-haihai</a></iframe>
   </div>
 
@@ -282,7 +282,7 @@
 
 <div class="share-buttons">
 
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Devlog: Smoothed Sector Ray Casting on linkedin"
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 開発ログ：平滑なセクター放射線キャスティング on linkedin"
         href="https://www.linkedin.com/in/heycharlola/">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path

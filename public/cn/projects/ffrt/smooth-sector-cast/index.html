@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="cn" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Devlog: Smoothed Sector Ray Casting | Portfolio</title>
+<title>开发日志：平滑扇区射线投射 | 作品集</title>
 <meta name="keywords" content="" />
-<meta name="description" content="A realtime sector ray casting method with smoothed central angle">
-<meta name="author" content="Tim Huang">
-<link rel="canonical" href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/" />
+<meta name="description" content="一种实时扇区射线投射方法，具有平滑的中心角">
+<meta name="author" content="黄尧天">
+<link rel="canonical" href="https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -77,7 +77,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -101,12 +101,12 @@
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/" title="JP"
-                            aria-label="JP">JP</a>
+                        <a href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/" title="EN"
+                            aria-label="EN">EN</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/" title="CN"
-                            aria-label="CN">CN</a>
+                        <a href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/" title="JP"
+                            aria-label="JP">JP</a>
                     </li>
                 </ul>
             </span>
@@ -116,23 +116,23 @@
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/projects/" title="Projects">
-                    <span>Projects</span>
+                <a href="https://www.yaotian-huang.com/cn/projects/" title="项目作品">
+                    <span>项目作品</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/ta/" title="TA">
-                    <span>TA</span>
+                <a href="https://www.yaotian-huang.com/cn/ta/" title="技术美术">
+                    <span>技术美术</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/code/" title="Code">
-                    <span>Code</span>
+                <a href="https://www.yaotian-huang.com/cn/code/" title="程序">
+                    <span>程序</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/art/" title="Art">
-                    <span>Art</span>
+                <a href="https://www.yaotian-huang.com/cn/art/" title="美术">
+                    <span>美术</span>
                 </a>
             </li>
         </ul>
@@ -142,14 +142,14 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/en/projects/">Game Projects</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/en/projects/ffrt/">Fluffy Floaty Rubber Tennis Devlogs</a></div>
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/">项目作品</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/projects/ffrt/">松软飘飘橡胶网球 开发日记</a></div>
     <h1 class="post-title">
-      Devlog: Smoothed Sector Ray Casting
+      开发日志：平滑扇区射线投射
     </h1>
     <div class="post-description">
-      A realtime sector ray casting method with smoothed central angle
+      一种实时扇区射线投射方法，具有平滑的中心角
     </div>
-    <div class="post-meta"><span title='2024-05-16 17:45:58 +0000 +0000'>May 16, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Tim Huang</div>
+    <div class="post-meta"><span title='2024-05-16 17:45:58 +0000 +0000'>May 16, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;黄尧天</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -158,25 +158,25 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#goal" aria-label="Goal">Goal</a></li>
+                    <a href="#%e7%9b%ae%e6%a0%87" aria-label="目标">目标</a></li>
                 <li>
-                    <a href="#why-not-physicsspherecast" aria-label="Why NOT Physics.SphereCast?">Why NOT Physics.SphereCast?</a></li>
+                    <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e7%94%a8-physicsspherecast" aria-label="为什么不用 Physics.SphereCast？">为什么不用 Physics.SphereCast？</a></li>
                 <li>
-                    <a href="#building-a-new-solution" aria-label="Building a New Solution">Building a New Solution</a><ul>
+                    <a href="#%e6%9e%84%e5%bb%ba%e6%96%b0%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" aria-label="构建新解决方案">构建新解决方案</a><ul>
                         
                 <li>
-                    <a href="#intuitivity" aria-label="Intuitivity">Intuitivity</a></li>
+                    <a href="#%e7%9b%b4%e8%a7%82%e6%80%a7" aria-label="直观性">直观性</a></li>
                 <li>
-                    <a href="#mechanism" aria-label="Mechanism">Mechanism</a></li>
+                    <a href="#%e6%9c%ba%e5%88%b6" aria-label="机制">机制</a></li>
                 <li>
-                    <a href="#ray-casting" aria-label="Ray Casting">Ray Casting</a></li>
+                    <a href="#%e5%b0%84%e7%ba%bf%e6%8a%95%e5%b0%84" aria-label="射线投射">射线投射</a></li>
                 <li>
-                    <a href="#ray-sorting" aria-label="Ray Sorting">Ray Sorting</a></li></ul>
+                    <a href="#%e5%b0%84%e7%ba%bf%e6%8e%92%e5%ba%8f" aria-label="射线排序">射线排序</a></li></ul>
                 </li>
                 <li>
-                    <a href="#implementation" aria-label="Implementation">Implementation</a></li>
+                    <a href="#%e5%ae%9e%e6%96%bd" aria-label="实施">实施</a></li>
                 <li>
-                    <a href="#want-to-see-the-work-in-the-game" aria-label="Want to see the work in the game?">Want to see the work in the game?</a>
+                    <a href="#%e6%83%b3%e5%9c%a8%e6%b8%b8%e6%88%8f%e4%b8%ad%e7%9c%8b%e5%88%b0%e8%bf%99%e4%b8%aa%e5%b7%a5%e4%bd%9c%e6%88%90%e6%9e%9c%e5%90%97" aria-label="想在游戏中看到这个工作成果吗？">想在游戏中看到这个工作成果吗？</a>
                 </li>
             </ul>
         </div>
@@ -184,105 +184,106 @@
 </div>
 
   <div class="post-content">
-  <h2 id="goal">Goal</h2>
-<p>The game project Fluffy Floaty Rubber Tennis is a physic-based fixed-Camera space tennis game. The only player control is to <strong>Swing</strong> the racket.</p>
-<p>The logic I chose for the interaction between the racket and other objects when swinging is to apply a force to the object the racket hit and a reaction force to the player.</p>
-<h2 id="why-not-physicsspherecast">Why NOT Physics.SphereCast?</h2>
-<p>So.. why not just use the built-in Unity physics function <code>Physics.SphereCast</code>?</p>
-<p>Maybe I just don&rsquo;t understand the real logic behind it, but I think it&rsquo;s bugged when the hit distance euqals to 0.</p>
-<p>As shown in the screenshot below, when the player swings toward left, the sphere cast starts at the character origin, and ends a little bit further than the racket. The expected collision point happens between &ldquo;first spehre&rdquo; of the Sphere Cast and the long obstacle on its right side. Since the sphere cast travels 0 distance to reach the obstacle, the hit distance is also expected to be 0.</p>
+  <h2 id="目标">目标</h2>
+<p>游戏项目 Fluffy Floaty Rubber Tennis 是一个基于物理的固定摄像机太空网球游戏。玩家唯一的控制是<strong>挥动</strong>球拍。</p>
+<p>我选择的球拍挥动时与其他物体交互的逻辑是对球拍击中的物体施加一个力，并对玩家施加一个反作用力。</p>
+<h2 id="为什么不用-physicsspherecast">为什么不用 Physics.SphereCast？</h2>
+<p>那么.. 为什么不用内置的 Unity 物理函数 <code>Physics.SphereCast</code> 呢？</p>
+<p>也许我只是不了解它背后的真实逻辑，但我认为当击中距离等于 0 时它是有问题的。</p>
+<p>如下图所示，当玩家向左挥动时，球拍的起始点是角色的原点，终点比球拍稍远一点。预期的碰撞点发生在球拍右侧的长障碍物和球拍的“第一个球体”之间。由于球拍在到达障碍物时的移动距离为 0，因此预期的击中距离也应为 0。</p>
 <figure><img src="sphere-cast.png"/>
 </figure>
 
-<p>To this point, Everything makes sense to me. The reality is that the Sphere Cast returns a hit with hit distance as 0, as expected, however the hit point is at <code>Vector3.Zero</code>!</p>
-<p>I did multiple tests and the result is consistent. As long as the hit distance is 0, the hit point is always <code>Vector3.Zero</code>&hellip;</p>
-<h2 id="building-a-new-solution">Building a New Solution</h2>
-<p>Since the built-in function is not working as expected, I decided to build my own solution, using <code>Physics.Raycast</code>.</p>
-<p>The mechanism is really based on the need of this project: swing a racket.</p>
-<h3 id="intuitivity">Intuitivity</h3>
-<p>Breaking down the problem, these are the key points to make a swing intuitive:</p>
+<p>到目前为止，一切对我来说都很合理。实际上，球拍返回的击中距离确实为 0，正如预期的那样，但是击中点在 <code>Vector3.Zero</code>！</p>
+<p>我做了多次测试，结果是一致的。只要击中距离为 0，击中点总是在 <code>Vector3.Zero</code>&hellip;</p>
+<h2 id="构建新解决方案">构建新解决方案</h2>
+<p>由于内置函数无法按预期工作，我决定使用 <code>Physics.Raycast</code> 构建自己的解决方案。</p>
+<p>该机制实际上是基于该项目的需求：挥动球拍。</p>
+<h3 id="直观性">直观性</h3>
+<p>分解问题，这些是使挥动直观的关键点：</p>
 <ul>
-<li>A comfortable swing should include a small circle space around the character, so when the ball is overlapping with the player, the player should be able to hit it.</li>
-<li>The swing should be the shape of a sector, because swinging is essentially rotating the arm to make the racket cover a sector area.</li>
-<li>The swing should hit the object which is closest to the aim direction or the mouse position first.</li>
+<li>舒适的挥动应包括角色周围的小圆空间，因此当球与玩家重叠时，玩家应能击中它。</li>
+<li>挥动应呈扇形，因为挥动本质上是旋转手臂，使球拍覆盖扇形区域。</li>
+<li>挥动应首先击中最接近瞄准方向或鼠标位置的物体。</li>
 </ul>
-<p>Therefore, the hitting area should be covered like this:</p>
+<p>因此，击打区域应覆盖如下：</p>
 <figure><img src="new-1.png" height="200"/>
 </figure>
 
-<h3 id="mechanism">Mechanism</h3>
-<p>As shown above, the idea is to draw two concentric circles, then draw two lines through the center of the circle to determine the sector angle, Then connect the hitting points to form a sector area with a smoothed central angle.</p>
-<p>The parameters are:</p>
+<h3 id="机制">机制</h3>
+<p>如上所示，思路是绘制两个同心圆，然后通过圆心绘制两条线来确定扇区角度，然后连接击打点以形成一个带有平滑中心角的扇区区域。</p>
+<p>参数为：</p>
 <ol>
-<li>The radius of the overlapping circle.</li>
-<li>The radius of the circle in which the sector lies. (Distance of how far the racket can reach when swinging)</li>
-<li>The angle of the sector.</li>
+<li>重叠圆的半径。</li>
+<li>扇区所在圆的半径。（挥动球拍时球拍可以到达的距离）</li>
+<li>扇区的角度。</li>
 </ol>
-<h3 id="ray-casting">Ray Casting</h3>
-<p>Then we can cast rays from the small circle to the big circle with a defined ray desity. In this project, I</p>
+<h3 id="射线投射">射线投射</h3>
+<p>然后我们可以以定义的射线密度从小圆投射到大圆。在这个项目中，我</p>
 <figure><img src="new-2.png" height="200"/>
 </figure>
 
-<h3 id="ray-sorting">Ray Sorting</h3>
-<p>As mentioned in the Intuitivity section, the ray should be sorted/culled to let the player hits what they want to hit.</p>
-<p>Say the player is aiming toward right and the green circle overlapping the hitting area is a ball. The default behaviour without any sorting is quite random. For example, in the shown image, the rays can be casting from bottom to top, top to bottom or even from middle to the edge.</p>
+<h3 id="射线排序">射线排序</h3>
+<p>如直观性部分所述，射线应按顺序/剔除，以便玩家击中他们想要击中的物体。</p>
+<p>假设玩家瞄准右侧，重叠击打区域的绿色圆圈是一个球。没有任何排序的默认行为是相当随机的。例如，在显示的图像中，射线可以从底部投射到顶部，从顶部投射到底部，甚至从中间到边缘。</p>
 <figure><img src="new-4.png" height="200"/>
 </figure>
 
 <figure><img src="new-3.png" height="200"/>
 </figure>
 
-<p>In this case, I decided to add three sorting methods:</p>
+<p>在这种情况下，我决定添加三种排序方法：</p>
 <ol>
 <li>
-<p><strong>Distance Sorting</strong>: Sort the rays based on the distance to the center of the sector.</p>
+<p><strong>距离排序</strong>：根据到扇区中心的距离对射线进行排序。</p>
 </li>
 <li>
-<p><strong>Angle Sorting</strong>: Sort the rays based on the angle between the ray and the aiming direction.</p>
+<p><strong>角度排序</strong>：根据射线与瞄准方向之间的角度对射线进行排序。</p>
 </li>
 <li>
-<p><strong>First/Last Hit Sorting</strong>: Sort the rays based on the order that rays are casted.</p>
+<p><strong>首次/最后击中排序</strong>：根据射线投射的顺序对射线进行排序。</p>
 </li>
 </ol>
-<h2 id="implementation">Implementation</h2>
-<p>After some debugging, the result is quite good, at least gameplay wise.</p>
-<p>Here is a full comparison of different sorting methods:</p>
+<h2 id="实施">实施</h2>
+<p>经过一些调试，结果相当不错，至少在游戏性方面是这样。</p>
+<p>这是不同排序方法的完整对比：</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;">
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="first-hit.png" alt="first hit" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Fist Hit</div>
+        <div style="margin-top: 0px; text-align: center;">首次击中</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="last-hit.png" alt="last hit" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Last Hit</div>
+        <div style="margin-top: 0px; text-align: center;">最后击中</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="dist-min.png" alt="distance min" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Min Distance</div>
+        <div style="margin-top: 0px; text-align: center;">最小距离</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="dist-max.png" alt="distance max" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Max Distance</div>
+        <div style="margin-top: 0px; text-align: center;">最大距离</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="angle-min.png" alt="angle min" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Min Angle</div>
+        <div style="margin-top: 0px; text-align: center;">最小角度</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center; width: 300px;">
         <img src="angle-max.png" alt="angle max" style="width: 100%; height: auto; aspect-ratio: 1 / 1;">
-        <div style="margin-top: 0px; text-align: center;">Max Angle</div>
+        <div style="margin-top: 0px; text-align: center;">最大角度</div>
     </div>
 </div>
-<h2 id="want-to-see-the-work-in-the-game">Want to see the work in the game?</h2>
-<p>Try the game yourself for free!</p>
+<h2 id="想在游戏中看到这个工作成果吗">想在游戏中看到这个工作成果吗？</h2>
+<p>自己试玩游戏吧！</p>
 <iframe frameborder="0" src="https://itch.io/embed/2707388?bg_color=ffffff&amp;fg_color=2d2d2d&amp;link_color=ea5858&amp;border_color=cccccc" width="552" height="167"><a href="https://secondrealmstudio.itch.io/ffrt">Fluffy Floaty Rubber Tennis by Second Realm Studio, Charlotte Crosland, Yyuk1, Wonderboiz, Rina, sky-haihai</a></iframe>
+
   </div>
 
   <footer class="post-footer">
 
 <div class="share-buttons">
 
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Devlog: Smoothed Sector Ray Casting on linkedin"
+    <a target="_blank" rel="noopener noreferrer" aria-label="share 开发日志：平滑扇区射线投射 on linkedin"
         href="https://www.linkedin.com/in/heycharlola/">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path

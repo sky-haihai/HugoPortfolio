@@ -63,6 +63,8 @@ params:
       - project
 
     socialIcons:
+        - name: itchio
+          url: "https://sky-haihai.itch.io/"
         - name: github
           url: "https://github.com/sky-haihai"
         - name: linkedin
@@ -71,6 +73,8 @@ params:
           url: "https://www.twitter.com/yaotianh"
         - name: instagram
           url: "https://www.instagram.com/sky_haihai/"
+        - name: discord
+          url: "https://discordapp.com/users/291908006361169930"
 
       # add more social icons. find more in svg.html file
       # - name: youtube

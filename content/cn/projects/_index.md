@@ -4,6 +4,11 @@ title: 项目作品
 
 ---
 
+{{<project-entry-img name="松软飘飘橡胶网球" date="2024" role="程序员, 技术美术" desc="这是一款太空网球游戏，连续击打6次即可获胜！但是没有网，球拍应该怎么做呢？答案就在你心中（是暴力）。这款游戏是为ToJam 2024制作的，主题是\"它就是这么干的！\" " img="ffrt/ffrtbeat.png" devlog="ffrt">}}
+
+
+---
+
 {{<project-entry-img name="Echoes of the Roots" date="2023-2024" role="技术美术、主程序" desc="在2024年Level-up Showcase中获得最佳艺术成就奖。这是一个使用Unity制作的2.5D动作冒险游戏。我负责编写战斗框架，包括着色器、后处理和资产自动化工具等多种技术美术工作。" img="eotr/AWARDS-min.png" devlog="eotr">}}
 
 ---
