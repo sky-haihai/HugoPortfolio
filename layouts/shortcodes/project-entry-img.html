@@ -2,6 +2,8 @@
 {{$srccode := .Get "srccode"}}
 {{$play := .Get "play"}}
 {{$devlog := .Get "devlog"}}
+{{$trailer := .Get "trailer"}}
+{{$gameplay := .Get "gameplay"}}
 
 <div>
   <!-- <div style="display: flex; flex-flow: row nowrap;column-gap: 20px;"> -->
@@ -14,9 +16,13 @@
       <p style="text-align: left;">
         {{ .Get "desc" }}
       </p>
-      {{ with .Get "srccode"}} <a href="{{ $srccode }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px;margin-right: 10px;box-shadow:none;"> <b>Source Code</b> </a> {{ end }}
-      {{ with .Get "play" }} <a href="{{ $play }}" style=" background-color: #5dec9d; border-radius: 8px; padding: 10px;margin-right: 10px;box-shadow:none;"> <b>Download</b> </a> {{ end }}
-      {{ with .Get "devlog" }} <a href="{{ $devlog }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px;box-shadow:none;"> <b>Devlogs</b> </a> {{ end }}
+      <div style="margin-bottom:20px;">
+      {{ with .Get "trailer" }} <a href="{{ $trailer }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px; box-shadow:none;margin-right:10px;"> <b>Trailer</b> </a> {{ end }}
+      {{ with .Get "gameplay" }} <a href="{{ $gameplay }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px;box-shadow:none;margin-right:10px;"> <b>Gameplay</b> </a> {{ end }}
+      {{ with .Get "play" }} <a href="{{ $play }}" style=" background-color: #5dec9d; border-radius: 8px; padding: 10px;box-shadow:none;margin-right:10px;"> <b>Download</b> </a> {{ end }}
+      {{ with .Get "srccode"}} <a href="{{ $srccode }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px;box-shadow:none;margin-right:10px;"> <b>Source Code</b> </a> {{ end }}
+      {{ with .Get "devlog" }} <a href="{{ $devlog }}" style=" background-color: #d6d6d6; border-radius: 8px; padding: 10px;box-shadow:none;margin-right:10px;"> <b>Devlogs</b> </a> {{ end }}
+      </div>
     </div>
     <div style="flex: 2 1 auto; align-self: center">
       <img style="width: 250px; height: auto; margin: 0px" src="{{ $img }}" alt="Huh? CloudFlare? Hello?" />
