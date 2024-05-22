@@ -4,7 +4,7 @@ title: 项目作品
 
 ---
 
-{{<project-entry-img name="松软飘飘橡胶网球" date="2024" role="程序员, 技术美术" desc="这是一款太空网球游戏，连续击打6次即可获胜！但是没有网，球拍应该怎么做呢？答案就在你心中（是暴力）。这款游戏是为ToJam 2024制作的，主题是\"它就是这么干的！\" " img="ffrt/ffrtbeat.png" devlog="ffrt">}}
+{{<project-entry-img name="松软飘飘橡胶网球" date="2024" role="程序员, 技术美术" desc="这是一款太空网球游戏，连续击打6次即可获胜！但是没有网，球拍应该怎么做呢？答案就在你心中（是暴力）。这款游戏是为ToJam 2024：Talk About Fourshadowing制作的，所有工作在一周内完成，主题是\"它就是这么干的！\" " img="ffrt/ffrtbeat.png" devlog="ffrt">}}
 
 
 ---

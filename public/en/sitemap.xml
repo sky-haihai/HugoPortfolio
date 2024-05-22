@@ -2,26 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/</loc>
-    <lastmod>2024-05-16T17:45:58+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-US"
-                href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/"
-                />
-  </url><url>
     <loc>https://www.yaotian-huang.com/en/projects/</loc>
-    <lastmod>2024-05-16T17:45:58+00:00</lastmod>
+    <lastmod>2024-05-21T15:07:01+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -39,7 +21,7 @@
                 />
   </url><url>
     <loc>https://www.yaotian-huang.com/en/</loc>
-    <lastmod>2024-05-16T17:45:58+00:00</lastmod>
+    <lastmod>2024-05-21T15:07:01+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -54,6 +36,24 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://www.yaotian-huang.com/en/"
+                />
+  </url><url>
+    <loc>https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/</loc>
+    <lastmod>2024-05-16T17:45:58+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://www.yaotian-huang.com/en/projects/ffrt/smooth-sector-cast/"
                 />
   </url><url>
     <loc>https://www.yaotian-huang.com/en/code/auto-fishing-wow/</loc>

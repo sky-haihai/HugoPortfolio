@@ -59,6 +59,8 @@ params:
               url: code/
             - name: Art
               url: art/
+            - name: Email Me
+              url: "mailto:huang.yaotian2000@gmail.com"
     mainSections:
       - project
 
@@ -152,6 +154,8 @@ languages:
               url: code/
             - name: アート
               url: art/
+            - name: メールを送る
+              url: "mailto:huang.yaotian2000@gmail.com"
       mainSections:
         - プロジェクト
 
@@ -213,5 +217,7 @@ languages:
               url: code/
             - name: 美术
               url: art/
+            - name: 给我发邮件
+              url: "mailto:huang.yaotian2000@gmail.com"  
       mainSections:
         - 项目作品
