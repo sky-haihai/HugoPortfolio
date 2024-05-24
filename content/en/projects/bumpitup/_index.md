@@ -1,9 +1,7 @@
 ---
-title: Windo　開発日誌
+title: Bump It Up Devlogs
 type: list
 _build:
   list: never
 ---
-
-
 
