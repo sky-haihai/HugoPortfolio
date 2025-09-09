@@ -6,105 +6,179 @@
     <description>Recent content on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate>
-    <atom:link href="https://www.yaotian-huang.com/cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开发日志：平滑扇区射线投射</title>
       <link>https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/</link>
       <pubDate>Thu, 16 May 2024 17:45:58 +0000</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/</guid>
-      <description>目标 游戏项目 Fluffy Floaty Rubber Tennis 是一个基于物理的固定摄像机太空网球游戏。玩家唯一的控制是挥动球拍。&#xA;我选择的球拍挥动时与其他物体交互的逻辑是对球拍击中的物体施加一个力，并对玩家施加一个反作用力。&#xA;为什么不用 Physics.SphereCast？ 那么.. 为什么不用内置的 Unity 物理函数 Physics.SphereCast 呢？&#xA;也许我只是不了解它背后的真实逻辑，但我认为当击中距离等于 0 时它是有问题的。&#xA;如下图所示，当玩家向左挥动时，球拍的起始点是角色的原点，终点比球拍稍远一点。预期的碰撞点发生在球拍右侧的长障碍物和球拍的“第一个球体”之间。由于球拍在到达障碍物时的移动距离为 0，因此预期的击中距离也应为 0。&#xA;到目前为止，一切对我来说都很合理。实际上，球拍返回的击中距离确实为 0，正如预期的那样，但是击中点在 Vector3.Zero！&#xA;我做了多次测试，结果是一致的。只要击中距离为 0，击中点总是在 Vector3.Zero&amp;hellip;&#xA;构建新解决方案 由于内置函数无法按预期工作，我决定使用 Physics.Raycast 构建自己的解决方案。&#xA;该机制实际上是基于该项目的需求：挥动球拍。&#xA;直观性 分解问题，这些是使挥动直观的关键点：&#xA;舒适的挥动应包括角色周围的小圆空间，因此当球与玩家重叠时，玩家应能击中它。 挥动应呈扇形，因为挥动本质上是旋转手臂，使球拍覆盖扇形区域。 挥动应首先击中最接近瞄准方向或鼠标位置的物体。 因此，击打区域应覆盖如下：&#xA;机制 如上所示，思路是绘制两个同心圆，然后通过圆心绘制两条线来确定扇区角度，然后连接击打点以形成一个带有平滑中心角的扇区区域。&#xA;参数为：&#xA;重叠圆的半径。 扇区所在圆的半径。（挥动球拍时球拍可以到达的距离） 扇区的角度。 射线投射 然后我们可以以定义的射线密度从小圆投射到大圆。在这个项目中，我&#xA;射线排序 如直观性部分所述，射线应按顺序/剔除，以便玩家击中他们想要击中的物体。&#xA;假设玩家瞄准右侧，重叠击打区域的绿色圆圈是一个球。没有任何排序的默认行为是相当随机的。例如，在显示的图像中，射线可以从底部投射到顶部，从顶部投射到底部，甚至从中间到边缘。&#xA;在这种情况下，我决定添加三种排序方法：&#xA;距离排序：根据到扇区中心的距离对射线进行排序。&#xA;角度排序：根据射线与瞄准方向之间的角度对射线进行排序。&#xA;首次/最后击中排序：根据射线投射的顺序对射线进行排序。&#xA;实施 经过一些调试，结果相当不错，至少在游戏性方面是这样。&#xA;这是不同排序方法的完整对比：&#xA;首次击中 最后击中 最小距离 最大距离 最小角度 最大角度 想在游戏中看到这个工作成果吗？ 自己试玩游戏吧！&#xA;Fluffy Floaty Rubber Tennis by Second Realm Studio, Charlotte Crosland, Yyuk1, Wonderboiz, Rina, sky-haihai </description>
+      <description>目标 游戏项目 Fluffy Floaty Rubber Tennis 是一个基于物理的固定摄像机太空网球游戏。玩家唯一的控制是挥动球拍。
+我选择的球拍挥动时与其他物体交互的逻辑是对球拍击中的物体施加一个力，并对玩家施加一个反作用力。
+为什么不用 Physics.SphereCast？ 那么.. 为什么不用内置的 Unity 物理函数 Physics.SphereCast 呢？
+也许我只是不了解它背后的真实逻辑，但我认为当击中距离等于 0 时它是有问题的。
+如下图所示，当玩家向左挥动时，球拍的起始点是角色的原点，终点比球拍稍远一点。预期的碰撞点发生在球拍右侧的长障碍物和球拍的“第一个球体”之间。由于球拍在到达障碍物时的移动距离为 0，因此预期的击中距离也应为 0。
+到目前为止，一切对我来说都很合理。实际上，球拍返回的击中距离确实为 0，正如预期的那样，但是击中点在 Vector3.Zero！
+我做了多次测试，结果是一致的。只要击中距离为 0，击中点总是在 Vector3.Zero&amp;hellip;
+构建新解决方案 由于内置函数无法按预期工作，我决定使用 Physics.Raycast 构建自己的解决方案。
+该机制实际上是基于该项目的需求：挥动球拍。
+直观性 分解问题，这些是使挥动直观的关键点：
+舒适的挥动应包括角色周围的小圆空间，因此当球与玩家重叠时，玩家应能击中它。 挥动应呈扇形，因为挥动本质上是旋转手臂，使球拍覆盖扇形区域。 挥动应首先击中最接近瞄准方向或鼠标位置的物体。 因此，击打区域应覆盖如下：
+机制 如上所示，思路是绘制两个同心圆，然后通过圆心绘制两条线来确定扇区角度，然后连接击打点以形成一个带有平滑中心角的扇区区域。
+参数为：
+重叠圆的半径。 扇区所在圆的半径。（挥动球拍时球拍可以到达的距离） 扇区的角度。 射线投射 然后我们可以以定义的射线密度从小圆投射到大圆。在这个项目中，我
+射线排序 如直观性部分所述，射线应按顺序/剔除，以便玩家击中他们想要击中的物体。
+假设玩家瞄准右侧，重叠击打区域的绿色圆圈是一个球。没有任何排序的默认行为是相当随机的。例如，在显示的图像中，射线可以从底部投射到顶部，从顶部投射到底部，甚至从中间到边缘。
+在这种情况下，我决定添加三种排序方法：
+距离排序：根据到扇区中心的距离对射线进行排序。
+角度排序：根据射线与瞄准方向之间的角度对射线进行排序。
+首次/最后击中排序：根据射线投射的顺序对射线进行排序。
+实施 经过一些调试，结果相当不错，至少在游戏性方面是这样。
+这是不同排序方法的完整对比：
+首次击中最后击中最小距离最大距离最小角度最大角度想在游戏中看到这个工作成果吗？ 自己试玩游戏吧！
+Fluffy Floaty Rubber Tennis by Second Realm Studio, Charlotte Crosland, Yyuk1, Wonderboiz, Rina, sky-haihai</description>
     </item>
+    
     <item>
       <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
       <link>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</link>
       <pubDate>Wed, 01 May 2024 08:35:48 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</guid>
-      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.&#xA;The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
+      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.
+The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
     </item>
+    
     <item>
       <title>Devlog: Dynamic Shadow for 2D Animation</title>
       <link>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</link>
       <pubDate>Mon, 29 Apr 2024 15:07:01 +0000</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/projects/eotr/dynamic-shadow-for-2d-animation/</guid>
-      <description>Why Dynamic Shadow for 2D Animation? In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.&#xA;Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&amp;rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.</description>
+      <description>Why Dynamic Shadow for 2D Animation? In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.
+Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&amp;rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.</description>
     </item>
+    
     <item>
       <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
       <link>https://www.yaotian-huang.com/cn/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
-      <description>Environment Unity 2021.3.16f1&#xA;URP 12.0&#xA;Prerequisite Basic knowledge of C# and Shader programming (HLSL).&#xA;GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&#xA;Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
+      <description>Environment Unity 2021.3.16f1
+URP 12.0
+Prerequisite Basic knowledge of C# and Shader programming (HLSL).
+GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.
+Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
     </item>
+    
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
       <link>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/</guid>
-      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&#xA;Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link&#xA;Features It has following features:&#xA;Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
+Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
+Features It has following features:
+Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
     </item>
+    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
       <link>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/</guid>
       <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
     </item>
+    
     <item>
       <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
       <link>https://www.yaotian-huang.com/cn/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
       <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
     </item>
+    
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
       <link>https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
-      <description>Environment Unity 2021.3.16f1&#xA;Universal Render Pipeline 12.0.0&#xA;Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&#xA;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+      <description>Environment Unity 2021.3.16f1
+Universal Render Pipeline 12.0.0
+Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
+One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
     </item>
+    
     <item>
       <title>Getting Started in Xiheframework</title>
       <link>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</link>
       <pubDate>Thu, 18 May 2023 08:35:48 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</guid>
-      <description>Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.&#xA;Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.&#xA;To do that:&#xA;Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.</description>
+      <description>Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.
+Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.
+To do that:
+Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.</description>
     </item>
+    
     <item>
       <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
       <link>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
-      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&#xA;How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
+How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
     </item>
+    
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
       <link>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo&#xA;View Live Demo: Diet Dashboard</description>
+      <description>Source code: Github Repo
+View Live Demo: Diet Dashboard</description>
     </item>
+    
     <item>
       <title>Secured Web Information System Prototype</title>
       <link>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</guid>
-      <description>View the full project here: Github Repo&#xA;Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.&#xA;The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
+      <description>View the full project here: Github Repo
+Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
+The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
     </item>
+    
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
       <link>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo&#xA;Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&#xA;Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <description>View the full project here: Github Repo
+Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
+Input a bunch of .GZ files, each containing multiple XML web documents.</description>
     </item>
+    
     <item>
       <title>Introducing Xiheframework</title>
       <link>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</guid>
-      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.&#xA;Who Should Use Scale Ideally at least two members:&#xA;Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)&#xA;Skills Unity Editor Node-based Editor C# (Custom Modules) Warning &amp;#x26a0;&amp;#xfe0f; Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
+Who Should Use Scale Ideally at least two members:
+Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
+Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
     </item>
+    
   </channel>
 </rss>

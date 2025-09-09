@@ -5,7 +5,6 @@
     <link>https://www.yaotian-huang.com/cn/art/</link>
     <description>Recent content in Arts on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <atom:link href="https://www.yaotian-huang.com/cn/art/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://www.yaotian-huang.com/cn/art/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -6,42 +6,6 @@
     <description>Recent content in Categories on ポートフォリオ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
-    <atom:link href="https://www.yaotian-huang.com/jp/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EOTR Devlog</title>
-      <link>https://www.yaotian-huang.com/jp/categories/eotr-devlog/</link>
-      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      <guid>https://www.yaotian-huang.com/jp/categories/eotr-devlog/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>3D Art</title>
-      <link>https://www.yaotian-huang.com/jp/categories/3d-art/</link>
-      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      <guid>https://www.yaotian-huang.com/jp/categories/3d-art/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Development</title>
-      <link>https://www.yaotian-huang.com/jp/categories/web-development/</link>
-      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      <guid>https://www.yaotian-huang.com/jp/categories/web-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Animation</title>
-      <link>https://www.yaotian-huang.com/jp/categories/animation/</link>
-      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/jp/categories/animation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Game Development</title>
-      <link>https://www.yaotian-huang.com/jp/categories/game-development/</link>
-      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      <guid>https://www.yaotian-huang.com/jp/categories/game-development/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

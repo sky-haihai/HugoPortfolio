@@ -14,7 +14,7 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
 <meta name="author" content="黄尧天">
 <link rel="canonical" href="https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
@@ -145,7 +145,7 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/cn/ta/">Technical Art</a></div>
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a></div>
     <h1 class="post-title">
       Recreating the Rain Drop Effect in The Legend of Zelda: TOTK
     </h1>
@@ -269,52 +269,52 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Rendering.Universal</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Serialization</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ZeldaRainDropFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ZeldaRainDropFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="k">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">m_RenderPass</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">settings</span><span class="p">.</span><span class="n">renderPassEvent</span>
 </span></span><span class="line"><span class="cl">        <span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderer</span><span class="p">.</span><span class="n">EnqueuePass</span><span class="p">(</span><span class="n">m_RenderPass</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="na">
 </span></span></span><span class="line"><span class="cl"><span class="na">    [System.Serializable]</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">ComputeShader</span> <span class="n">rainDropShader</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">Texture2D</span> <span class="n">noiseTex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">Color</span> <span class="n">dropColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0, 20)]</span> <span class="kd">public</span> <span class="kt">int</span> <span class="n">thickness</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="kd">public</span> <span class="kt">float</span> <span class="n">sobelThreshold</span> <span class="p">=</span> <span class="m">0.166f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="kd">public</span> <span class="kt">float</span> <span class="n">rainDropScale</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">float</span> <span class="n">dropSpeed</span> <span class="p">=</span> <span class="m">100f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">ComputeShader</span> <span class="n">rainDropShader</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">Texture2D</span> <span class="n">noiseTex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">Color</span> <span class="n">dropColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0, 20)]</span> <span class="k">public</span> <span class="kt">int</span> <span class="n">thickness</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="k">public</span> <span class="kt">float</span> <span class="n">sobelThreshold</span> <span class="p">=</span> <span class="m">0.166f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="k">public</span> <span class="kt">float</span> <span class="n">rainDropScale</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="kt">float</span> <span class="n">dropSpeed</span> <span class="p">=</span> <span class="m">100f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="create-a-render-pass">Create a Render Pass</h3>
 <p>Now we have the settings and a basic structure of the render feature. We can start to implement the render pass.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">class</span> <span class="nc">RainDropRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_ResultTex</span><span class="p">;</span> <span class="c1">//camera color</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">class</span> <span class="nc">RainDropRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_ResultTex</span><span class="p">;</span> <span class="c1">//camera color</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">m_Settings</span> <span class="p">=</span> <span class="n">settings</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">descriptor</span> <span class="p">=</span> <span class="n">cameraTextureDescriptor</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">colorFormat</span> <span class="p">=</span> <span class="n">RenderTextureFormat</span><span class="p">.</span><span class="n">ARGB32</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">cmd</span><span class="p">.</span><span class="n">GetTemporaryRT</span><span class="p">(</span><span class="n">m_ResultTex</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">m_Settings</span><span class="p">.</span><span class="n">previewInSceneView</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">renderingData</span><span class="p">.</span><span class="n">cameraData</span><span class="p">.</span><span class="n">isSceneViewCamera</span> <span class="p">||</span> <span class="n">renderingData</span><span class="p">.</span><span class="n">cameraData</span><span class="p">.</span><span class="n">isPreviewCamera</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
@@ -361,7 +361,7 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 </span></span><span class="line"><span class="cl">            <span class="n">context</span><span class="p">.</span><span class="n">Submit</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">cmd</span><span class="p">.</span><span class="n">ReleaseTemporaryRT</span><span class="p">(</span><span class="n">m_ResultTex</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>

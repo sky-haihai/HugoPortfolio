@@ -5,7 +5,6 @@
     <link>https://www.yaotian-huang.com/cn/projects/bumpitup/</link>
     <description>Recent content in Bump It Up 开发日志 on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <atom:link href="https://www.yaotian-huang.com/cn/projects/bumpitup/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://www.yaotian-huang.com/cn/projects/bumpitup/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

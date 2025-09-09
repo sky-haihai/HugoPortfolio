@@ -6,42 +6,59 @@
     <description>Recent content in Web Development on 作品集</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate>
-    <atom:link href="https://www.yaotian-huang.com/cn/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
       <link>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/</guid>
-      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&#xA;Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link&#xA;Features It has following features:&#xA;Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
+Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
+Features It has following features:
+Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
     </item>
+    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
       <link>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-scene/</guid>
       <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
     </item>
+    
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
       <link>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo&#xA;View Live Demo: Diet Dashboard</description>
+      <description>Source code: Github Repo
+View Live Demo: Diet Dashboard</description>
     </item>
+    
     <item>
       <title>Secured Web Information System Prototype</title>
       <link>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</guid>
-      <description>View the full project here: Github Repo&#xA;Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.&#xA;The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
+      <description>View the full project here: Github Repo
+Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
+The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
     </item>
+    
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
       <link>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      
       <guid>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo&#xA;Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&#xA;Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <description>View the full project here: Github Repo
+Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
+Input a bunch of .GZ files, each containing multiple XML web documents.</description>
     </item>
+    
   </channel>
 </rss>

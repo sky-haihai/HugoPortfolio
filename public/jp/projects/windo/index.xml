@@ -5,7 +5,6 @@
     <link>https://www.yaotian-huang.com/jp/projects/windo/</link>
     <description>Recent content in Windo　開発日誌 on ポートフォリオ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <atom:link href="https://www.yaotian-huang.com/jp/projects/windo/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language><atom:link href="https://www.yaotian-huang.com/jp/projects/windo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

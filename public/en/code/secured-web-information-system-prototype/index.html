@@ -13,7 +13,7 @@ The goal was to implement a web application that could allow users to login, log
 <meta name="author" content="Tim Huang">
 <link rel="canonical" href="https://www.yaotian-huang.com/en/code/secured-web-information-system-prototype/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.30d2332871da51f600f574811c17751e6c862577d450b624f86e2bc8a6e31221.js" integrity="sha256-MNIzKHHaUfYA9XSBHBd1HmyGJXfUULYk&#43;G4ryKbjEiE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
@@ -144,7 +144,7 @@ The goal was to implement a web application that could allow users to login, log
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a>&nbsp;»&nbsp;<a href="https://www.yaotian-huang.com/en/code/">Code</a></div>
+    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a></div>
     <h1 class="post-title">
       Secured Web Information System Prototype
     </h1>
@@ -238,7 +238,7 @@ The goal was to implement a web application that could allow users to login, log
 <p>The URL of the deployed website on the school SIT server is:
 <a href="http://sit.itec.yorku.ca:8080/itec4020grp9/">http://sit.itec.yorku.ca:8080/itec4020grp9/</a></p>
 <blockquote>
-<p>&#x26a0;&#xfe0f; <strong>Note</strong><br>
+<p>⚠️ <strong>Note</strong><br>
 The website is deployed on the school System Integration Testing(SIT) server. Access it requires a York University VPN. Please contact me if you are interested and I will send you a video demo of the website.</p>
 </blockquote>
 <h2 id="environment">Environment</h2>
@@ -249,7 +249,7 @@ The website is deployed on the school System Integration Testing(SIT) server. Ac
 </ul>
 <h3 id="local">Local</h3>
 <ul>
-<li>JavaSE 8 &#x26a0;&#xfe0f; Must match the version of the server side</li>
+<li>JavaSE 8 ⚠️ Must match the version of the server side</li>
 <li>VS Code (with the following extensions)
 <ul>
 <li>Language Support for Java(TM) by Red Hat <code>v1.18.0</code></li>
@@ -291,7 +291,7 @@ The website is deployed on the school System Integration Testing(SIT) server. Ac
 ├── index.jsp
 ├── readme.txt //instructions for setting up the environment
 </code></pre><blockquote>
-<p>&#x26a0;&#xfe0f; <strong>Note</strong> <br>
+<p>⚠️ <strong>Note</strong> <br>
 Servlet api version 3.0.x is supported by Tomcat 7.0.76. If you are using a different version of Tomcat, you may need to change the version of the servlet api jar file.</p>
 </blockquote>
 <h2 id="implementation">Implementation</h2>
@@ -299,85 +299,85 @@ Servlet api version 3.0.x is supported by Tomcat 7.0.76. If you are using a diff
 <h4 id="login">Login</h4>
 <p>For simplicity, the login page is implemented inside <code>index.jsp</code>. A login form is submitted to the <code>LoginServlet.class</code>. when the user clicks the login button.</p>
 <p>Since this was a school project, the username and password are hard-coded in the <strong>Controller</strong> layer. In a real-world application, the username and password should be stored in a database and accessed by <strong>Data Access Object(DAO)</strong> layer.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">fakeUsername</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;admin&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">fakePassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;admin&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&#34;username&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&#34;password&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">boolean</span><span class="w"> </span><span class="n">inputMatches</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fakeUserName</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">username</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">fakePassword</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">password</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inputMatches</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">,</span><span class="n">username</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="s">&#34;aboutme&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/LoginServlet.java">LoginServlet.java</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">fakeUsername</span> <span class="o">=</span> <span class="s">&#34;admin&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">fakePassword</span> <span class="o">=</span> <span class="s">&#34;admin&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">&#34;username&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">&#34;password&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">boolean</span> <span class="n">inputMatches</span> <span class="o">=</span> <span class="n">fakeUserName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">username</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">fakePassword</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">password</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">inputMatches</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">session</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">&#34;userId&#34;</span><span class="o">,</span><span class="n">username</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">&#34;aboutme&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/LoginServlet.java">LoginServlet.java</a></p>
 <blockquote>
-<p>&#x26a0;&#xfe0f; <strong>Note</strong> <br>
+<p>⚠️ <strong>Note</strong> <br>
 As the user authentication details, such as the username and password, are transmitted through an HTML form, it is recommended to implement the authentication logic in the doPost() method rather than the doGet() method. Otherwise, the user authentication information will be exposed in the URL, causing security issues.</p>
 </blockquote>
 <h4 id="logout">Logout</h4>
 <p>The logout page is much simpler. It only needs to invalidate the session and redirect the user to the login page. This logic can be implemented inside either the doGet() method or the doPost() method.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">session</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">session</span><span class="p">.</span><span class="na">removeAttribute</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="s">&#34;index.jsp&#34;</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/LogoutServlet.java">Logout.java</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">session</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">session</span><span class="o">.</span><span class="na">removeAttribute</span><span class="o">(</span><span class="s">&#34;userId&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">&#34;index.jsp&#34;</span><span class="o">);</span>
+</span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/LogoutServlet.java">Logout.java</a></p>
 <h3 id="secured-content-pages">Secured Content Pages</h3>
 <p>For each protected content page, the servlet class needs to check if the user has logged in. If the user has not logged in, the servlet class will redirect the user to the login page.</p>
 <p>Check if the user has logged in:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// check if user is logged in</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">session</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">getAttribute</span><span class="p">(</span><span class="s">&#34;userId&#34;</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="s">&#34;index.jsp&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><p>Disable Caching:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">response</span><span class="p">.</span><span class="na">setHeader</span><span class="p">(</span><span class="s">&#34;Cache-Control&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;no-cache, no-store, must-revalidate&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">response</span><span class="p">.</span><span class="na">setHeader</span><span class="p">(</span><span class="s">&#34;Pragma&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;no-cache&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">response</span><span class="p">.</span><span class="na">setDateHeader</span><span class="p">(</span><span class="s">&#34;Expires&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">0</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Actually writing the content of the page:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&#34;text/html&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;html&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;head&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;title&gt;AboutMe&lt;/title&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/reset.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/useDefaultCursor.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/preventPrint.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/credit.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/profile.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/aboutme.css\&#34;&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;/head&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;body&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">...</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;/body&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;script src=&#39;js/disableSelection.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;script src=&#39;js/disableSavingImg.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;script src=&#39;js/disableDragging.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;/html&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/AboutMeServlet.java">AboutMeServlet.java</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// check if user is logged in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">HttpSession</span> <span class="n">session</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getSession</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="n">session</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">session</span><span class="o">.</span><span class="na">getAttribute</span><span class="o">(</span><span class="s">&#34;userId&#34;</span><span class="o">)</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span><span class="o">.</span><span class="na">sendRedirect</span><span class="o">(</span><span class="s">&#34;index.jsp&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>Disable Caching:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&#34;Cache-Control&#34;</span><span class="o">,</span> <span class="s">&#34;no-cache, no-store, must-revalidate&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span><span class="o">.</span><span class="na">setHeader</span><span class="o">(</span><span class="s">&#34;Pragma&#34;</span><span class="o">,</span> <span class="s">&#34;no-cache&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span><span class="o">.</span><span class="na">setDateHeader</span><span class="o">(</span><span class="s">&#34;Expires&#34;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span></span></code></pre></div><p>Actually writing the content of the page:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&#34;text/html&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;html&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;head&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;title&gt;AboutMe&lt;/title&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/reset.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/useDefaultCursor.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/preventPrint.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/credit.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/profile.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;link rel=\&#34;stylesheet\&#34; href=\&#34;css/aboutme.css\&#34;&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;/head&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;body&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;/body&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;script src=&#39;js/disableSelection.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;script src=&#39;js/disableSavingImg.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;script src=&#39;js/disableDragging.js&#39;&gt;&lt;/script&gt;&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;/html&gt;&#34;</span><span class="o">);</span>
+</span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/AboutMeServlet.java">AboutMeServlet.java</a></p>
 <h3 id="image-protection">Image Protection</h3>
 <p>The images that need to be protected are put into the <code>WEB-INF</code> folder. <code>WEB-INF</code> folder is a special folder which is protected by web application containers like Tomcat. Anything inside will not be accessable directly through a URL such as <code>https://www.example.com/WEB-INF/images/user_icon.png</code></p>
 <p>To read the image file, pass the relative path of the image file to the Servlet API:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// path: &#34;/WEB-INF/images/user_icon.png&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getResourceAsStream</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Finally read the Input Stream and convert the image into data URI schemes to completely hide the image URL:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">imageStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">getEncoder</span><span class="p">().</span><span class="na">encodeToString</span><span class="p">(</span><span class="n">imageData</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/util/ImageHelper.java">ImageHelper.java</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// path: &#34;/WEB-INF/images/user_icon.png&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">InputStream</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="n">path</span><span class="o">);</span>
+</span></span></code></pre></div><p>Finally read the Input Stream and convert the image into data URI schemes to completely hide the image URL:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">imageStr</span> <span class="o">=</span> <span class="n">Base64</span><span class="o">.</span><span class="na">getEncoder</span><span class="o">().</span><span class="na">encodeToString</span><span class="o">(</span><span class="n">imageData</span><span class="o">);</span>
+</span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/util/ImageHelper.java">ImageHelper.java</a></p>
 <p>Then include the URI schemes in the HTML:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;&lt;img src=&#39;data:image/png;base64,&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">imageStr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39; /&gt;&#34;</span><span class="p">);</span><span class="w">
-</span></span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/AboutMeServlet.java">AboutMeServlet.java</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;&lt;img src=&#39;data:image/png;base64,&#34;</span> <span class="o">+</span> <span class="n">imageStr</span> <span class="o">+</span> <span class="s">&#34;&#39; /&gt;&#34;</span><span class="o">);</span>
+</span></span></code></pre></div><p>Source <a href="https://github.com/sky-haihai/4020A2-Secured-Web-IS/blob/fc29ffe396baaaaa47062d61970c054b70014d36/website/src/AboutMeServlet.java">AboutMeServlet.java</a></p>
 <h3 id="preventing-unwanted-user-actions">Preventing Unwanted User Actions</h3>
 <p>To prevent users from saving images on the web pages:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
@@ -473,7 +473,7 @@ public class AboutMeServlet extends HttpServlet {
 <ol>
 <li>Upload the changes to the server.</li>
 <li>Restart the Tomcat server. <strong>Not Practical</strong> if you are not the server administrator.</li>
-<li>Alternatively, slightly changing the <code>web.xml</code> file back and forth will trigger a kind of reload event inside Tomcat. <strong>Not Elegant</strong> but Practical:kissing_face:</li>
+<li>Alternatively, slightly changing the <code>web.xml</code> file back and forth will trigger a kind of reload event inside Tomcat. <strong>Not Elegant</strong> but Practical😗</li>
 </ol>
 <h2 id="test-cases">Test Cases</h2>
 <h3 id="case-1">Case 1</h3>
