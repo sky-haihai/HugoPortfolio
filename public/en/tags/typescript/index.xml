@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TypeScript on Portfolio</title>
-    <link>https://www.yaotian-huang.com/en/tags/typescript/</link>
+    <link>http://localhost:1313/en/tags/typescript/</link>
     <description>Recent content in TypeScript on Portfolio</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/en/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://www.yaotian-huang.com/en/code/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>http://localhost:1313/en/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>http://localhost:1313/en/code/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>&lt;p&gt;Source code: &lt;a href=&#34;https://github.com/sky-haihai/diet-dashboard.git&#34;&gt;Github Repo&lt;/a&gt;&lt;br&gt;&#xA;View Live Demo: &lt;a href=&#34;https://diet-dashboard.vercel.app/&#34;&gt;Diet Dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

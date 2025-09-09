@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arts on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/art/</link>
+    <link>http://localhost:1313/jp/art/</link>
     <description>Recent content in Arts on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="https://www.yaotian-huang.com/jp/art/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <atom:link href="http://localhost:1313/jp/art/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

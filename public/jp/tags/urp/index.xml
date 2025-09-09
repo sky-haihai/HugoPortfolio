@@ -2,45 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>URP on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/tags/urp/</link>
+    <link>http://localhost:1313/jp/tags/urp/</link>
     <description>Recent content in URP on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/tags/urp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/tags/urp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
-      <link>https://www.yaotian-huang.com/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
+      <link>http://localhost:1313/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
-      <description>Environment Unity 2021.3.16f1
-URP 12.0
-Prerequisite Basic knowledge of C# and Shader programming (HLSL).
-GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.
-Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
+      <guid>http://localhost:1313/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
+      <description>&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;&#xA;&lt;p&gt;Unity 2021.3.16f1&lt;br&gt;&#xA;URP 12.0&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;&#xA;&lt;p&gt;Basic knowledge of C# and Shader programming (HLSL).&lt;/p&gt;&#xA;&lt;h2 id=&#34;gpu-instancing&#34;&gt;GPU Instancing&lt;/h2&gt;&#xA;&lt;p&gt;GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;graphicsdrawmeshinstancedindirect&#34;&gt;Graphics.DrawMeshInstancedIndirect&lt;/h2&gt;&#xA;&lt;p&gt;The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call. In Unity, we can use &lt;code&gt;Graphics.DrawMeshInstancedIndirect&lt;/code&gt; to create a GPU instancing draw call.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
-      <link>https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <link>http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
-      <description>Environment Unity 2021.3.16f1
-Universal Render Pipeline 12.0.0
-Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
-One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+      <guid>http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <description>&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;&#xA;&lt;p&gt;Unity 2021.3.16f1&lt;br&gt;&#xA;Universal Render Pipeline 12.0.0&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I recently finished &lt;em&gt;The Legend of Zelda: Tears of the Kingdom&lt;/em&gt;. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&lt;/p&gt;&#xA;&lt;p&gt;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene. It&amp;rsquo;s a very subtle effect but it actually guided me through the thunder island where the player&amp;rsquo;s visibility range was less than 1 meter. In the image below, you can see that the rain drops react to the edge of the mining cart rails, which tells the player that there is a path to continue the journey. I guess probably the game designer didn&amp;rsquo;t intend to do this, but it&amp;rsquo;s Nintendo, you never know.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
-      <link>https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <link>http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
-      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
-How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+      <guid>http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will be discussing how I implemented a &lt;strong&gt;Screen-door transparency&lt;/strong&gt; effect in Unity using &lt;strong&gt;URP 12&lt;/strong&gt;. This effect is used to simulate the look of a transparent object by applying &lt;strong&gt;Bayer Ordered Dithering&lt;/strong&gt; to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;&#xA;&lt;p&gt;You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper. Also you can use a Threshold value to control how transparent the object is, a.k.a, how density of the grid of holes.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Screen-Door Transparency on 作品集</title>
-    <link>https://www.yaotian-huang.com/cn/tags/screen-door-transparency/</link>
+    <link>http://localhost:1313/cn/tags/screen-door-transparency/</link>
     <description>Recent content in Screen-Door Transparency on 作品集</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 07 May 2023 22:54:14 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/tags/screen-door-transparency/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 22:54:14 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/cn/tags/screen-door-transparency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
-      <link>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <link>http://localhost:1313/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
-      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
-How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+      <guid>http://localhost:1313/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will be discussing how I implemented a &lt;strong&gt;Screen-door transparency&lt;/strong&gt; effect in Unity using &lt;strong&gt;URP 12&lt;/strong&gt;. This effect is used to simulate the look of a transparent object by applying &lt;strong&gt;Bayer Ordered Dithering&lt;/strong&gt; to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;&#xA;&lt;p&gt;You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper. Also you can use a Threshold value to control how transparent the object is, a.k.a, how density of the grid of holes.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

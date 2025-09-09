@@ -2,63 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Development on Portfolio</title>
-    <link>https://www.yaotian-huang.com/en/categories/web-development/</link>
+    <link>http://localhost:1313/en/categories/web-development/</link>
     <description>Recent content in Web Development on Portfolio</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate><atom:link href="https://www.yaotian-huang.com/en/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Oct 2023 13:40:42 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
-      <link>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/</link>
+      <link>http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/</guid>
-      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
-Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
-Features It has following features:
-Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+      <guid>http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-avator/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this &lt;a href=&#34;https://0827133699.us1.myhubs.net/avatars/oJpqzhA&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;features&#34;&gt;Features&lt;/h4&gt;&#xA;&lt;p&gt;It has following features:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Idle animation&lt;/li&gt;&#xA;&lt;li&gt;Head tracking&lt;/li&gt;&#xA;&lt;li&gt;Lip syncing (User audio input feedback)&lt;/li&gt;&#xA;&lt;li&gt;Personal space invader (other avators will be transparent or disappear when the user is too close to them)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;It doesn&amp;rsquo;t have:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
-      <link>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/</link>
+      <link>http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-scene/</guid>
-      <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
+      <guid>http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-scene/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://www.yaotian-huang.com/en/code/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>http://localhost:1313/en/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>http://localhost:1313/en/code/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>&lt;p&gt;Source code: &lt;a href=&#34;https://github.com/sky-haihai/diet-dashboard.git&#34;&gt;Github Repo&lt;/a&gt;&lt;br&gt;&#xA;View Live Demo: &lt;a href=&#34;https://diet-dashboard.vercel.app/&#34;&gt;Diet Dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Secured Web Information System Prototype</title>
-      <link>https://www.yaotian-huang.com/en/code/secured-web-information-system-prototype/</link>
+      <link>http://localhost:1313/en/code/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/code/secured-web-information-system-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
-The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
+      <guid>http://localhost:1313/en/code/secured-web-information-system-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A2-Secured-Web-IS.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
-      <link>https://www.yaotian-huang.com/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
+      <link>http://localhost:1313/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
-Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <guid>http://localhost:1313/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A3-Information-Retrieval.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&lt;/p&gt;&#xA;&lt;h3 id=&#34;input&#34;&gt;Input&lt;/h3&gt;&#xA;&lt;p&gt;a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

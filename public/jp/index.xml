@@ -2,182 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/</link>
+    <link>http://localhost:1313/jp/</link>
     <description>Recent content on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発ログ：平滑なセクター放射線キャスティング</title>
-      <link>https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/</link>
+      <link>http://localhost:1313/jp/projects/ffrt/smooth-sector-cast/</link>
       <pubDate>Thu, 16 May 2024 17:45:58 +0000</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/</guid>
-      <description>目標 ゲームプロジェクト Fluffy Floaty Rubber Tennis は、物理ベースの固定カメラ宇宙テニスゲームです。プレイヤーの唯一の操作はラケットを振ることです。
-ラケットを振る際にラケットと他の物体がどのように相互作用するかのロジックは、ラケットがヒットした物体に力を加え、プレイヤーに反作用力を加えることです。
-なぜ Physics.SphereCast を使わないのか？ では、なぜ内蔵の Unity 物理関数 Physics.SphereCast を使わないのでしょうか？
-もしかしたらその背後にある本当のロジックを理解していないだけかもしれませんが、ヒット距離が 0 の時にバグがあると思います。
-下のスクリーンショットに示されているように、プレイヤーが左に向かってスイングすると、スフィアキャストはキャラクターの原点で始まり、ラケットより少し先で終わります。予想される衝突点はスフィアキャストの「最初の球体」とその右側の長い障害物の間に発生します。スフィアキャストが障害物に到達するまでの移動距離が 0 であるため、ヒット距離も 0 であると予想されます。
-この時点までは、すべてが私にとって理にかなっています。実際には、スフィアキャストは予想通りヒット距離が 0 でヒットを返しますが、ヒットポイントは Vector3.Zero にあります！
-私は複数のテストを行い、結果は一貫しています。ヒット距離が 0 である限り、ヒットポイントは常に Vector3.Zero にあります&amp;hellip;
-新しいソリューションの構築 組み込みの関数が期待通りに動作しないため、Physics.Raycast を使用して独自のソリューションを構築することにしました。
-このメカニズムは、このプロジェクトのニーズに基づいています：ラケットを振ること。
-直感性 問題を分解すると、これらはスイングを直感的にするための重要なポイントです：
-快適なスイングには、キャラクターの周りに小さな円の空間を含める必要があります。したがって、ボールがプレイヤーと重なっている場合、プレイヤーはそれを打つことができるはずです。 スイングは扇形である必要があります。なぜなら、スイングは基本的に腕を回転させてラケットが扇形の領域をカバーするからです。 スイングは、プレイヤーが狙っている方向またはマウスの位置に最も近い物体を最初にヒットする必要があります。 したがって、打撃領域は次のようにカバーする必要があります：
-メカニズム 上記のように、アイデアは同心円を2つ描き、円の中心を通る2本の線を引いて扇形の角度を決定し、ヒットポイントを接続して平滑な中心角を持つ扇形領域を形成することです。
-パラメータは以下の通りです：
-重なり合う円の半径。 扇形がある円の半径。（スイング時にラケットが届く距離） 扇形の角度。 レイキャスティング その後、小さな円から大きな円まで定義されたレイ密度でレイをキャストできます。このプロジェクトでは、
-レイのソーティング 直感性セクションで述べたように、レイはプレイヤーがヒットしたい物体をヒットするようにソート/削除する必要があります。
-たとえば、プレイヤーが右側を狙っていて、ヒットエリアと重なる緑の円がボールである場合、ソートなしのデフォルトの動作は非常にランダムです。たとえば、表示された画像では、レイは下から上、上から下、さらには中央からエッジに向かってキャストされることがあります。
-この場合、次の3つのソーティング方法を追加することにしました：
-距離ソート：セクターの中心からの距離に基づいてレイをソートします。
-角度ソート：レイと照準方向との角度に基づいてレイをソートします。
-最初/最後のヒットソート：レイがキャストされる順序に基づいてレイをソートします。
-実装 いくつかのデバッグを経て、結果はかなり良好です。少なくともゲームプレイの観点からはそうです。
-これは、さまざまなソート方法の完全な比較です：
-最初のヒット最後のヒット最小距離最大距離最小角度最大角度ゲーム内でこの成果を見たいですか？ 自分でゲームを試してみてください！</description>
+      <guid>http://localhost:1313/jp/projects/ffrt/smooth-sector-cast/</guid>
+      <description>&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;&#xA;&lt;p&gt;ゲームプロジェクト Fluffy Floaty Rubber Tennis は、物理ベースの固定カメラ宇宙テニスゲームです。プレイヤーの唯一の操作は&lt;strong&gt;ラケットを振る&lt;/strong&gt;ことです。&lt;/p&gt;&#xA;&lt;p&gt;ラケットを振る際にラケットと他の物体がどのように相互作用するかのロジックは、ラケットがヒットした物体に力を加え、プレイヤーに反作用力を加えることです。&lt;/p&gt;&#xA;&lt;h2 id=&#34;なぜ-physicsspherecast-を使わないのか&#34;&gt;なぜ Physics.SphereCast を使わないのか？&lt;/h2&gt;&#xA;&lt;p&gt;では、なぜ内蔵の Unity 物理関数 &lt;code&gt;Physics.SphereCast&lt;/code&gt; を使わないのでしょうか？&lt;/p&gt;&#xA;&lt;p&gt;もしかしたらその背後にある本当のロジックを理解していないだけかもしれませんが、ヒット距離が 0 の時にバグがあると思います。&lt;/p&gt;&#xA;&lt;p&gt;下のスクリーンショットに示されているように、プレイヤーが左に向かってスイングすると、スフィアキャストはキャラクターの原点で始まり、ラケットより少し先で終わります。予想される衝突点はスフィアキャストの「最初の球体」とその右側の長い障害物の間に発生します。スフィアキャストが障害物に到達するまでの移動距離が 0 であるため、ヒット距離も 0 であると予想されます。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/sphere-cast.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;この時点までは、すべてが私にとって理にかなっています。実際には、スフィアキャストは予想通りヒット距離が 0 でヒットを返しますが、ヒットポイントは &lt;code&gt;Vector3.Zero&lt;/code&gt; にあります！&lt;/p&gt;&#xA;&lt;p&gt;私は複数のテストを行い、結果は一貫しています。ヒット距離が 0 である限り、ヒットポイントは常に &lt;code&gt;Vector3.Zero&lt;/code&gt; にあります&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;新しいソリューションの構築&#34;&gt;新しいソリューションの構築&lt;/h2&gt;&#xA;&lt;p&gt;組み込みの関数が期待通りに動作しないため、&lt;code&gt;Physics.Raycast&lt;/code&gt; を使用して独自のソリューションを構築することにしました。&lt;/p&gt;&#xA;&lt;p&gt;このメカニズムは、このプロジェクトのニーズに基づいています：ラケットを振ること。&lt;/p&gt;&#xA;&lt;h3 id=&#34;直感性&#34;&gt;直感性&lt;/h3&gt;&#xA;&lt;p&gt;問題を分解すると、これらはスイングを直感的にするための重要なポイントです：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;快適なスイングには、キャラクターの周りに小さな円の空間を含める必要があります。したがって、ボールがプレイヤーと重なっている場合、プレイヤーはそれを打つことができるはずです。&lt;/li&gt;&#xA;&lt;li&gt;スイングは扇形である必要があります。なぜなら、スイングは基本的に腕を回転させてラケットが扇形の領域をカバーするからです。&lt;/li&gt;&#xA;&lt;li&gt;スイングは、プレイヤーが狙っている方向またはマウスの位置に最も近い物体を最初にヒットする必要があります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;したがって、打撃領域は次のようにカバーする必要があります：&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-1.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;メカニズム&#34;&gt;メカニズム&lt;/h3&gt;&#xA;&lt;p&gt;上記のように、アイデアは同心円を2つ描き、円の中心を通る2本の線を引いて扇形の角度を決定し、ヒットポイントを接続して平滑な中心角を持つ扇形領域を形成することです。&lt;/p&gt;&#xA;&lt;p&gt;パラメータは以下の通りです：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;重なり合う円の半径。&lt;/li&gt;&#xA;&lt;li&gt;扇形がある円の半径。（スイング時にラケットが届く距離）&lt;/li&gt;&#xA;&lt;li&gt;扇形の角度。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;レイキャスティング&#34;&gt;レイキャスティング&lt;/h3&gt;&#xA;&lt;p&gt;その後、小さな円から大きな円まで定義されたレイ密度でレイをキャストできます。このプロジェクトでは、&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-2.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;レイのソーティング&#34;&gt;レイのソーティング&lt;/h3&gt;&#xA;&lt;p&gt;直感性セクションで述べたように、レイはプレイヤーがヒットしたい物体をヒットするようにソート/削除する必要があります。&lt;/p&gt;&#xA;&lt;p&gt;たとえば、プレイヤーが右側を狙っていて、ヒットエリアと重なる緑の円がボールである場合、ソートなしのデフォルトの動作は非常にランダムです。たとえば、表示された画像では、レイは下から上、上から下、さらには中央からエッジに向かってキャストされることがあります。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-4.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-3.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;この場合、次の3つのソーティング方法を追加することにしました：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;距離ソート&lt;/strong&gt;：セクターの中心からの距離に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;角度ソート&lt;/strong&gt;：レイと照準方向との角度に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;最初/最後のヒットソート&lt;/strong&gt;：レイがキャストされる順序に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;&#xA;&lt;p&gt;いくつかのデバッグを経て、結果はかなり良好です。少なくともゲームプレイの観点からはそうです。&lt;/p&gt;&#xA;&lt;p&gt;これは、さまざまなソート方法の完全な比較です：&lt;/p&gt;&#xA;&lt;div style=&#34;display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;&#34;&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;first-hit.png&#34; alt=&#34;first hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最初のヒット&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;last-hit.png&#34; alt=&#34;last hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最後のヒット&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-min.png&#34; alt=&#34;distance min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小距離&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-max.png&#34; alt=&#34;distance max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大距離&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-min.png&#34; alt=&#34;angle min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-max.png&#34; alt=&#34;angle max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;ゲーム内でこの成果を見たいですか&#34;&gt;ゲーム内でこの成果を見たいですか？&lt;/h2&gt;&#xA;&lt;p&gt;自分でゲームを試してみてください！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
-      <link>https://www.yaotian-huang.com/jp/code/auto-fishing-wow/</link>
+      <link>http://localhost:1313/jp/code/auto-fishing-wow/</link>
       <pubDate>Wed, 01 May 2024 08:35:48 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/auto-fishing-wow/</guid>
-      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.
-The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
+      <guid>http://localhost:1313/jp/code/auto-fishing-wow/</guid>
+      <description>&lt;h2 id=&#34;morally-speaking&#34;&gt;Morally Speaking&lt;/h2&gt;&#xA;&lt;p&gt;Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.&lt;/p&gt;&#xA;&lt;p&gt;The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Devlog: Dynamic Shadow for 2D Animation</title>
-      <link>https://www.yaotian-huang.com/jp/projects/eotr/dynamic-shadow-for-2d-animation/</link>
+      <link>http://localhost:1313/jp/projects/eotr/dynamic-shadow-for-2d-animation/</link>
       <pubDate>Mon, 29 Apr 2024 15:07:01 +0000</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/projects/eotr/dynamic-shadow-for-2d-animation/</guid>
-      <description>Why Dynamic Shadow for 2D Animation? In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.
-Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&amp;rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.</description>
+      <guid>http://localhost:1313/jp/projects/eotr/dynamic-shadow-for-2d-animation/</guid>
+      <description>&lt;h2 id=&#34;why-dynamic-shadow-for-2d-animation&#34;&gt;Why Dynamic Shadow for 2D Animation?&lt;/h2&gt;&#xA;&lt;p&gt;In the game project Echoes of the Roots, an very important art decision to win us the Best Art Award was the pillar to combine 2D animation and 3D enviroment to achieve a sense 2.5D Visual Style.&lt;/p&gt;&#xA;&lt;p&gt;Among the various efforts, a key point was to achieve the consistancy of the shadow between 2D and 3D objects. 3D objects generally involve a more complex lighting model than 2D objects, so the our direction was pretty clear: to simplify the lighting model for 3D objects to match the 2D look, and to make 2D shadows dynamic to trick the player&amp;rsquo;s eyes to perceive that the 2D and 3D objects are in the same world.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Create Stylized GPU Instancing Billboard Grass Without Creating Position Buffer in URP</title>
-      <link>https://www.yaotian-huang.com/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
+      <link>http://localhost:1313/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</link>
       <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
-      <description>Environment Unity 2021.3.16f1
-URP 12.0
-Prerequisite Basic knowledge of C# and Shader programming (HLSL).
-GPU Instancing GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.
-Graphics.DrawMeshInstancedIndirect The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call.</description>
+      <guid>http://localhost:1313/jp/ta/create-stylized-gpu-instancing-billboard-grass-without-creating-position-buffer-in-urp/</guid>
+      <description>&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;&#xA;&lt;p&gt;Unity 2021.3.16f1&lt;br&gt;&#xA;URP 12.0&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisite&#34;&gt;Prerequisite&lt;/h2&gt;&#xA;&lt;p&gt;Basic knowledge of C# and Shader programming (HLSL).&lt;/p&gt;&#xA;&lt;h2 id=&#34;gpu-instancing&#34;&gt;GPU Instancing&lt;/h2&gt;&#xA;&lt;p&gt;GPU instancing is a technique that allows you to draw multiple copies of the same mesh using a single draw call. It is basically normal forward rendering pipeline but skipping the Vertex Specification stage.&lt;/p&gt;&#xA;&lt;h2 id=&#34;graphicsdrawmeshinstancedindirect&#34;&gt;Graphics.DrawMeshInstancedIndirect&lt;/h2&gt;&#xA;&lt;p&gt;The first step to create multiple millions of grass is to properly call the GPU to draw so, a.k.a. draw call. In Unity, we can use &lt;code&gt;Graphics.DrawMeshInstancedIndirect&lt;/code&gt; to create a GPU instancing draw call.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Notes on Learning Mozilla Hubs: Avator</title>
-      <link>https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-avator/</link>
+      <link>http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-avator/</link>
       <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-avator/</guid>
-      <description>Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.
-Demo Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
-Features It has following features:
-Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&amp;rsquo;t have:</description>
+      <guid>http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-avator/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&amp;rsquo;m going to talk about the avator system in Hubs.&lt;/p&gt;&#xA;&lt;h2 id=&#34;demo&#34;&gt;Demo&lt;/h2&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s a demo avator I made during my study, you may use it as your own avator from this &lt;a href=&#34;https://0827133699.us1.myhubs.net/avatars/oJpqzhA&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;features&#34;&gt;Features&lt;/h4&gt;&#xA;&lt;p&gt;It has following features:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Idle animation&lt;/li&gt;&#xA;&lt;li&gt;Head tracking&lt;/li&gt;&#xA;&lt;li&gt;Lip syncing (User audio input feedback)&lt;/li&gt;&#xA;&lt;li&gt;Personal space invader (other avators will be transparent or disappear when the user is too close to them)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;It doesn&amp;rsquo;t have:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Notes on Learning Mozilla Hubs: Scene</title>
-      <link>https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/</link>
+      <link>http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-scene/</link>
       <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-scene/</guid>
-      <description>Introduction Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:</description>
+      <guid>http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-scene/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Mozilla Hubs is a open-source browser-based metaverse web application that supports XR. The first thing to keep in mind is that it&amp;rsquo;s component-based like Unity. In the official build, Hubs supports various but very limited components such as model renderer, images renderer, videos renderer, audio field, etc. Although what creators could do in Hubs is very limited by the default build, I could imagine it&amp;rsquo;s bright future for two reasons:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Harmony Script: Adding Placeholder Drawings to Empty Timeline Cells</title>
-      <link>https://www.yaotian-huang.com/jp/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
+      <link>http://localhost:1313/jp/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</link>
       <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
-      <description>Introduction In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.</description>
+      <guid>http://localhost:1313/jp/ta/harmony-script-adding-placeholder-drawings-to-empty-timeline-cells/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will introduce a script I wrote for Toon-Boom Harmony that can be used to fill empty timeline cells with a placeholder drawing named &amp;ldquo;00&amp;rdquo; in order to save lots of time for animators. This is my first time writing a script for Harmony 20, so along with the script, I will also talk about what I learnt about the scripting module of Harmony from the past few days and some of the challenges I encountered.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK</title>
-      <link>https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
+      <link>http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</link>
       <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
-      <description>Environment Unity 2021.3.16f1
-Universal Render Pipeline 12.0.0
-Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
-One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.</description>
+      <guid>http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/</guid>
+      <description>&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;&#xA;&lt;p&gt;Unity 2021.3.16f1&lt;br&gt;&#xA;Universal Render Pipeline 12.0.0&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;I recently finished &lt;em&gt;The Legend of Zelda: Tears of the Kingdom&lt;/em&gt;. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.&lt;/p&gt;&#xA;&lt;p&gt;One of the things I noticed is the rain drop effect that react to the uppper edges of the scene. It&amp;rsquo;s a very subtle effect but it actually guided me through the thunder island where the player&amp;rsquo;s visibility range was less than 1 meter. In the image below, you can see that the rain drops react to the edge of the mining cart rails, which tells the player that there is a path to continue the journey. I guess probably the game designer didn&amp;rsquo;t intend to do this, but it&amp;rsquo;s Nintendo, you never know.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting Started in Xiheframework</title>
-      <link>https://www.yaotian-huang.com/jp/code/getting-started-xiheframework/</link>
+      <link>http://localhost:1313/jp/code/getting-started-xiheframework/</link>
       <pubDate>Thu, 18 May 2023 08:35:48 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/getting-started-xiheframework/</guid>
-      <description>Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.
-Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.
-To do that:
-Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.</description>
+      <guid>http://localhost:1313/jp/code/getting-started-xiheframework/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;import-xiheframework&#34;&gt;Import Xiheframework&lt;/h2&gt;&#xA;&lt;h3 id=&#34;via-git-submodule&#34;&gt;Via Git Submodule&lt;/h3&gt;&#xA;&lt;p&gt;The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.&lt;/p&gt;&#xA;&lt;p&gt;To do that:&lt;/p&gt;&#xA;&lt;p&gt;Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Layer-based Screen-Door Transparency Effect using Unity URP 12</title>
-      <link>https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
+      <link>http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</link>
       <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
-      <description>Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
-How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.</description>
+      <guid>http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In this post, I will be discussing how I implemented a &lt;strong&gt;Screen-door transparency&lt;/strong&gt; effect in Unity using &lt;strong&gt;URP 12&lt;/strong&gt;. This effect is used to simulate the look of a transparent object by applying &lt;strong&gt;Bayer Ordered Dithering&lt;/strong&gt; to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;&#xA;&lt;p&gt;You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper. Also you can use a Threshold value to control how transparent the object is, a.k.a, how density of the grid of holes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://www.yaotian-huang.com/jp/code/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>http://localhost:1313/jp/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>http://localhost:1313/jp/code/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>&lt;p&gt;Source code: &lt;a href=&#34;https://github.com/sky-haihai/diet-dashboard.git&#34;&gt;Github Repo&lt;/a&gt;&lt;br&gt;&#xA;View Live Demo: &lt;a href=&#34;https://diet-dashboard.vercel.app/&#34;&gt;Diet Dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Secured Web Information System Prototype</title>
-      <link>https://www.yaotian-huang.com/jp/code/secured-web-information-system-prototype/</link>
+      <link>http://localhost:1313/jp/code/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/secured-web-information-system-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
-The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
+      <guid>http://localhost:1313/jp/code/secured-web-information-system-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A2-Secured-Web-IS.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
-      <link>https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
+      <link>http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
-Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <guid>http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A3-Information-Retrieval.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&lt;/p&gt;&#xA;&lt;h3 id=&#34;input&#34;&gt;Input&lt;/h3&gt;&#xA;&lt;p&gt;a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Introducing Xiheframework</title>
-      <link>https://www.yaotian-huang.com/jp/code/introducing-xiheframework/</link>
+      <link>http://localhost:1313/jp/code/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/introducing-xiheframework/</guid>
-      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
-Who Should Use Scale Ideally at least two members:
-Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
-Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+      <guid>http://localhost:1313/jp/code/introducing-xiheframework/</guid>
+      <description>&lt;h2 id=&#34;what-is-xiheframework&#34;&gt;What is XiheFramework&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;XiheFramework&lt;/strong&gt; is a game framework for agile development, wrote on top of &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;who-should-use&#34;&gt;Who Should Use&lt;/h2&gt;&#xA;&lt;h3 id=&#34;scale&#34;&gt;Scale&lt;/h3&gt;&#xA;&lt;p&gt;Ideally at least two members:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Programmer for creating custom modules(game features)&lt;/li&gt;&#xA;&lt;li&gt;Technical designer for node editing&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Or use it as an individual developer (&lt;del&gt;hair loss rate 200%&lt;/del&gt;)&lt;/p&gt;&#xA;&lt;h3 id=&#34;skills&#34;&gt;Skills&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Unity Editor&lt;/li&gt;&#xA;&lt;li&gt;Node-based Editor&lt;/li&gt;&#xA;&lt;li&gt;C# (Custom Modules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;warning-warning&#34;&gt;Warning &amp;#x26a0;&amp;#xfe0f;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Consider not to use this framework if you are work individually and have &lt;strong&gt;ZERO&lt;/strong&gt; programming skill as you probably will have a lot of pain if you just use the node editor for all game logic. However, this is just a warning, feel free to ignore it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

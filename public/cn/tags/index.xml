@@ -2,10 +2,256 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 作品集</title>
-    <link>https://www.yaotian-huang.com/cn/tags/</link>
+    <link>http://localhost:1313/cn/tags/</link>
     <description>Recent content in Tags on 作品集</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPU Instancing</title>
+      <link>http://localhost:1313/cn/tags/gpu-instancing/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/cn/tags/gpu-instancing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grass</title>
+      <link>http://localhost:1313/cn/tags/grass/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/cn/tags/grass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shader</title>
+      <link>http://localhost:1313/cn/tags/shader/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/cn/tags/shader/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unity</title>
+      <link>http://localhost:1313/cn/tags/unity/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/cn/tags/unity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>URP</title>
+      <link>http://localhost:1313/cn/tags/urp/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/cn/tags/urp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blender</title>
+      <link>http://localhost:1313/cn/tags/blender/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/blender/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Character</title>
+      <link>http://localhost:1313/cn/tags/character/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/character/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GLB</title>
+      <link>http://localhost:1313/cn/tags/glb/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/glb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Metaverse</title>
+      <link>http://localhost:1313/cn/tags/metaverse/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/metaverse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mozilla Hubs</title>
+      <link>http://localhost:1313/cn/tags/mozilla-hubs/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/mozilla-hubs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opimazation</title>
+      <link>http://localhost:1313/cn/tags/opimazation/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/opimazation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scene</title>
+      <link>http://localhost:1313/cn/tags/scene/</link>
+      <pubDate>Thu, 26 Oct 2023 10:27:04 -0600</pubDate>
+      <guid>http://localhost:1313/cn/tags/scene/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Animation</title>
+      <link>http://localhost:1313/cn/tags/animation/</link>
+      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/animation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Script</title>
+      <link>http://localhost:1313/cn/tags/script/</link>
+      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Toom-Boom Harmony</title>
+      <link>http://localhost:1313/cn/tags/toom-boom-harmony/</link>
+      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/toom-boom-harmony/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compute Shader</title>
+      <link>http://localhost:1313/cn/tags/compute-shader/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/compute-shader/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Post Processing</title>
+      <link>http://localhost:1313/cn/tags/post-processing/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/post-processing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Render Feature</title>
+      <link>http://localhost:1313/cn/tags/render-feature/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/render-feature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C Sharp</title>
+      <link>http://localhost:1313/cn/tags/c-sharp/</link>
+      <pubDate>Thu, 18 May 2023 08:35:48 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/c-sharp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Screen-Door Transparency</title>
+      <link>http://localhost:1313/cn/tags/screen-door-transparency/</link>
+      <pubDate>Sun, 07 May 2023 22:54:14 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/screen-door-transparency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Angular</title>
+      <link>http://localhost:1313/cn/tags/angular/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/angular/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:1313/cn/tags/css/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>http://localhost:1313/cn/tags/html/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/cn/tags/javascript/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>http://localhost:1313/cn/tags/typescript/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unfinished</title>
+      <link>http://localhost:1313/cn/tags/unfinished/</link>
+      <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/unfinished/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/cn/tags/java/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JSP</title>
+      <link>http://localhost:1313/cn/tags/jsp/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/jsp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Servlet</title>
+      <link>http://localhost:1313/cn/tags/servlet/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/servlet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tomcat</title>
+      <link>http://localhost:1313/cn/tags/tomcat/</link>
+      <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/tomcat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Information Retrieval</title>
+      <link>http://localhost:1313/cn/tags/information-retrieval/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/information-retrieval/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inverted Index</title>
+      <link>http://localhost:1313/cn/tags/inverted-index/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/inverted-index/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/cn/tags/python/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search Engine</title>
+      <link>http://localhost:1313/cn/tags/search-engine/</link>
+      <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/search-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C#</title>
+      <link>http://localhost:1313/cn/tags/c%23/</link>
+      <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
+      <guid>http://localhost:1313/cn/tags/c%23/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

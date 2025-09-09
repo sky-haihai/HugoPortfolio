@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unfinished on 作品集</title>
-    <link>https://www.yaotian-huang.com/cn/tags/unfinished/</link>
+    <link>http://localhost:1313/cn/tags/unfinished/</link>
     <description>Recent content in Unfinished on 作品集</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/tags/unfinished/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 May 2023 21:47:36 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/cn/tags/unfinished/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>http://localhost:1313/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>http://localhost:1313/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>&lt;p&gt;Source code: &lt;a href=&#34;https://github.com/sky-haihai/diet-dashboard.git&#34;&gt;Github Repo&lt;/a&gt;&lt;br&gt;&#xA;View Live Demo: &lt;a href=&#34;https://diet-dashboard.vercel.app/&#34;&gt;Diet Dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

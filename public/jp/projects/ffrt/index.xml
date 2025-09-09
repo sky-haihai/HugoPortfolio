@@ -2,41 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ふわふわぷかぷかゴムテニス 開発日誌 on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/projects/ffrt/</link>
+    <link>http://localhost:1313/jp/projects/ffrt/</link>
     <description>Recent content in ふわふわぷかぷかゴムテニス 開発日誌 on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/projects/ffrt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/projects/ffrt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開発ログ：平滑なセクター放射線キャスティング</title>
-      <link>https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/</link>
+      <link>http://localhost:1313/jp/projects/ffrt/smooth-sector-cast/</link>
       <pubDate>Thu, 16 May 2024 17:45:58 +0000</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/projects/ffrt/smooth-sector-cast/</guid>
-      <description>目標 ゲームプロジェクト Fluffy Floaty Rubber Tennis は、物理ベースの固定カメラ宇宙テニスゲームです。プレイヤーの唯一の操作はラケットを振ることです。
-ラケットを振る際にラケットと他の物体がどのように相互作用するかのロジックは、ラケットがヒットした物体に力を加え、プレイヤーに反作用力を加えることです。
-なぜ Physics.SphereCast を使わないのか？ では、なぜ内蔵の Unity 物理関数 Physics.SphereCast を使わないのでしょうか？
-もしかしたらその背後にある本当のロジックを理解していないだけかもしれませんが、ヒット距離が 0 の時にバグがあると思います。
-下のスクリーンショットに示されているように、プレイヤーが左に向かってスイングすると、スフィアキャストはキャラクターの原点で始まり、ラケットより少し先で終わります。予想される衝突点はスフィアキャストの「最初の球体」とその右側の長い障害物の間に発生します。スフィアキャストが障害物に到達するまでの移動距離が 0 であるため、ヒット距離も 0 であると予想されます。
-この時点までは、すべてが私にとって理にかなっています。実際には、スフィアキャストは予想通りヒット距離が 0 でヒットを返しますが、ヒットポイントは Vector3.Zero にあります！
-私は複数のテストを行い、結果は一貫しています。ヒット距離が 0 である限り、ヒットポイントは常に Vector3.Zero にあります&amp;hellip;
-新しいソリューションの構築 組み込みの関数が期待通りに動作しないため、Physics.Raycast を使用して独自のソリューションを構築することにしました。
-このメカニズムは、このプロジェクトのニーズに基づいています：ラケットを振ること。
-直感性 問題を分解すると、これらはスイングを直感的にするための重要なポイントです：
-快適なスイングには、キャラクターの周りに小さな円の空間を含める必要があります。したがって、ボールがプレイヤーと重なっている場合、プレイヤーはそれを打つことができるはずです。 スイングは扇形である必要があります。なぜなら、スイングは基本的に腕を回転させてラケットが扇形の領域をカバーするからです。 スイングは、プレイヤーが狙っている方向またはマウスの位置に最も近い物体を最初にヒットする必要があります。 したがって、打撃領域は次のようにカバーする必要があります：
-メカニズム 上記のように、アイデアは同心円を2つ描き、円の中心を通る2本の線を引いて扇形の角度を決定し、ヒットポイントを接続して平滑な中心角を持つ扇形領域を形成することです。
-パラメータは以下の通りです：
-重なり合う円の半径。 扇形がある円の半径。（スイング時にラケットが届く距離） 扇形の角度。 レイキャスティング その後、小さな円から大きな円まで定義されたレイ密度でレイをキャストできます。このプロジェクトでは、
-レイのソーティング 直感性セクションで述べたように、レイはプレイヤーがヒットしたい物体をヒットするようにソート/削除する必要があります。
-たとえば、プレイヤーが右側を狙っていて、ヒットエリアと重なる緑の円がボールである場合、ソートなしのデフォルトの動作は非常にランダムです。たとえば、表示された画像では、レイは下から上、上から下、さらには中央からエッジに向かってキャストされることがあります。
-この場合、次の3つのソーティング方法を追加することにしました：
-距離ソート：セクターの中心からの距離に基づいてレイをソートします。
-角度ソート：レイと照準方向との角度に基づいてレイをソートします。
-最初/最後のヒットソート：レイがキャストされる順序に基づいてレイをソートします。
-実装 いくつかのデバッグを経て、結果はかなり良好です。少なくともゲームプレイの観点からはそうです。
-これは、さまざまなソート方法の完全な比較です：
-最初のヒット最後のヒット最小距離最大距離最小角度最大角度ゲーム内でこの成果を見たいですか？ 自分でゲームを試してみてください！</description>
+      <guid>http://localhost:1313/jp/projects/ffrt/smooth-sector-cast/</guid>
+      <description>&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;&#xA;&lt;p&gt;ゲームプロジェクト Fluffy Floaty Rubber Tennis は、物理ベースの固定カメラ宇宙テニスゲームです。プレイヤーの唯一の操作は&lt;strong&gt;ラケットを振る&lt;/strong&gt;ことです。&lt;/p&gt;&#xA;&lt;p&gt;ラケットを振る際にラケットと他の物体がどのように相互作用するかのロジックは、ラケットがヒットした物体に力を加え、プレイヤーに反作用力を加えることです。&lt;/p&gt;&#xA;&lt;h2 id=&#34;なぜ-physicsspherecast-を使わないのか&#34;&gt;なぜ Physics.SphereCast を使わないのか？&lt;/h2&gt;&#xA;&lt;p&gt;では、なぜ内蔵の Unity 物理関数 &lt;code&gt;Physics.SphereCast&lt;/code&gt; を使わないのでしょうか？&lt;/p&gt;&#xA;&lt;p&gt;もしかしたらその背後にある本当のロジックを理解していないだけかもしれませんが、ヒット距離が 0 の時にバグがあると思います。&lt;/p&gt;&#xA;&lt;p&gt;下のスクリーンショットに示されているように、プレイヤーが左に向かってスイングすると、スフィアキャストはキャラクターの原点で始まり、ラケットより少し先で終わります。予想される衝突点はスフィアキャストの「最初の球体」とその右側の長い障害物の間に発生します。スフィアキャストが障害物に到達するまでの移動距離が 0 であるため、ヒット距離も 0 であると予想されます。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/sphere-cast.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;この時点までは、すべてが私にとって理にかなっています。実際には、スフィアキャストは予想通りヒット距離が 0 でヒットを返しますが、ヒットポイントは &lt;code&gt;Vector3.Zero&lt;/code&gt; にあります！&lt;/p&gt;&#xA;&lt;p&gt;私は複数のテストを行い、結果は一貫しています。ヒット距離が 0 である限り、ヒットポイントは常に &lt;code&gt;Vector3.Zero&lt;/code&gt; にあります&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;新しいソリューションの構築&#34;&gt;新しいソリューションの構築&lt;/h2&gt;&#xA;&lt;p&gt;組み込みの関数が期待通りに動作しないため、&lt;code&gt;Physics.Raycast&lt;/code&gt; を使用して独自のソリューションを構築することにしました。&lt;/p&gt;&#xA;&lt;p&gt;このメカニズムは、このプロジェクトのニーズに基づいています：ラケットを振ること。&lt;/p&gt;&#xA;&lt;h3 id=&#34;直感性&#34;&gt;直感性&lt;/h3&gt;&#xA;&lt;p&gt;問題を分解すると、これらはスイングを直感的にするための重要なポイントです：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;快適なスイングには、キャラクターの周りに小さな円の空間を含める必要があります。したがって、ボールがプレイヤーと重なっている場合、プレイヤーはそれを打つことができるはずです。&lt;/li&gt;&#xA;&lt;li&gt;スイングは扇形である必要があります。なぜなら、スイングは基本的に腕を回転させてラケットが扇形の領域をカバーするからです。&lt;/li&gt;&#xA;&lt;li&gt;スイングは、プレイヤーが狙っている方向またはマウスの位置に最も近い物体を最初にヒットする必要があります。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;したがって、打撃領域は次のようにカバーする必要があります：&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-1.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;メカニズム&#34;&gt;メカニズム&lt;/h3&gt;&#xA;&lt;p&gt;上記のように、アイデアは同心円を2つ描き、円の中心を通る2本の線を引いて扇形の角度を決定し、ヒットポイントを接続して平滑な中心角を持つ扇形領域を形成することです。&lt;/p&gt;&#xA;&lt;p&gt;パラメータは以下の通りです：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;重なり合う円の半径。&lt;/li&gt;&#xA;&lt;li&gt;扇形がある円の半径。（スイング時にラケットが届く距離）&lt;/li&gt;&#xA;&lt;li&gt;扇形の角度。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;レイキャスティング&#34;&gt;レイキャスティング&lt;/h3&gt;&#xA;&lt;p&gt;その後、小さな円から大きな円まで定義されたレイ密度でレイをキャストできます。このプロジェクトでは、&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-2.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;レイのソーティング&#34;&gt;レイのソーティング&lt;/h3&gt;&#xA;&lt;p&gt;直感性セクションで述べたように、レイはプレイヤーがヒットしたい物体をヒットするようにソート/削除する必要があります。&lt;/p&gt;&#xA;&lt;p&gt;たとえば、プレイヤーが右側を狙っていて、ヒットエリアと重なる緑の円がボールである場合、ソートなしのデフォルトの動作は非常にランダムです。たとえば、表示された画像では、レイは下から上、上から下、さらには中央からエッジに向かってキャストされることがあります。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-4.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-3.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;この場合、次の3つのソーティング方法を追加することにしました：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;距離ソート&lt;/strong&gt;：セクターの中心からの距離に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;角度ソート&lt;/strong&gt;：レイと照準方向との角度に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;最初/最後のヒットソート&lt;/strong&gt;：レイがキャストされる順序に基づいてレイをソートします。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;実装&#34;&gt;実装&lt;/h2&gt;&#xA;&lt;p&gt;いくつかのデバッグを経て、結果はかなり良好です。少なくともゲームプレイの観点からはそうです。&lt;/p&gt;&#xA;&lt;p&gt;これは、さまざまなソート方法の完全な比較です：&lt;/p&gt;&#xA;&lt;div style=&#34;display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;&#34;&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;first-hit.png&#34; alt=&#34;first hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最初のヒット&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;last-hit.png&#34; alt=&#34;last hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最後のヒット&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-min.png&#34; alt=&#34;distance min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小距離&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-max.png&#34; alt=&#34;distance max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大距離&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-min.png&#34; alt=&#34;angle min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-max.png&#34; alt=&#34;angle max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;ゲーム内でこの成果を見たいですか&#34;&gt;ゲーム内でこの成果を見たいですか？&lt;/h2&gt;&#xA;&lt;p&gt;自分でゲームを試してみてください！&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

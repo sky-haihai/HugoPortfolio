@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C# on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/tags/c#/</link>
+    <link>http://localhost:1313/jp/tags/c%23/</link>
     <description>Recent content in C# on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 05 May 2023 14:24:13 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 14:24:13 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing Xiheframework</title>
-      <link>https://www.yaotian-huang.com/jp/code/introducing-xiheframework/</link>
+      <link>http://localhost:1313/jp/code/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/introducing-xiheframework/</guid>
-      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
-Who Should Use Scale Ideally at least two members:
-Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
-Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+      <guid>http://localhost:1313/jp/code/introducing-xiheframework/</guid>
+      <description>&lt;h2 id=&#34;what-is-xiheframework&#34;&gt;What is XiheFramework&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;XiheFramework&lt;/strong&gt; is a game framework for agile development, wrote on top of &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;who-should-use&#34;&gt;Who Should Use&lt;/h2&gt;&#xA;&lt;h3 id=&#34;scale&#34;&gt;Scale&lt;/h3&gt;&#xA;&lt;p&gt;Ideally at least two members:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Programmer for creating custom modules(game features)&lt;/li&gt;&#xA;&lt;li&gt;Technical designer for node editing&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Or use it as an individual developer (&lt;del&gt;hair loss rate 200%&lt;/del&gt;)&lt;/p&gt;&#xA;&lt;h3 id=&#34;skills&#34;&gt;Skills&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Unity Editor&lt;/li&gt;&#xA;&lt;li&gt;Node-based Editor&lt;/li&gt;&#xA;&lt;li&gt;C# (Custom Modules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;warning-warning&#34;&gt;Warning &amp;#x26a0;&amp;#xfe0f;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Consider not to use this framework if you are work individually and have &lt;strong&gt;ZERO&lt;/strong&gt; programming skill as you probably will have a lot of pain if you just use the node editor for all game logic. However, this is just a warning, feel free to ignore it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,42 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>松软飘飘橡胶网球 开发日记 on 作品集</title>
-    <link>https://www.yaotian-huang.com/cn/projects/ffrt/</link>
+    <link>http://localhost:1313/cn/projects/ffrt/</link>
     <description>Recent content in 松软飘飘橡胶网球 开发日记 on 作品集</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/projects/ffrt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 May 2024 17:45:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/cn/projects/ffrt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开发日志：平滑扇区射线投射</title>
-      <link>https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/</link>
+      <link>http://localhost:1313/cn/projects/ffrt/smooth-sector-cast/</link>
       <pubDate>Thu, 16 May 2024 17:45:58 +0000</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/projects/ffrt/smooth-sector-cast/</guid>
-      <description>目标 游戏项目 Fluffy Floaty Rubber Tennis 是一个基于物理的固定摄像机太空网球游戏。玩家唯一的控制是挥动球拍。
-我选择的球拍挥动时与其他物体交互的逻辑是对球拍击中的物体施加一个力，并对玩家施加一个反作用力。
-为什么不用 Physics.SphereCast？ 那么.. 为什么不用内置的 Unity 物理函数 Physics.SphereCast 呢？
-也许我只是不了解它背后的真实逻辑，但我认为当击中距离等于 0 时它是有问题的。
-如下图所示，当玩家向左挥动时，球拍的起始点是角色的原点，终点比球拍稍远一点。预期的碰撞点发生在球拍右侧的长障碍物和球拍的“第一个球体”之间。由于球拍在到达障碍物时的移动距离为 0，因此预期的击中距离也应为 0。
-到目前为止，一切对我来说都很合理。实际上，球拍返回的击中距离确实为 0，正如预期的那样，但是击中点在 Vector3.Zero！
-我做了多次测试，结果是一致的。只要击中距离为 0，击中点总是在 Vector3.Zero&amp;hellip;
-构建新解决方案 由于内置函数无法按预期工作，我决定使用 Physics.Raycast 构建自己的解决方案。
-该机制实际上是基于该项目的需求：挥动球拍。
-直观性 分解问题，这些是使挥动直观的关键点：
-舒适的挥动应包括角色周围的小圆空间，因此当球与玩家重叠时，玩家应能击中它。 挥动应呈扇形，因为挥动本质上是旋转手臂，使球拍覆盖扇形区域。 挥动应首先击中最接近瞄准方向或鼠标位置的物体。 因此，击打区域应覆盖如下：
-机制 如上所示，思路是绘制两个同心圆，然后通过圆心绘制两条线来确定扇区角度，然后连接击打点以形成一个带有平滑中心角的扇区区域。
-参数为：
-重叠圆的半径。 扇区所在圆的半径。（挥动球拍时球拍可以到达的距离） 扇区的角度。 射线投射 然后我们可以以定义的射线密度从小圆投射到大圆。在这个项目中，我
-射线排序 如直观性部分所述，射线应按顺序/剔除，以便玩家击中他们想要击中的物体。
-假设玩家瞄准右侧，重叠击打区域的绿色圆圈是一个球。没有任何排序的默认行为是相当随机的。例如，在显示的图像中，射线可以从底部投射到顶部，从顶部投射到底部，甚至从中间到边缘。
-在这种情况下，我决定添加三种排序方法：
-距离排序：根据到扇区中心的距离对射线进行排序。
-角度排序：根据射线与瞄准方向之间的角度对射线进行排序。
-首次/最后击中排序：根据射线投射的顺序对射线进行排序。
-实施 经过一些调试，结果相当不错，至少在游戏性方面是这样。
-这是不同排序方法的完整对比：
-首次击中最后击中最小距离最大距离最小角度最大角度想在游戏中看到这个工作成果吗？ 自己试玩游戏吧！
-Fluffy Floaty Rubber Tennis by Second Realm Studio, Charlotte Crosland, Yyuk1, Wonderboiz, Rina, sky-haihai</description>
+      <guid>http://localhost:1313/cn/projects/ffrt/smooth-sector-cast/</guid>
+      <description>&lt;h2 id=&#34;目标&#34;&gt;目标&lt;/h2&gt;&#xA;&lt;p&gt;游戏项目 Fluffy Floaty Rubber Tennis 是一个基于物理的固定摄像机太空网球游戏。玩家唯一的控制是&lt;strong&gt;挥动&lt;/strong&gt;球拍。&lt;/p&gt;&#xA;&lt;p&gt;我选择的球拍挥动时与其他物体交互的逻辑是对球拍击中的物体施加一个力，并对玩家施加一个反作用力。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么不用-physicsspherecast&#34;&gt;为什么不用 Physics.SphereCast？&lt;/h2&gt;&#xA;&lt;p&gt;那么.. 为什么不用内置的 Unity 物理函数 &lt;code&gt;Physics.SphereCast&lt;/code&gt; 呢？&lt;/p&gt;&#xA;&lt;p&gt;也许我只是不了解它背后的真实逻辑，但我认为当击中距离等于 0 时它是有问题的。&lt;/p&gt;&#xA;&lt;p&gt;如下图所示，当玩家向左挥动时，球拍的起始点是角色的原点，终点比球拍稍远一点。预期的碰撞点发生在球拍右侧的长障碍物和球拍的“第一个球体”之间。由于球拍在到达障碍物时的移动距离为 0，因此预期的击中距离也应为 0。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/sphere-cast.png&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;到目前为止，一切对我来说都很合理。实际上，球拍返回的击中距离确实为 0，正如预期的那样，但是击中点在 &lt;code&gt;Vector3.Zero&lt;/code&gt;！&lt;/p&gt;&#xA;&lt;p&gt;我做了多次测试，结果是一致的。只要击中距离为 0，击中点总是在 &lt;code&gt;Vector3.Zero&lt;/code&gt;&amp;hellip;&lt;/p&gt;&#xA;&lt;h2 id=&#34;构建新解决方案&#34;&gt;构建新解决方案&lt;/h2&gt;&#xA;&lt;p&gt;由于内置函数无法按预期工作，我决定使用 &lt;code&gt;Physics.Raycast&lt;/code&gt; 构建自己的解决方案。&lt;/p&gt;&#xA;&lt;p&gt;该机制实际上是基于该项目的需求：挥动球拍。&lt;/p&gt;&#xA;&lt;h3 id=&#34;直观性&#34;&gt;直观性&lt;/h3&gt;&#xA;&lt;p&gt;分解问题，这些是使挥动直观的关键点：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;舒适的挥动应包括角色周围的小圆空间，因此当球与玩家重叠时，玩家应能击中它。&lt;/li&gt;&#xA;&lt;li&gt;挥动应呈扇形，因为挥动本质上是旋转手臂，使球拍覆盖扇形区域。&lt;/li&gt;&#xA;&lt;li&gt;挥动应首先击中最接近瞄准方向或鼠标位置的物体。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;因此，击打区域应覆盖如下：&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-1.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;机制&#34;&gt;机制&lt;/h3&gt;&#xA;&lt;p&gt;如上所示，思路是绘制两个同心圆，然后通过圆心绘制两条线来确定扇区角度，然后连接击打点以形成一个带有平滑中心角的扇区区域。&lt;/p&gt;&#xA;&lt;p&gt;参数为：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;重叠圆的半径。&lt;/li&gt;&#xA;&lt;li&gt;扇区所在圆的半径。（挥动球拍时球拍可以到达的距离）&lt;/li&gt;&#xA;&lt;li&gt;扇区的角度。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;射线投射&#34;&gt;射线投射&lt;/h3&gt;&#xA;&lt;p&gt;然后我们可以以定义的射线密度从小圆投射到大圆。在这个项目中，我&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-2.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h3 id=&#34;射线排序&#34;&gt;射线排序&lt;/h3&gt;&#xA;&lt;p&gt;如直观性部分所述，射线应按顺序/剔除，以便玩家击中他们想要击中的物体。&lt;/p&gt;&#xA;&lt;p&gt;假设玩家瞄准右侧，重叠击打区域的绿色圆圈是一个球。没有任何排序的默认行为是相当随机的。例如，在显示的图像中，射线可以从底部投射到顶部，从顶部投射到底部，甚至从中间到边缘。&lt;/p&gt;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-4.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;figure&gt;&lt;img src=&#34;http://localhost:1313/en/projects/ffrt/smooth-sector-cast/new-3.png&#34; height=&#34;200&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;p&gt;在这种情况下，我决定添加三种排序方法：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;距离排序&lt;/strong&gt;：根据到扇区中心的距离对射线进行排序。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;角度排序&lt;/strong&gt;：根据射线与瞄准方向之间的角度对射线进行排序。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;首次/最后击中排序&lt;/strong&gt;：根据射线投射的顺序对射线进行排序。&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;实施&#34;&gt;实施&lt;/h2&gt;&#xA;&lt;p&gt;经过一些调试，结果相当不错，至少在游戏性方面是这样。&lt;/p&gt;&#xA;&lt;p&gt;这是不同排序方法的完整对比：&lt;/p&gt;&#xA;&lt;div style=&#34;display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;&#34;&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;first-hit.png&#34; alt=&#34;first hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;首次击中&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;last-hit.png&#34; alt=&#34;last hit&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最后击中&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-min.png&#34; alt=&#34;distance min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小距离&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;dist-max.png&#34; alt=&#34;distance max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大距离&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-min.png&#34; alt=&#34;angle min&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最小角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div style=&#34;display: flex; flex-direction: column; align-items: center; width: 300px;&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;angle-max.png&#34; alt=&#34;angle max&#34; style=&#34;width: 100%; height: auto; aspect-ratio: 1 / 1;&#34;&gt;&#xD;&#xA;        &lt;div style=&#34;margin-top: 0px; text-align: center;&#34;&gt;最大角度&lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2 id=&#34;想在游戏中看到这个工作成果吗&#34;&gt;想在游戏中看到这个工作成果吗？&lt;/h2&gt;&#xA;&lt;p&gt;自己试玩游戏吧！&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

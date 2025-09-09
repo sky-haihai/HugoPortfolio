@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="cn" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Getting Started in Xiheframework | 作品集</title>
 <meta name="keywords" content="Unity, C sharp" />
-<meta name="description" content="Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.
-Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.
+<meta name="description" content="Introduction
+In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.
+Import Xiheframework
+Via Git Submodule
+The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.
 To do that:
 Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.">
 <meta name="author" content="黄尧天">
-<link rel="canonical" href="https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/" />
+<link rel="canonical" href="http://localhost:1313/cn/code/getting-started-xiheframework/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
+<link rel="icon" href="http://localhost:1313/images/favicon64.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/favicon128.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon128.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/code/getting-started-xiheframework/" />
-<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/code/getting-started-xiheframework/" />
-<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/code/getting-started-xiheframework/" />
+<link rel="alternate" hreflang="jp" href="http://localhost:1313/jp/code/getting-started-xiheframework/" />
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/cn/code/getting-started-xiheframework/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -80,7 +83,7 @@ Run the following command from the root of your Unity project folder to add Xihe
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
+            <a href="http://localhost:1313/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -104,11 +107,11 @@ Run the following command from the root of your Unity project folder to add Xihe
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/en/code/getting-started-xiheframework/" title="EN"
+                        <a href="http://localhost:1313/en/code/getting-started-xiheframework/" title="EN"
                             aria-label="EN">EN</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/code/getting-started-xiheframework/" title="JP"
+                        <a href="http://localhost:1313/jp/code/getting-started-xiheframework/" title="JP"
                             aria-label="JP">JP</a>
                     </li>
                 </ul>
@@ -119,22 +122,22 @@ Run the following command from the root of your Unity project folder to add Xihe
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/projects/" title="项目作品">
+                <a href="http://localhost:1313/cn/projects/" title="项目作品">
                     <span>项目作品</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/ta/" title="技术美术">
+                <a href="http://localhost:1313/cn/ta/" title="技术美术">
                     <span>技术美术</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/code/" title="程序">
+                <a href="http://localhost:1313/cn/code/" title="程序">
                     <span>程序</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/art/" title="美术">
+                <a href="http://localhost:1313/cn/art/" title="美术">
                     <span>美术</span>
                 </a>
             </li>
@@ -145,7 +148,7 @@ Run the following command from the root of your Unity project folder to add Xihe
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cn/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/cn/code/">Code</a></div>
     <h1 class="post-title">
       Getting Started in Xiheframework
     </h1>
@@ -208,8 +211,8 @@ Run the following command from the root of your Unity project folder to add Xihe
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/cn/tags/unity/">Unity</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/c-sharp/">C sharp</a></li>
+      <li><a href="http://localhost:1313/cn/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/cn/tags/c-sharp/">C Sharp</a></li>
     </ul>
 
 <div class="share-buttons">

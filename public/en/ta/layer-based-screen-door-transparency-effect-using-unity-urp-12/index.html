@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Layer-based Screen-Door Transparency Effect using Unity URP 12 | Portfolio</title>
 <meta name="keywords" content="Screen-Door Transparency, Unity, URP, Shader, Render Feature" />
-<meta name="description" content="Introduction In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
-How it works You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper.">
+<meta name="description" content="Introduction
+In this post, I will be discussing how I implemented a Screen-door transparency effect in Unity using URP 12. This effect is used to simulate the look of a transparent object by applying Bayer Ordered Dithering to the semi-transparent object. This effect can be used in games to give the player a better view of the character even when the character is coverd by obstacles.
+How it works
+You can think of this effect as using a sharp pencil to poke a dense grid of holes onto a paper to reveal the objects behind the paper. Also you can use a Threshold value to control how transparent the object is, a.k.a, how density of the grid of holes.">
 <meta name="author" content="Tim Huang">
-<link rel="canonical" href="https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="canonical" href="http://localhost:1313/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
+<link rel="icon" href="http://localhost:1313/images/favicon64.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/favicon128.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon128.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
-<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
-<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="alternate" hreflang="jp" href="http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -78,7 +80,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <a href="http://localhost:1313/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -102,11 +104,11 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" title="JP"
+                        <a href="http://localhost:1313/jp/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" title="JP"
                             aria-label="JP">JP</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" title="CN"
+                        <a href="http://localhost:1313/cn/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/" title="CN"
                             aria-label="CN">CN</a>
                     </li>
                 </ul>
@@ -117,22 +119,22 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/projects/" title="Projects">
+                <a href="http://localhost:1313/en/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/ta/" title="TA">
+                <a href="http://localhost:1313/en/ta/" title="TA">
                     <span>TA</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/code/" title="Code">
+                <a href="http://localhost:1313/en/code/" title="Code">
                     <span>Code</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/art/" title="Art">
+                <a href="http://localhost:1313/en/art/" title="Art">
                     <span>Art</span>
                 </a>
             </li>
@@ -143,7 +145,7 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/en/ta/">Technical Art</a></div>
     <h1 class="post-title">
       Layer-based Screen-Door Transparency Effect using Unity URP 12
     </h1>
@@ -218,18 +220,16 @@ How it works You can think of this effect as using a sharp pencil to poke a dens
 </ol>
 <h2 id="demo">Demo</h2>
 <p>Here&rsquo;s a quick demo of the effect.</p>
-<p>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/D8kw0DIIDWQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<p><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/D8kw0DIIDWQ?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 <br>
 Another detailed explanation of the effect, showcasing how this effect reacts to different threshold values.
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/ebjjGDwZ6kw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ebjjGDwZ6kw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 </p>
-<p>From here, if you are fimiliar with the concept of render feature and render pass, and just want to see the ordered dithering part, you can skip to the <a href="#execute-method">#execute-method</a> section. To see the final code, skip to here: <a href="#source-code">#source-code</a></p>
+<p>From here, if you are fimiliar with the concept of render feature and render pass, and just want to see the ordered dithering part, you can skip to the <a href="/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/#execute-method">#execute-method</a> section. To see the final code, skip to here: <a href="/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/#source-code">#source-code</a></p>
 <h2 id="environment">Environment</h2>
 <ul>
 <li>Unity <code>2021.3.16f1</code></li>
@@ -248,85 +248,84 @@ Another detailed explanation of the effect, showcasing how this effect reacts to
 <h3 id="to-inputs">To Inputs</h3>
 <p>From these requirements, we can determine that the inputs are:</p>
 <table>
-<thead>
-<tr>
-<th>Input</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Character LayerMask</td>
-<td>LayerMask</td>
-</tr>
-<tr>
-<td>Obstacle LayerMask</td>
-<td>LayerMask</td>
-</tr>
-<tr>
-<td>Ordered Dithering Shader</td>
-<td>Compute Shader</td>
-</tr>
-<tr>
-<td>Threshold Value</td>
-<td>float</td>
-</tr>
-<tr>
-<td>Render Pass Event</td>
-<td>RenderPassEvent</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Input</th>
+          <th>Type</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Character LayerMask</td>
+          <td>LayerMask</td>
+      </tr>
+      <tr>
+          <td>Obstacle LayerMask</td>
+          <td>LayerMask</td>
+      </tr>
+      <tr>
+          <td>Ordered Dithering Shader</td>
+          <td>Compute Shader</td>
+      </tr>
+      <tr>
+          <td>Threshold Value</td>
+          <td>float</td>
+      </tr>
+      <tr>
+          <td>Render Pass Event</td>
+          <td>RenderPassEvent</td>
+      </tr>
+  </tbody>
 </table>
 <p>Put into a <code>Setting</code> class, we have:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="na">[System.Serializable]</span>
-</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">ComputeShader</span> <span class="n">computeShader</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">LayerMask</span> <span class="n">targetLayer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">LayerMask</span> <span class="n">obstacleLayer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [Range(0, 1f)]</span> <span class="k">public</span> <span class="kt">float</span> <span class="n">ditheringThreshold</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ComputeShader</span> <span class="n">computeShader</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">LayerMask</span> <span class="n">targetLayer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">LayerMask</span> <span class="n">obstacleLayer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [Range(0, 1f)]</span> <span class="kd">public</span> <span class="kt">float</span> <span class="n">ditheringThreshold</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">//For Debugging(Optional)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="render-pass">Render Pass</h3>
 <h4 id="structure">Structure</h4>
 <p>Now to create a new C# class that inherits <code>ScriptableRenderPass</code>, including settings we just created.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">class</span> <span class="nc">ScreenDoorRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">class</span> <span class="nc">ScreenDoorRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">ScreenDoorRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ScreenDoorRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">m_Settings</span> <span class="p">=</span> <span class="n">settings</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//Configure render target and render texture</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//Construct and execute command buffer</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">//Release temporary textures</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h4 id="variables">Variables</h4>
 <p>Inside of the render pass, we need to create a few variables to store the temporary render textures and render target handles.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_TempCameraOpaque</span><span class="p">;</span> <span class="c1">//camera color</span>
-</span></span><span class="line"><span class="cl"><span class="k">private</span> <span class="n">RenderTexture</span> <span class="n">m_TargetOpaqueTexture</span><span class="p">;</span> <span class="c1">//target layer color</span>
-</span></span><span class="line"><span class="cl"><span class="k">private</span> <span class="n">RenderTexture</span> <span class="n">m_TargetDepthTexture</span><span class="p">;</span> <span class="c1">//target layer depth</span>
-</span></span><span class="line"><span class="cl"><span class="k">private</span> <span class="n">RenderTexture</span> <span class="n">m_ObstacleDepthTexture</span><span class="p">;</span> <span class="c1">//obstacle layer depth</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_TempCameraOpaque</span><span class="p">;</span> <span class="c1">//camera color</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="n">RenderTexture</span> <span class="n">m_TargetOpaqueTexture</span><span class="p">;</span> <span class="c1">//target layer color</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="n">RenderTexture</span> <span class="n">m_TargetDepthTexture</span><span class="p">;</span> <span class="c1">//target layer depth</span>
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="n">RenderTexture</span> <span class="n">m_ObstacleDepthTexture</span><span class="p">;</span> <span class="c1">//obstacle layer depth</span>
 </span></span></code></pre></div><blockquote>
 <p><strong>Note</strong>:
 Don&rsquo;t be scared by the type names. <code>RenderTargetHandle</code>, <code>RenderTargetIdentifier</code>, <code>RenderTexture</code>, etc. They all does the same thing: storing a texture.<br>
-In GPU, each texture is associated with a unique ID. <code>RenderTargetHandle</code>, <code>RenderTargetIdentifier</code> are just wrappers around the texture ID while <code>RenderTexture</code> is a wrapper around the texture itself.</p>
-</blockquote>
+In GPU, each texture is associated with a unique ID. <code>RenderTargetHandle</code>, <code>RenderTargetIdentifier</code> are just wrappers around the texture ID while <code>RenderTexture</code> is a wrapper around the texture itself.</p></blockquote>
 <h4 id="configure-method">Configure Method</h4>
 <p>Now we can configure the render target and render texture in the <code>Configure</code> function.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span><span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span><span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">descriptor</span> <span class="p">=</span> <span class="n">cameraTextureDescriptor</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cmd</span><span class="p">.</span><span class="n">GetTemporaryRT</span><span class="p">(</span><span class="n">m_TempCameraOpaque</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">m_TargetOpaqueTexture</span> <span class="p">=</span> <span class="n">RenderTexture</span><span class="p">.</span><span class="n">GetTemporary</span><span class="p">(</span><span class="n">cameraTextureDescriptor</span><span class="p">.</span><span class="n">width</span><span class="p">,</span> <span class="n">cameraTextureDescriptor</span><span class="p">.</span><span class="n">height</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">RenderTextureFormat</span><span class="p">.</span><span class="n">ARGB32</span><span class="p">);</span>
@@ -335,7 +334,7 @@ In GPU, each texture is associated with a unique ID. <code>RenderTargetHandle</c
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h4 id="frame-cleanup-method">Frame Cleanup Method</h4>
 <p>Finish the <code>FrameCleanup</code> function while we still remember.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cmd</span><span class="p">.</span><span class="n">ReleaseTemporaryRT</span><span class="p">(</span><span class="n">m_TempCameraOpaque</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">RenderTexture</span><span class="p">.</span><span class="n">ReleaseTemporary</span><span class="p">(</span><span class="n">m_TargetOpaqueTexture</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">RenderTexture</span><span class="p">.</span><span class="n">ReleaseTemporary</span><span class="p">(</span><span class="n">m_TargetDepthTexture</span><span class="p">);</span>
@@ -366,21 +365,21 @@ After fetching the command buffer, prepare the drawing settings for drawing opaq
 Now render all the textures using the settings we just created.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">//draw target opaque</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">SetRenderTarget</span><span class="p">(</span><span class="n">m_TargetOpaqueTexture</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">true</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">ExecuteCommandBuffer</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">DrawRenderers</span><span class="p">(</span><span class="n">renderingData</span><span class="p">.</span><span class="n">cullResults</span><span class="p">,</span> <span class="k">ref</span> <span class="n">drawOpaqueSettings</span><span class="p">,</span> <span class="k">ref</span> <span class="n">targetFilter</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//draw target depth</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">SetRenderTarget</span><span class="p">(</span><span class="n">m_TargetDepthTexture</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">ExecuteCommandBuffer</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">DrawRenderers</span><span class="p">(</span><span class="n">renderingData</span><span class="p">.</span><span class="n">cullResults</span><span class="p">,</span> <span class="k">ref</span> <span class="n">drawDepthSettings</span><span class="p">,</span> <span class="k">ref</span> <span class="n">targetFilter</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//draw obstacle depth</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">SetRenderTarget</span><span class="p">(</span><span class="n">m_ObstacleDepthTexture</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">false</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">ClearRenderTarget</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="n">Color</span><span class="p">.</span><span class="n">clear</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">ExecuteCommandBuffer</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl"><span class="n">context</span><span class="p">.</span><span class="n">DrawRenderers</span><span class="p">(</span><span class="n">renderingData</span><span class="p">.</span><span class="n">cullResults</span><span class="p">,</span> <span class="k">ref</span> <span class="n">drawDepthSettings</span><span class="p">,</span> <span class="k">ref</span> <span class="n">obstacleFilter</span><span class="p">);</span>
@@ -393,8 +392,7 @@ Now render all the textures using the settings we just created.</p>
 </span></span><span class="line"><span class="cl"><span class="n">cmd</span><span class="p">.</span><span class="n">Blit</span><span class="p">(</span><span class="n">cam</span><span class="p">.</span><span class="n">cameraColorTarget</span><span class="p">,</span> <span class="n">m_TempCameraOpaque</span><span class="p">.</span><span class="n">Identifier</span><span class="p">());</span>
 </span></span></code></pre></div><blockquote>
 <p><strong>Note</strong><br>
-The commands inside <code>CommandBuffer</code> won&rsquo;t be executed before <code>context.ExecuteCommandBuffer(cmd)</code>. Therefore  <code>context.ExecuteCommandBuffer(cmd)</code> is needed before every <code>context.DrawRenderers(...)</code> to make sure the commands are executed before we draw any textures.</p>
-</blockquote>
+The commands inside <code>CommandBuffer</code> won&rsquo;t be executed before <code>context.ExecuteCommandBuffer(cmd)</code>. Therefore  <code>context.ExecuteCommandBuffer(cmd)</code> is needed before every <code>context.DrawRenderers(...)</code> to make sure the commands are executed before we draw any textures.</p></blockquote>
 <p>At this point, we have rendered all the textures we need. Now we can pass them to the compute shader:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">//get kernel</span>
 </span></span><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">shader</span> <span class="p">=</span> <span class="n">m_Settings</span><span class="p">.</span><span class="n">computeShader</span><span class="p">;</span>
@@ -434,19 +432,19 @@ The commands inside <code>CommandBuffer</code> won&rsquo;t be executed before <c
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Rendering</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Rendering.Universal</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ScreenDoorRenderFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="k">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ScreenDoorRenderFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">ScreenDoorRenderPass</span> <span class="n">m_RenderPass</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">m_RenderPass</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ScreenDoorRenderPass</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">settings</span><span class="p">.</span><span class="n">renderPassEvent</span>
 </span></span><span class="line"><span class="cl">        <span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">computeShader</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">targetLayer</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">obstacleLayer</span> <span class="p">!=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">computeShader</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">targetLayer</span> <span class="p">!=</span> <span class="m">0</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">obstacleLayer</span> <span class="p">!=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderer</span><span class="p">.</span><span class="n">EnqueuePass</span><span class="p">(</span><span class="n">m_RenderPass</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -458,19 +456,18 @@ The commands inside <code>CommandBuffer</code> won&rsquo;t be executed before <c
 <h3 id="renderer-asset">Renderer Asset</h3>
 <blockquote>
 <p><strong>Note</strong>
-The basic setup for an URP project is not part of the scope for this article. If you don&rsquo;t know how to do that, please refer to this manual page: <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/InstallURPIntoAProject.html">InstallURPIntoAProject</a>.</p>
-</blockquote>
+The basic setup for an URP project is not part of the scope for this article. If you don&rsquo;t know how to do that, please refer to this manual page: <a href="https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/InstallURPIntoAProject.html">InstallURPIntoAProject</a>.</p></blockquote>
 <p>Make sure to enable opaque texture and depth texture in the URP asset.</p>
-<figure><img src="asset-setting.png"/>
+<figure><img src="/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/asset-setting.png">
 </figure>
 
 <p><br>
 Find your URP renderer asset and add the render feature we just created.</p>
-<p><figure><img src="feature-setting.png"/>
+<p><figure><img src="/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/feature-setting.png">
 </figure>
 
 Drag the compute shader we create eariler in, and set the target layer to the ones you want to reveal from obstacles and as the name suggested , set all the environment layers as obstacle layer.</p>
-<p>For example, in the video <a href="#demo">demo</a>, the layer for the green boxes are set to be osbatcle layer, and the layer for the orange balls are set to be target layer.</p>
+<p>For example, in the video <a href="/en/ta/layer-based-screen-door-transparency-effect-using-unity-urp-12/#demo">demo</a>, the layer for the green boxes are set to be osbatcle layer, and the layer for the orange balls are set to be target layer.</p>
 <h2 id="future-improvements">Future Improvements</h2>
 <ol>
 <li>Add a dropdown menu to the render feature to allow the user to select different <strong>sizes</strong> of Bayer Matrixes.</li>
@@ -488,11 +485,11 @@ Drag the compute shader we create eariler in, and set the target layer to the on
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/en/tags/screen-door-transparency/">Screen-Door Transparency</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/unity/">Unity</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/urp/">URP</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/shader/">Shader</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/render-feature/">Render Feature</a></li>
+      <li><a href="http://localhost:1313/en/tags/screen-door-transparency/">Screen-Door Transparency</a></li>
+      <li><a href="http://localhost:1313/en/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/en/tags/urp/">URP</a></li>
+      <li><a href="http://localhost:1313/en/tags/shader/">Shader</a></li>
+      <li><a href="http://localhost:1313/en/tags/render-feature/">Render Feature</a></li>
     </ul>
 
 <div class="share-buttons">

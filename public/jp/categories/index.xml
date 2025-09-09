@@ -2,10 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/categories/</link>
+    <link>http://localhost:1313/jp/categories/</link>
     <description>Recent content in Categories on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 11:59:37 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EOTR Devlog</title>
+      <link>http://localhost:1313/jp/categories/eotr-devlog/</link>
+      <pubDate>Mon, 04 Mar 2024 11:59:37 -0700</pubDate>
+      <guid>http://localhost:1313/jp/categories/eotr-devlog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3D Art</title>
+      <link>http://localhost:1313/jp/categories/3d-art/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/jp/categories/3d-art/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://localhost:1313/jp/categories/web-development/</link>
+      <pubDate>Sat, 28 Oct 2023 13:40:42 -0600</pubDate>
+      <guid>http://localhost:1313/jp/categories/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Animation</title>
+      <link>http://localhost:1313/jp/categories/animation/</link>
+      <pubDate>Mon, 23 Oct 2023 09:35:14 -0400</pubDate>
+      <guid>http://localhost:1313/jp/categories/animation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game Development</title>
+      <link>http://localhost:1313/jp/categories/game-development/</link>
+      <pubDate>Tue, 23 May 2023 23:50:10 -0400</pubDate>
+      <guid>http://localhost:1313/jp/categories/game-development/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

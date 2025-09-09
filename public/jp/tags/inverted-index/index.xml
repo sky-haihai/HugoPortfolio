@@ -2,21 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inverted Index on ポートフォリオ</title>
-    <link>https://www.yaotian-huang.com/jp/tags/inverted-index/</link>
+    <link>http://localhost:1313/jp/tags/inverted-index/</link>
     <description>Recent content in Inverted Index on ポートフォリオ</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 05 May 2023 16:49:27 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/jp/tags/inverted-index/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 16:49:27 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/jp/tags/inverted-index/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
-      <link>https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
+      <link>http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
-Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <guid>http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A3-Information-Retrieval.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&lt;/p&gt;&#xA;&lt;h3 id=&#34;input&#34;&gt;Input&lt;/h3&gt;&#xA;&lt;p&gt;a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

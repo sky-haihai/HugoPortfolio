@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="cn" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Notes on Learning Mozilla Hubs: Avator | 作品集</title>
 <meta name="keywords" content="Metaverse, Mozilla Hubs, Blender, GLB, Opimazation, Character" />
-<meta name="description" content="Introduction In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&rsquo;m going to talk about the avator system in Hubs.
-Demo Here&rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
-Features It has following features:
-Idle animation Head tracking Lip syncing (User audio input feedback) Personal space invader (other avators will be transparent or disappear when the user is too close to them) It doesn&rsquo;t have:">
+<meta name="description" content="Introduction
+In my last post I started learning Mozilla Hubs by creating a demo scene. In this post I&rsquo;m going to talk about the avator system in Hubs.
+Demo
+Here&rsquo;s a demo avator I made during my study, you may use it as your own avator from this Link
+Features
+It has following features:
+
+Idle animation
+Head tracking
+Lip syncing (User audio input feedback)
+Personal space invader (other avators will be transparent or disappear when the user is too close to them)
+
+It doesn&rsquo;t have:">
 <meta name="author" content="黄尧天">
-<link rel="canonical" href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/" />
+<link rel="canonical" href="http://localhost:1313/cn/ta/notes-on-learning-mozilla-hubs-avator/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
+<link rel="icon" href="http://localhost:1313/images/favicon64.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/favicon128.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon128.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/" />
-<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-avator/" />
-<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/ta/notes-on-learning-mozilla-hubs-avator/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-avator/" />
+<link rel="alternate" hreflang="jp" href="http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-avator/" />
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/cn/ta/notes-on-learning-mozilla-hubs-avator/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -80,7 +89,7 @@ Idle animation Head tracking Lip syncing (User audio input feedback) Personal sp
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
+            <a href="http://localhost:1313/cn/" accesskey="h" title="作品集 (Alt + H)">作品集</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -104,11 +113,11 @@ Idle animation Head tracking Lip syncing (User audio input feedback) Personal sp
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/en/ta/notes-on-learning-mozilla-hubs-avator/" title="EN"
+                        <a href="http://localhost:1313/en/ta/notes-on-learning-mozilla-hubs-avator/" title="EN"
                             aria-label="EN">EN</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/ta/notes-on-learning-mozilla-hubs-avator/" title="JP"
+                        <a href="http://localhost:1313/jp/ta/notes-on-learning-mozilla-hubs-avator/" title="JP"
                             aria-label="JP">JP</a>
                     </li>
                 </ul>
@@ -119,22 +128,22 @@ Idle animation Head tracking Lip syncing (User audio input feedback) Personal sp
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/projects/" title="项目作品">
+                <a href="http://localhost:1313/cn/projects/" title="项目作品">
                     <span>项目作品</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/ta/" title="技术美术">
+                <a href="http://localhost:1313/cn/ta/" title="技术美术">
                     <span>技术美术</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/code/" title="程序">
+                <a href="http://localhost:1313/cn/code/" title="程序">
                     <span>程序</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/cn/art/" title="美术">
+                <a href="http://localhost:1313/cn/art/" title="美术">
                     <span>美术</span>
                 </a>
             </li>
@@ -145,7 +154,7 @@ Idle animation Head tracking Lip syncing (User audio input feedback) Personal sp
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/cn/">Home</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/cn/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/cn/ta/">Technical Art</a></div>
     <h1 class="post-title">
       Notes on Learning Mozilla Hubs: Avator
     </h1>
@@ -251,23 +260,23 @@ Idle animation Head tracking Lip syncing (User audio input feedback) Personal sp
 <p>Unlike there is only one option, Blender, for scene creation, avator can be created using any DCC sofware, at least theoretically. However since I have been using Blender for more than 5k hours, I&rsquo;m going to stick with Blender for avator creation.</p>
 <h3 id="modelling-uv-mapping">Modelling, UV Mapping</h3>
 <p>Modelling doesn&rsquo;t have any guideline from Hubs Documents, but it&rsquo;s good to keep the polygon count low. Here&rsquo;s a little bat I made for my demo avator:</p>
-<figure><img src="modelling.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/modelling.png">
 </figure>
 
 <h3 id="texturing-rendering">Texturing, Rendering</h3>
 <p>When it comes to texturing, although Hubs doesn&rsquo;t have any naming convension for textures, one thing to keep in mind is that Hubs only support PBR(Physical-Based-Rendering) workflow, which means the textures should be created based on PBR workflow. Here&rsquo;s a list of types of textures Hubs supports:</p>
 <h4 id="1-albedo-mapcolor-map">1. Albedo Map(Color Map)</h4>
 <p>Alpha channel is supported but not suggested because it&rsquo;s expensive and not handled very well by Hubs when there is a huge amount of participants in the scene.
-<figure><img src="albedo.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/albedo.png">
 </figure>
 </p>
 <h4 id="2-normal-map">2. Normal Map</h4>
-<figure><img src="normal.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/normal.png">
 </figure>
 
 <h4 id="3-emission-map">3. Emission Map</h4>
 <p>Emission Map tells the renderer which part of the model should be self-illuminated. It&rsquo;s not very important for Hubs now because post-processing is still experimental, but it&rsquo;s still good to have one in case the post-processing is implemented in the future official Hubs build or if you are using a custom build of Hubs.
-<figure><img src="emission.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/emission.png">
 </figure>
 </p>
 <h4 id="4-orm-map-occlusion-roughness-metallic">4. ORM Map (Occlusion, Roughness, Metallic)</h4>
@@ -278,12 +287,12 @@ B: Metallic</p>
 <p>Since the browser renderer for Hubs uses a simplified PBR workflow, ORM map would only make a very subtle change of the visual quality of the avator, therefore, in my demo avator I decided to ignore this map for now.</p>
 <h3 id="material">Material</h3>
 <p>There&rsquo;s a function in Hubs called remixing, which allows users to change the texture of an existing avator. However, remixing will only affect the first material in the model, threfore, it&rsquo;s important to keep the number of materials single. Here&rsquo;s a screenshot of the material setup of my demo avator:</p>
-<figure><img src="material.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/material.png">
 </figure>
 
 <h3 id="rigging">Rigging</h3>
 <p>There is a very strict naming convension for bones. The best practice is to download the sample avator from <a href="https://github.com/MozillaReality/hubs-avatar-pipelines/tree/master/Blender/AvatarBot">Hubs Github Repo</a> and use it as a starting point. From there, import your own model and rig it using the same bone structure. Additional bones are allowed while built-in bones is needed for the avator to be correctly setup inside Hubs. Here&rsquo;s a screenshot of the bone structure of my avator:</p>
-<figure><img src="bone-structure.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/bone-structure.png">
 </figure>
 
 <h3 id="animation">Animation</h3>
@@ -296,32 +305,32 @@ B: Metallic</p>
 <h3 id="shape-keys">Shape Keys</h3>
 <p>Shape keys are supported just make sure to include them when exporting as a GLB/GLTF file.</p>
 <h3 id="hubs-components">Hubs Components</h3>
-<p>Each <a href="#features">Feature</a> I mentioned above is implemented using Hubs Components. Here&rsquo;s a list of components I used in my demo avator:</p>
+<p>Each <a href="/cn/ta/notes-on-learning-mozilla-hubs-avator/#features">Feature</a> I mentioned above is implemented using Hubs Components. Here&rsquo;s a list of components I used in my demo avator:</p>
 <h4 id="1-loop-animation-component-for-idle-animation">1. Loop Animation Component for idle animation</h4>
-<figure><img src="loop-animation.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/loop-animation.png">
 </figure>
 
 <h4 id="2-head-tracking">2. Head tracking</h4>
 <p>Head tracking is handled automatically by Hubs, no need to add any component for it. The only thing artists have to make sure is the head bone&rsquo;s name is set to &ldquo;Head&rdquo;</p>
 <h4 id="3-lip-syncing">3. Lip syncing</h4>
 <p>There are two types of components used for lip syncing, one is for shape key animation to simulate the mouth movement</p>
-<figure><img src="morph-audio.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/morph-audio.png">
 </figure>
 
 <p>The other one is for a simple scale change to give other user a sense of volume change when the user is speaking</p>
-<figure><img src="scale-audio.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/scale-audio.png">
 </figure>
 
 <h4 id="4-personal-space-invader">4. Personal space invader</h4>
-<figure><img src="personal-space-invader.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/personal-space-invader.png">
 </figure>
 
 <h3 id="exporting">Exporting</h3>
 <p>Here&rsquo;s my setting when exporting my avator, the setting may vary depending on your model, for instance, if you don&rsquo;t have any shape keys, you can uncheck the &ldquo;Export Shape Keys&rdquo; option to potentially reduce the size of the final GLB file.</p>
-<p><figure><img src="export1.png"/>
+<p><figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/export1.png">
 </figure>
 
-<figure><img src="export2.png"/>
+<figure><img src="/cn/ta/notes-on-learning-mozilla-hubs-avator/export2.png">
 </figure>
 </p>
 <h2 id="copy-right">Copy Right</h2>
@@ -334,12 +343,12 @@ B: Metallic</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/cn/tags/metaverse/">Metaverse</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/mozilla-hubs/">Mozilla Hubs</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/blender/">Blender</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/glb/">GLB</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/opimazation/">Opimazation</a></li>
-      <li><a href="https://www.yaotian-huang.com/cn/tags/character/">Character</a></li>
+      <li><a href="http://localhost:1313/cn/tags/metaverse/">Metaverse</a></li>
+      <li><a href="http://localhost:1313/cn/tags/mozilla-hubs/">Mozilla Hubs</a></li>
+      <li><a href="http://localhost:1313/cn/tags/blender/">Blender</a></li>
+      <li><a href="http://localhost:1313/cn/tags/glb/">GLB</a></li>
+      <li><a href="http://localhost:1313/cn/tags/opimazation/">Opimazation</a></li>
+      <li><a href="http://localhost:1313/cn/tags/character/">Character</a></li>
     </ul>
 
 <div class="share-buttons">

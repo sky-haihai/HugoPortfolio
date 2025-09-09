@@ -2,76 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on 作品集</title>
-    <link>https://www.yaotian-huang.com/cn/code/</link>
+    <link>http://localhost:1313/cn/code/</link>
     <description>Recent content in Code on 作品集</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 May 2024 08:35:48 -0400</lastBuildDate><atom:link href="https://www.yaotian-huang.com/cn/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 May 2024 08:35:48 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/cn/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Auto Fishing in World of Warcraft Based on RMS of the Audio Loudness</title>
-      <link>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</link>
+      <link>http://localhost:1313/cn/code/auto-fishing-wow/</link>
       <pubDate>Wed, 01 May 2024 08:35:48 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/auto-fishing-wow/</guid>
-      <description>Morally Speaking Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.
-The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.</description>
+      <guid>http://localhost:1313/cn/code/auto-fishing-wow/</guid>
+      <description>&lt;h2 id=&#34;morally-speaking&#34;&gt;Morally Speaking&lt;/h2&gt;&#xA;&lt;p&gt;Fishing in most video games are basically free mini Gacha games, players can get literal crap or something extremely rewarding, all in the same pool. Unlike mobile Gacha game that cost players money, fishing typically trade player&amp;rsquo;s wait time with some expectation for a bigger reward.&lt;/p&gt;&#xA;&lt;p&gt;The only bad part of this no risk high reward process called fishing in game design aspect is that it&amp;rsquo;s designed to be boring and repetitive to keep players from doing it forever.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Getting Started in Xiheframework</title>
-      <link>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</link>
+      <link>http://localhost:1313/cn/code/getting-started-xiheframework/</link>
       <pubDate>Thu, 18 May 2023 08:35:48 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/getting-started-xiheframework/</guid>
-      <description>Introduction In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.
-Import Xiheframework Via Git Submodule The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.
-To do that:
-Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.</description>
+      <guid>http://localhost:1313/cn/code/getting-started-xiheframework/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the previous post, I introduced the Xiheframework and its core modules. In this post, I will show you how to use it in your project and how to create your own modules in detail.&lt;/p&gt;&#xA;&lt;h2 id=&#34;import-xiheframework&#34;&gt;Import Xiheframework&lt;/h2&gt;&#xA;&lt;h3 id=&#34;via-git-submodule&#34;&gt;Via Git Submodule&lt;/h3&gt;&#xA;&lt;p&gt;The recommended way to import Xiheframework is to use Git Submodule. This way, you can easily update Xiheframework to the latest version.&lt;/p&gt;&#xA;&lt;p&gt;To do that:&lt;/p&gt;&#xA;&lt;p&gt;Run the following command from the root of your Unity project folder to add Xiheframework as a submodule.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Creating a Diet Dashboard Based on Angular</title>
-      <link>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
+      <link>http://localhost:1313/cn/code/creating-a-diet-dashboard-based-on-angular/</link>
       <pubDate>Sun, 07 May 2023 21:47:36 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
-      <description>Source code: Github Repo
-View Live Demo: Diet Dashboard</description>
+      <guid>http://localhost:1313/cn/code/creating-a-diet-dashboard-based-on-angular/</guid>
+      <description>&lt;p&gt;Source code: &lt;a href=&#34;https://github.com/sky-haihai/diet-dashboard.git&#34;&gt;Github Repo&lt;/a&gt;&lt;br&gt;&#xA;View Live Demo: &lt;a href=&#34;https://diet-dashboard.vercel.app/&#34;&gt;Diet Dashboard&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Secured Web Information System Prototype</title>
-      <link>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</link>
+      <link>http://localhost:1313/cn/code/secured-web-information-system-prototype/</link>
       <pubDate>Sun, 07 May 2023 02:26:29 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/secured-web-information-system-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.
-The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.</description>
+      <guid>http://localhost:1313/cn/code/secured-web-information-system-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A2-Secured-Web-IS.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I implemented a secured web information system using Java Servlet and created several content pages including AboutMe, Skills, and Contact pages for testing my system.&lt;/p&gt;&#xA;&lt;p&gt;The goal was to implement a web application that could allow users to login, logout and view their profile. The application also had to be secured against unauthorized access such as directly typing the content page URL.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Information Retrieval: Web Document Indexer and Search Engine Prototype</title>
-      <link>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
+      <link>http://localhost:1313/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</link>
       <pubDate>Fri, 05 May 2023 16:49:27 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
-      <description>View the full project here: Github Repo
-Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
-Input a bunch of .GZ files, each containing multiple XML web documents.</description>
+      <guid>http://localhost:1313/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/</guid>
+      <description>&lt;p&gt;View the full project here: &lt;a href=&#34;https://github.com/sky-haihai/4020A3-Information-Retrieval.git&#34;&gt;Github Repo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.&lt;/p&gt;&#xA;&lt;h3 id=&#34;input&#34;&gt;Input&lt;/h3&gt;&#xA;&lt;p&gt;a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Introducing Xiheframework</title>
-      <link>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</link>
+      <link>http://localhost:1313/cn/code/introducing-xiheframework/</link>
       <pubDate>Fri, 05 May 2023 14:24:13 -0400</pubDate>
-      
-      <guid>https://www.yaotian-huang.com/cn/code/introducing-xiheframework/</guid>
-      <description>What is XiheFramework XiheFramework is a game framework for agile development, wrote on top of Unity engine.
-Who Should Use Scale Ideally at least two members:
-Programmer for creating custom modules(game features) Technical designer for node editing Or use it as an individual developer (hair loss rate 200%)
-Skills Unity Editor Node-based Editor C# (Custom Modules) Warning ⚠️ Consider not to use this framework if you are work individually and have ZERO programming skill as you probably will have a lot of pain if you just use the node editor for all game logic.</description>
+      <guid>http://localhost:1313/cn/code/introducing-xiheframework/</guid>
+      <description>&lt;h2 id=&#34;what-is-xiheframework&#34;&gt;What is XiheFramework&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;XiheFramework&lt;/strong&gt; is a game framework for agile development, wrote on top of &lt;strong&gt;Unity&lt;/strong&gt; engine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;who-should-use&#34;&gt;Who Should Use&lt;/h2&gt;&#xA;&lt;h3 id=&#34;scale&#34;&gt;Scale&lt;/h3&gt;&#xA;&lt;p&gt;Ideally at least two members:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Programmer for creating custom modules(game features)&lt;/li&gt;&#xA;&lt;li&gt;Technical designer for node editing&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Or use it as an individual developer (&lt;del&gt;hair loss rate 200%&lt;/del&gt;)&lt;/p&gt;&#xA;&lt;h3 id=&#34;skills&#34;&gt;Skills&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Unity Editor&lt;/li&gt;&#xA;&lt;li&gt;Node-based Editor&lt;/li&gt;&#xA;&lt;li&gt;C# (Custom Modules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;warning-warning&#34;&gt;Warning &amp;#x26a0;&amp;#xfe0f;&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Consider not to use this framework if you are work individually and have &lt;strong&gt;ZERO&lt;/strong&gt; programming skill as you probably will have a lot of pain if you just use the node editor for all game logic. However, this is just a warning, feel free to ignore it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

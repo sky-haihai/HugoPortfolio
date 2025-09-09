@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="jp" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Recreating the Rain Drop Effect in The Legend of Zelda: TOTK | ポートフォリオ</title>
 <meta name="keywords" content="Unity, Shader, Compute Shader, Render Feature, Post Processing, URP" />
-<meta name="description" content="Environment Unity 2021.3.16f1
+<meta name="description" content="Environment
+Unity 2021.3.16f1
 Universal Render Pipeline 12.0.0
-Introduction I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
-One of the things I noticed is the rain drop effect that react to the uppper edges of the scene.">
+Introduction
+I recently finished The Legend of Zelda: Tears of the Kingdom. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.
+One of the things I noticed is the rain drop effect that react to the uppper edges of the scene. It&rsquo;s a very subtle effect but it actually guided me through the thunder island where the player&rsquo;s visibility range was less than 1 meter. In the image below, you can see that the rain drops react to the edge of the mining cart rails, which tells the player that there is a path to continue the journey. I guess probably the game designer didn&rsquo;t intend to do this, but it&rsquo;s Nintendo, you never know.">
 <meta name="author" content="黃 堯天">
-<link rel="canonical" href="https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
+<link rel="canonical" href="http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
+<link rel="icon" href="http://localhost:1313/images/favicon64.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/favicon128.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon128.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
-<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
-<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
+<link rel="alternate" hreflang="jp" href="http://localhost:1313/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -80,7 +82,7 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/jp/" accesskey="h" title="ポートフォリオ (Alt + H)">ポートフォリオ</a>
+            <a href="http://localhost:1313/jp/" accesskey="h" title="ポートフォリオ (Alt + H)">ポートフォリオ</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -104,11 +106,11 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" title="EN"
+                        <a href="http://localhost:1313/en/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" title="EN"
                             aria-label="EN">EN</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" title="CN"
+                        <a href="http://localhost:1313/cn/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/" title="CN"
                             aria-label="CN">CN</a>
                     </li>
                 </ul>
@@ -119,22 +121,22 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/projects/" title="プロジェクト">
+                <a href="http://localhost:1313/jp/projects/" title="プロジェクト">
                     <span>プロジェクト</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/ta/" title="テクニカルアート">
+                <a href="http://localhost:1313/jp/ta/" title="テクニカルアート">
                     <span>テクニカルアート</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/code/" title="プログラミング">
+                <a href="http://localhost:1313/jp/code/" title="プログラミング">
                     <span>プログラミング</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/jp/art/" title="アート">
+                <a href="http://localhost:1313/jp/art/" title="アート">
                     <span>アート</span>
                 </a>
             </li>
@@ -145,7 +147,7 @@ One of the things I noticed is the rain drop effect that react to the uppper edg
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/jp/">Home</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/jp/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/jp/ta/">Technical Art</a></div>
     <h1 class="post-title">
       Recreating the Rain Drop Effect in The Legend of Zelda: TOTK
     </h1>
@@ -196,15 +198,14 @@ Universal Render Pipeline 12.0.0</p>
 <h2 id="introduction">Introduction</h2>
 <p>I recently finished <em>The Legend of Zelda: Tears of the Kingdom</em>. To me as an indie game developer, it felt like a text book of open world game design. I had a lot of fun playing it and I learned a lot from it.</p>
 <p>One of the things I noticed is the rain drop effect that react to the uppper edges of the scene. It&rsquo;s a very subtle effect but it actually guided me through the thunder island where the player&rsquo;s visibility range was less than 1 meter. In the image below, you can see that the rain drops react to the edge of the mining cart rails, which tells the player that there is a path to continue the journey. I guess probably the game designer didn&rsquo;t intend to do this, but it&rsquo;s Nintendo, you never know.</p>
-<figure><img src="life-saver.png"/>
+<figure><img src="/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/life-saver.png">
 </figure>
 
 <p>This effect was one of the a few things I could rely on while exploring the island, so I decided to implement it in Unity as a render feature, just to show my appreciation to those little rain drops.</p>
 <h2 id="demo">Demo</h2>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/1oAGbDdVZ7E" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1oAGbDdVZ7E?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="how-it-works">How It Works</h2>
 <p>The effect basically composes of two parts: Edge detection with angle limitation and a fast scrolling noise map.</p>
@@ -234,14 +235,14 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 <pre tabindex="0"><code>angle = atan2(vertical, horizontal)
 </code></pre><p>It gives us a value between -pi and pi, representing the angle of the vector in radian.</p>
 <p>Now we have the magnitude and the angle of the gradient. We can use them to create a mask that only shows the edges we want, which are the edges that are facing up.</p>
-<figure><img src="demo_mask.png"/>
+<figure><img src="/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/demo_mask.png">
 </figure>
 
 <h3 id="noise-map">Noise Map</h3>
 <p>Congradulations to you and future me that forgot how I did this! for making it this far. Now we have the edge mask, we can just multiply a scrolling noise map on it to get the final mask.</p>
 <p>After that, configure the settings as you like: thickness, sobel threshold, rain drop scale, drop speed, drop color, etc.</p>
 <p>For noise map, I used a simple 2D perlin noise map that I generated from this website: <a href="http://kitfox.com/projects/perlinNoiseMaker/">http://kitfox.com/projects/perlinNoiseMaker/</a></p>
-<figure><img src="noise_map.png"/>
+<figure><img src="/jp/ta/recreating-the-rain-drop-effect-in-the-legend-of-zelda-totk/noise_map.png">
 </figure>
 
 <h2 id="implementation">Implementation</h2>
@@ -269,52 +270,52 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Rendering.Universal</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">UnityEngine.Serialization</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ZeldaRainDropFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="k">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ZeldaRainDropFeature</span> <span class="p">:</span> <span class="n">ScriptableRendererFeature</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [SerializeField]</span> <span class="kd">public</span> <span class="n">Settings</span> <span class="n">settings</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Settings</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Create</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">m_RenderPass</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">settings</span><span class="p">.</span><span class="n">renderPassEvent</span>
 </span></span><span class="line"><span class="cl">        <span class="p">};</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="k">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">AddRenderPasses</span><span class="p">(</span><span class="n">ScriptableRenderer</span> <span class="n">renderer</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">&amp;&amp;</span> <span class="n">settings</span><span class="p">.</span><span class="n">rainDropShader</span> <span class="p">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">renderer</span><span class="p">.</span><span class="n">EnqueuePass</span><span class="p">(</span><span class="n">m_RenderPass</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="na">
 </span></span></span><span class="line"><span class="cl"><span class="na">    [System.Serializable]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">ComputeShader</span> <span class="n">rainDropShader</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">Texture2D</span> <span class="n">noiseTex</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">Color</span> <span class="n">dropColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0, 20)]</span> <span class="k">public</span> <span class="kt">int</span> <span class="n">thickness</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="k">public</span> <span class="kt">float</span> <span class="n">sobelThreshold</span> <span class="p">=</span> <span class="m">0.166f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="k">public</span> <span class="kt">float</span> <span class="n">rainDropScale</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="kt">float</span> <span class="n">dropSpeed</span> <span class="p">=</span> <span class="m">100f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">class</span> <span class="nc">Settings</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">ComputeShader</span> <span class="n">rainDropShader</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">Texture2D</span> <span class="n">noiseTex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">Color</span> <span class="n">dropColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0, 20)]</span> <span class="kd">public</span> <span class="kt">int</span> <span class="n">thickness</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="kd">public</span> <span class="kt">float</span> <span class="n">sobelThreshold</span> <span class="p">=</span> <span class="m">0.166f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [Range(0f, 1f)]</span> <span class="kd">public</span> <span class="kt">float</span> <span class="n">rainDropScale</span> <span class="p">=</span> <span class="m">0.5f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">float</span> <span class="n">dropSpeed</span> <span class="p">=</span> <span class="m">100f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">RenderPassEvent</span> <span class="n">renderPassEvent</span> <span class="p">=</span> <span class="n">RenderPassEvent</span><span class="p">.</span><span class="n">AfterRenderingTransparents</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kt">bool</span> <span class="n">previewInSceneView</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="create-a-render-pass">Create a Render Pass</h3>
 <p>Now we have the settings and a basic structure of the render feature. We can start to implement the render pass.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">class</span> <span class="nc">RainDropRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="k">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_ResultTex</span><span class="p">;</span> <span class="c1">//camera color</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">private</span> <span class="k">class</span> <span class="nc">RainDropRenderPass</span> <span class="p">:</span> <span class="n">ScriptableRenderPass</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">Settings</span> <span class="n">m_Settings</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">private</span> <span class="n">RenderTargetHandle</span> <span class="n">m_ResultTex</span><span class="p">;</span> <span class="c1">//camera color</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="n">RainDropRenderPass</span><span class="p">(</span><span class="n">Settings</span> <span class="n">settings</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">m_Settings</span> <span class="p">=</span> <span class="n">settings</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Configure</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">,</span> <span class="n">RenderTextureDescriptor</span> <span class="n">cameraTextureDescriptor</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="kt">var</span> <span class="n">descriptor</span> <span class="p">=</span> <span class="n">cameraTextureDescriptor</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">colorFormat</span> <span class="p">=</span> <span class="n">RenderTextureFormat</span><span class="p">.</span><span class="n">ARGB32</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">descriptor</span><span class="p">.</span><span class="n">enableRandomWrite</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="n">cmd</span><span class="p">.</span><span class="n">GetTemporaryRT</span><span class="p">(</span><span class="n">m_ResultTex</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">descriptor</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Execute</span><span class="p">(</span><span class="n">ScriptableRenderContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">RenderingData</span> <span class="n">renderingData</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">m_Settings</span><span class="p">.</span><span class="n">previewInSceneView</span> <span class="p">&amp;&amp;</span> <span class="p">(</span><span class="n">renderingData</span><span class="p">.</span><span class="n">cameraData</span><span class="p">.</span><span class="n">isSceneViewCamera</span> <span class="p">||</span> <span class="n">renderingData</span><span class="p">.</span><span class="n">cameraData</span><span class="p">.</span><span class="n">isPreviewCamera</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">                <span class="k">return</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
@@ -361,7 +362,7 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 </span></span><span class="line"><span class="cl">            <span class="n">context</span><span class="p">.</span><span class="n">Submit</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">FrameCleanup</span><span class="p">(</span><span class="n">CommandBuffer</span> <span class="n">cmd</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="n">cmd</span><span class="p">.</span><span class="n">ReleaseTemporaryRT</span><span class="p">(</span><span class="n">m_ResultTex</span><span class="p">.</span><span class="n">id</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
@@ -378,12 +379,12 @@ vertical = depth[x-1,y-1] * -1 + depth[x,y-1] * -2 + depth[x+1,y-1] * -1
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/jp/tags/unity/">Unity</a></li>
-      <li><a href="https://www.yaotian-huang.com/jp/tags/shader/">Shader</a></li>
-      <li><a href="https://www.yaotian-huang.com/jp/tags/compute-shader/">Compute Shader</a></li>
-      <li><a href="https://www.yaotian-huang.com/jp/tags/render-feature/">Render Feature</a></li>
-      <li><a href="https://www.yaotian-huang.com/jp/tags/post-processing/">Post Processing</a></li>
-      <li><a href="https://www.yaotian-huang.com/jp/tags/urp/">URP</a></li>
+      <li><a href="http://localhost:1313/jp/tags/unity/">Unity</a></li>
+      <li><a href="http://localhost:1313/jp/tags/shader/">Shader</a></li>
+      <li><a href="http://localhost:1313/jp/tags/compute-shader/">Compute Shader</a></li>
+      <li><a href="http://localhost:1313/jp/tags/render-feature/">Render Feature</a></li>
+      <li><a href="http://localhost:1313/jp/tags/post-processing/">Post Processing</a></li>
+      <li><a href="http://localhost:1313/jp/tags/urp/">URP</a></li>
     </ul>
 
 <div class="share-buttons">

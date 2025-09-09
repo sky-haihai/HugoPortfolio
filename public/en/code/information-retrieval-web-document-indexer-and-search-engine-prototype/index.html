@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>Information Retrieval: Web Document Indexer and Search Engine Prototype | Portfolio</title>
 <meta name="keywords" content="Python, Information Retrieval, Search Engine, Inverted Index" />
 <meta name="description" content="View the full project here: Github Repo
-Introduction In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
-Input a bunch of .GZ files, each containing multiple XML web documents.">
+Introduction
+In a recent academic project, I created an efficient indexer and search engine for a collection of Web documents. My goal was to implement an program that could create an inverted index for the provided Web documents(.GZ files), and search these web documents for 20 topics/queries, outputting the search results in a file.
+Input
+a bunch of .GZ files, each containing multiple XML web documents. Each xml doc contains multiple articles.">
 <meta name="author" content="Tim Huang">
-<link rel="canonical" href="https://www.yaotian-huang.com/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<link rel="canonical" href="http://localhost:1313/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js" integrity="sha256-uVus3DnjejMqn4g7Hni&#43;Srwf3KK8HyZB9V4809q9TWE="
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://www.yaotian-huang.com/images/favicon64.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://www.yaotian-huang.com/images/favicon16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://www.yaotian-huang.com/images/favicon32.png">
-<link rel="apple-touch-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
-<link rel="mask-icon" href="https://www.yaotian-huang.com/images/favicon128.png">
+<link rel="icon" href="http://localhost:1313/images/favicon64.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/images/favicon128.png">
+<link rel="mask-icon" href="http://localhost:1313/images/favicon128.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://www.yaotian-huang.com/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
-<link rel="alternate" hreflang="jp" href="https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
-<link rel="alternate" hreflang="cn" href="https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<link rel="alternate" hreflang="en" href="http://localhost:1313/en/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<link rel="alternate" hreflang="jp" href="http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
+<link rel="alternate" hreflang="cn" href="http://localhost:1313/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" />
 <noscript>
     <style>
         #theme-toggle,
@@ -79,7 +81,7 @@ Input a bunch of .GZ files, each containing multiple XML web documents.">
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.yaotian-huang.com/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
+            <a href="http://localhost:1313/en/" accesskey="h" title="Portfolio (Alt + H)">Portfolio</a>
             <span class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -103,11 +105,11 @@ Input a bunch of .GZ files, each containing multiple XML web documents.">
                 </button>
                 <ul class="lang-switch"><li>|</li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" title="JP"
+                        <a href="http://localhost:1313/jp/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" title="JP"
                             aria-label="JP">JP</a>
                     </li>
                     <li>
-                        <a href="https://www.yaotian-huang.com/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" title="CN"
+                        <a href="http://localhost:1313/cn/code/information-retrieval-web-document-indexer-and-search-engine-prototype/" title="CN"
                             aria-label="CN">CN</a>
                     </li>
                 </ul>
@@ -118,22 +120,22 @@ Input a bunch of .GZ files, each containing multiple XML web documents.">
                 <a href="/" title="Home"><span>Home</span></a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/projects/" title="Projects">
+                <a href="http://localhost:1313/en/projects/" title="Projects">
                     <span>Projects</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/ta/" title="TA">
+                <a href="http://localhost:1313/en/ta/" title="TA">
                     <span>TA</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/code/" title="Code">
+                <a href="http://localhost:1313/en/code/" title="Code">
                     <span>Code</span>
                 </a>
             </li>
             <li>
-                <a href="https://www.yaotian-huang.com/en/art/" title="Art">
+                <a href="http://localhost:1313/en/art/" title="Art">
                     <span>Art</span>
                 </a>
             </li>
@@ -144,7 +146,7 @@ Input a bunch of .GZ files, each containing multiple XML web documents.">
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://www.yaotian-huang.com/en/">Home</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/en/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/en/code/">Code</a></div>
     <h1 class="post-title">
       Information Retrieval: Web Document Indexer and Search Engine Prototype
     </h1>
@@ -334,10 +336,10 @@ Stick with one encoding format, in this case, UTF-8 to avoid decoding errors whe
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://www.yaotian-huang.com/en/tags/python/">Python</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/information-retrieval/">Information Retrieval</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/search-engine/">Search Engine</a></li>
-      <li><a href="https://www.yaotian-huang.com/en/tags/inverted-index/">Inverted Index</a></li>
+      <li><a href="http://localhost:1313/en/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/en/tags/information-retrieval/">Information Retrieval</a></li>
+      <li><a href="http://localhost:1313/en/tags/search-engine/">Search Engine</a></li>
+      <li><a href="http://localhost:1313/en/tags/inverted-index/">Inverted Index</a></li>
     </ul>
 
 <div class="share-buttons">

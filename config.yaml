@@ -1,9 +1,7 @@
 baseURL: "https://www.yaotian-huang.com"
 title: "Portfolio"
-paginate: 50
+paginate.pagerSize: 50
 theme: "charlolamode"
-
-
 
 menu:
   main:
